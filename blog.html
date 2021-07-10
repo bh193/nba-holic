@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css" />
+    <style>
+      .blog-header img {
+        width: 1000px;
+      }
+      .blog-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(58, 58, 58);
+      }
+      .blog-header h2 {
+        margin-top: 45px;
+      }
+      .blog-header p {
+        margin-top: 10px;
+      }
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 30px;
+      }
+      .card img {
+        width: 300px;
+      }
+      .main a {
+        text-decoration: none;
+        color: rgb(39, 39, 39);
+      }
+      .card {
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        box-shadow: 1px 1px 5px rgb(207, 207, 207);
+        position: relative;
+      }
+      .card .date {
+        width: 70px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background-color: rgb(241, 137, 67);
+        display: flex;
+        flex-direction: column;
+      }
+      .card .name {
+        width: 230px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        padding: 10px;
+        background-color: rgb(49, 101, 212);
+      }
+      .card .info {
+        display: flex;
+        height: 60px;
+        /* border: 1px solid green; */
+      }
+      .card .detail {
+        margin: 12px;
+        font-size: 15px;
+        line-height: 25px;
+      }
+      .card::after {
+        content: "...More";
+        font-size: 14px;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+      }
+      .pagination {
+        height: 40px;
+        text-align: center;
+        margin: 20px;
+      }
+      .pagination a {
+        text-decoration: none;
+        color: rgb(39, 39, 39);
+        font-size: 16px;
+        line-height: 40px;
+        margin: 10px;
+      }
+      .pagination img {
+        width: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping"><span>FREE SHIPPING</span></div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <ol class="breadcrumb">
+      <li><a href="home.html"> 首頁 </a></li>
+      <li class="active">Blog</li>
+    </ol>
+    <div class="blog-header">
+      <img src="pic/blog-header.png" alt="" />
+      <h2>達人Blog專欄</h2>
+      <p>一起來閱讀關於球衣的有趣知識！</p>
+    </div>
+    <div class="main">
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card1.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Mar</span>
+              <span>22</span>
+            </div>
+            <div class="name">
+              <span>2021年獎勵版球衣細節大公開</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              美國時間 3/11，上個賽季有進入季後賽的 16
+              支球隊同步發表了將於剩餘賽事中穿著的獎勵版 (Earned)
+              球衣。用於獎勵在...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card2.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Fed</span>
+              <span>28</span>
+            </div>
+            <div class="name">
+              <span>球員穿這個背號最有機會成就偉大? </span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              在籃球運動的最高殿堂 NBA 中，背號也同時象徵了榮耀，
+              這個號碼將會成為你的標誌性象徵永流於世，最成功的例子...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card3.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Fed</span>
+              <span>3</span>
+            </div>
+            <div class="name">
+              <span>最完整的 NBA 全明星賽球衣70年歷史</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              球迷最期盼的就是二月份的全明星賽了， 今年受到新冠肺炎COVID-19
+              疫情影響，NBA 2020-2021
+              賽季延後開打，明星賽舉辦與否也成為未知數...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card4.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Jan</span>
+              <span>17</span>
+            </div>
+            <div class="name">
+              <span>錢包警報?! NBA 75 周年系列球衣即將到來?</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              2021-2022 賽季是 NBA 創立 75 周年紀念，2020 年底時，在 Twitter
+              流出了幾張可能是 NBA 75 周年的特別球衣圖片，萬惡的 Nike
+              又在默默的企劃什麼呢...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card5.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Dec</span>
+              <span>30</span>
+            </div>
+            <div class="name">
+              <span>被剝奪的榮耀? 不再出現的 NBA 開幕戰冠軍球衣</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              象徵 NBA 最高榮耀的歐布萊恩冠軍盃，
+              最終只有一支球隊可以將這份榮耀帶回去。冠軍隊伍除了可以...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card6.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Dec</span>
+              <span>1</span>
+            </div>
+            <div class="name">
+              <span>2020-2021 NBA 球衣贊助商廣告清單</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              NBA 2017-2018 賽季除了球衣製造商轉手 Nike
+              外，同時首度開放了各隊球衣上面的贊助商廣告，上賽季恰逢這些球隊...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card7.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Nov</span>
+              <span>18</span>
+            </div>
+            <div class="name">
+              <span>復古球衣的起點 - 96-97 賽季 NBA 復古之夜</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              老東西總會帶個人們一股懷舊的風味，彷彿又重回了年少的美好時光，這也是復古球衣總是受人歡迎的原因。NBA
+              復古之夜如今已經成為每個賽季...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card8.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Nov</span>
+              <span>4</span>
+            </div>
+            <div class="name">
+              <span>就是愛原味球衣! 淺談 NBA 比賽球衣</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              作為一個 NBA
+              球衣的收藏家，你是否已經對於市面上量產販售的球衣失去感覺?
+              是否已經不想再跟路人意外組隊? 如果以上症狀都符合 ...
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="card">
+          <img src="pic/card9.jpg" alt="" />
+          <div class="info">
+            <div class="date">
+              <span>Oct</span>
+              <span>18</span>
+            </div>
+            <div class="name">
+              <span>Nike 是如何打造了球衣界的 "大 AU 時代"?</span>
+            </div>
+          </div>
+          <div class="detail">
+            <p>
+              在十年前，球衣市場還是以相對平價的 Swingman
+              球衣為主流的時代，當年必定沒有人料想到在 Nike 接手 NBA
+              合約後的現代，球員版球衣...
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="pagination">
+      <a href="#"><img src="icon/page-left.png" alt="" /></a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#"><img src="icon/page-right.png" alt="" /></a>
+    </div>
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css" />
+
+    <style>
+      .title {
+        position: relative;
+        height: 40px;
+      }
+      .title .left {
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+      }
+      .title .right {
+        position: absolute;
+        right: 400px;
+        bottom: 0;
+      }
+      .main-area {
+        /* width: 95%; */
+        display: flex;
+      }
+      .main-area a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .top-news {
+        width: 700px;
+        margin: 20px;
+        line-height: 27px;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgb(207, 207, 207);
+        border-radius: 4px;
+      }
+      .top-news h3 {
+        line-height: 35px;
+      }
+      .top-news .top-text {
+        margin: 10px;
+      }
+      .top-news img {
+        width: 700px;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+      }
+      .video-news {
+        width: 600px;
+        margin: 20px;
+        line-height: 20px;
+        position: relative;
+      }
+
+      .video-news .video {
+        display: flex;
+        margin-bottom: 25px;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgb(207, 207, 207);
+        position: relative;
+      }
+
+      .video-news img {
+        width: 200px;
+        border-radius: 4px;
+      }
+      .video-text {
+        margin: 0 5px 15px 7px;
+        line-height: 20px;
+      }
+      .video-text h4 {
+        font-size: 14px;
+        color: rgb(0, 0, 0);
+      }
+      .video-text p {
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+      }
+      .video-text span {
+        font-size: 12px;
+        color: rgb(58, 58, 58);
+        position: absolute;
+        bottom: 0;
+      }
+
+      /* ---------------------------------- */
+      .hot-news {
+        width: 100%;
+        position: relative;
+        margin: 10px 0;
+        padding: 10px 0 0 20px;
+        border-top: 1px solid rgb(184, 183, 183);
+      }
+
+      .second-area img {
+        width: 180px;
+      }
+      .second-area {
+        display: flex;
+        margin-bottom: 30px;
+      }
+      .second-area a {
+        text-decoration: none;
+        color: #000;
+      }
+      .news-list .single {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 900px;
+        /* border: 1px solid red; */
+        margin: 20px;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgb(207, 207, 207);
+      }
+      .single .list-text {
+        margin: 10px;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+      }
+      .single .list-text p {
+        padding-top: 8px;
+        font-size: 14px;
+        /* border: 1px green solid; */
+        margin-bottom: 20px;
+      }
+      .single .list-text span {
+        align-self: flex-end;
+        font-size: 13px;
+        color: #0303af;
+      }
+      .subscribe {
+        width: 300px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgb(207, 207, 207);
+      }
+
+      .subscribe .pic {
+        width: 150px;
+        margin: 40px 20px 20px 20px;
+      }
+      .subscribe .email {
+        width: 250px;
+        height: 35px;
+        margin: 20px 0;
+        border: 1px solid rgb(184, 183, 183);
+      }
+      .sub {
+        margin: 12px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .subscribe .button {
+        width: 120px;
+        height: 40px;
+        border-radius: 60px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #0303af;
+        color: #fff;
+        border: 0;
+        margin: 20px;
+      }
+      .subscribe::before {
+        content: "";
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, #4d79ff, #000066);
+      }
+      .page-down img {
+        width: 40px;
+      }
+
+      .page-down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping"><span>FREE SHIPPING</span></div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="home.html"> 首頁 </a></li>
+      <li class="active">News</li>
+    </ol>
+    <div class="title">
+      <h2 class="left">頭條新聞</h2>
+      <h2 class="right">影音報導</h2>
+    </div>
+    <div class="main-area">
+      <div class="top-news">
+        <a href="#">
+          <img src="pic/news-1.jpg" alt="" />
+          <div class="top-text">
+            <h3>NBA明星賽球衣紀念Kobe　背號統一穿24與2</h3>
+            <p>
+              即將到來的NBA明星賽，將為紀念意外身亡的傳奇球星Kobe
+              Bryant，球員的球衣背號都會換成24號，以及她二女兒Gianna
+              Bryant的2號。
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="video-news">
+        <a href="">
+          <div class="video">
+            <img src="pic/video-1.jpg" alt="" />
+            <div class="video-text">
+              <h4>明星賽球衣演變史-喬丹球衣勾起球迷青春回憶</h4>
+              <p>
+                為了歡慶NBA明星賽在相隔32年之後重返芝加哥主場，運動品牌搶搭熱潮。
+              </p>
+              <span>1小時前</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="video">
+            <img src="pic/video-2.jpg" alt="" />
+            <div class="video-text">
+              <h4>球鞋愛好者注意！歐洲金童專屬喬丹鞋發售日確定</h4>
+              <p>備受矚目的歐洲金童-Luka Doncic第一雙專屬喬丹球鞋即將上市。</p>
+              <span>3小時前</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="video">
+            <img src="pic/video-3.jpg" alt="" />
+            <div class="video-text">
+              <h4>NBA首開賣NFT商品 勇士競標豐收2百萬美元</h4>
+              <p>
+                不可替代代幣近期無疑是最火熱投資標的，NBA也視其為新的金雞母。
+              </p>
+              <span>9小時前</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="video">
+            <img src="pic/video-4.jpg" alt="" />
+            <div class="video-text">
+              <h4>揮別黑曼巴 Nike聲明與布萊恩結束合作</h4>
+              <p>運動大廠Nike與已故球星布萊恩(Kobe Bryant)的合約終止了。</p>
+              <span>9小時前</span>
+            </div>
+          </div>
+        </a>
+        <div class="page-down">
+          <img src="icon/news-down.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="title hot-news">
+      <h2>熱門新聞</h2>
+    </div>
+    <div class="second-area">
+      <div class="news-list">
+        <a href="">
+          <div class="single">
+            <img src="pic/lbj-jersey.jpg" alt="lbj jersey" />
+            <div class="list-text">
+              <h4>LeBron James明星賽球衣標出一千八百萬天價 創官方紀錄</h4>
+              <p>
+                今年NBA 全明星賽事已經落下帷幕，NBA
+                官方會把眾多球星穿著過的球衣進行公開拍賣，湖人球員LeBron
+                James實著球衣最終定價在630,300美金。
+              </p>
+              <span>觀看人數：11,420人</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="single">
+            <img src="pic/pillow.jpg" alt="nba pillow" />
+            <div class="list-text">
+              <h4>球衣變抱枕？Looptworks與NBA環保結合</h4>
+              <p>
+                Looptworks 與NBA
+                合作，將轉隊、過季滯銷的全新球衣“升級再製（Upcycling）”​，
+                將每件球衣打造成更精美的限量球迷商品。
+              </p>
+              <span>觀看人數：10,052人</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="single">
+            <img src="pic/movie.jpeg" alt="nba movie" />
+            <div class="list-text">
+              <h4>怪物奇兵新篇章　詹皇新球鞋趁勢推出</h4>
+              <p>
+                電影《怪物奇兵：A NEW LEGACY》相關商品即將登場，Nike 和 Converse
+                為影片角色帶來了一系列鞋款和服飾。
+              </p>
+              <span>觀看人數：9,146人</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="single">
+            <img src="pic/fingercroxx.jpg" alt="fingercroxx" />
+            <div class="list-text">
+              <h4>
+                NBA X Fingercroxx 聯乘系列翻玩球隊標誌 致敬 NBA 聯盟年代榮耀
+              </h4>
+              <p>
+                NBA Store 首度攜手香港街頭品牌 fingercroxx 宣布推出全新 NBA
+                聯名系列商品，囊括東西區聯盟共六支年代代表性球隊。
+              </p>
+              <span>觀看人數：6,143人</span>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="single">
+            <img src="pic/lbj.jpg" alt="lbj" />
+            <div class="list-text">
+              <h4>詹皇、湖人稱霸上半季球衣商品銷售　籃網組3巨頭人氣大爆發</h4>
+              <p>
+                NBA官方與球員工會12日公布上半季的球衣和球隊商品銷售排行，洛城一哥詹姆斯(LeBron
+                James)與衛冕軍湖人稱霸榜單。
+              </p>
+              <span>觀看人數：1,222人</span>
+            </div>
+          </div>
+        </a>
+        <div class="page-down">
+          <img src="icon/news-down.png" alt="" />
+        </div>
+      </div>
+      <div class="subscribe">
+        <img src="icon/postbox.png" alt="" class="sub pic" />
+        <h4 class="sub text">
+          想接收更多NBA相關商品的最新資訊？ <br />馬上註冊NBA HOLIC！
+        </h4>
+        <input class="subs email" type="text" placeholder="Email Address" />
+        <button class="sub button">Submit</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+  </body>
+</html>

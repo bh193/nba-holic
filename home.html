@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css" />
+
+    <style>
+      .banner {
+        position: relative;
+      }
+      .banner img {
+        width: 100%;
+      }
+
+      .circle {
+        position: absolute;
+        transform: translate(599px, -25px);
+      }
+      .circle img {
+        width: 15%;
+      }
+
+      /* ------------------------------------------------- */
+      .middle-line {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.726);
+        text-align: center;
+        margin: 25px 0;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .middle-line::before {
+        content: "";
+        /* width: 550px; */
+        flex: 1;
+        height: 1px;
+        background-color: #d2d2d2;
+        display: block;
+        transform: translateY(20px);
+      }
+      .middle-line::after {
+        content: "";
+        /* width: 550px; */
+        flex: 1;
+        height: 1px;
+        background-color: #d2d2d2;
+        /* display: block; */
+        transform: translateY(20px);
+      }
+      .nba-map img {
+        width: 100%;
+      }
+      /* ----------------------------------------------------------- */
+      .player img {
+        width: 100%;
+        border-radius: 1%;
+      }
+      .player {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .star {
+        box-sizing: border-box;
+        width: 386px;
+        margin: 25px;
+        /* padding: 10px; */
+        text-align: center;
+        font-size: 20px;
+      }
+      /* -------------------------------------------------------------- */
+      .banner-jersey img {
+        width: 100%;
+      }
+      .banner-jersey {
+        text-align: center;
+        margin: 30px 0;
+      }
+      .best-seller {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .best-seller img {
+        width: 100%;
+      }
+
+      /* --------------------------------------------------------- */
+      .story {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+      }
+
+      .story-pic {
+        width: 50%;
+        margin: 30px;
+      }
+      .story-main {
+        width: 50%;
+        margin: 30px;
+        font-size: 16px;
+        line-height: 28px;
+      }
+      .story h2 {
+        text-align: center;
+        padding: 5px;
+      }
+      .story p {
+        padding: 10px;
+      }
+      .story img {
+        width: 580px;
+        border-radius: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping"><span>FREE SHIPPING</span></div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="banner">
+      <a href="##"><img src="pic/girl.jpg" border="0" /></a>
+    </div>
+    <div class="circle">
+      <img src="icon/gray_circle.png" alt="" />
+      <img src="icon/gray_circle.png" alt="" />
+      <img src="icon/red_circle.png" alt="" />
+      <img src="icon/gray_circle.png" alt="" />
+    </div>
+    <div class="middle-line"><h2>選擇球隊</h2></div>
+    <a href="##"
+      ><div class="nba-map"><img src="pic/map.png" alt="NBA map" /></div
+    ></a>
+    <div class="middle-line"><h2>精選球星</h2></div>
+    <div class="player">
+      <div class="star">
+        <a href="##"><img src="pic/star1.jpg" border="0" /></a>
+        <h3>Steve Nash</h3>
+        <span>Lakers</span>
+      </div>
+      <div class="star">
+        <a href="##"><img src="pic/star2.jpg" border="0" /></a>
+        <h3>Chris Paul</h3>
+        <span>Hornets</span>
+      </div>
+      <div class="star">
+        <a href="##"><img src="pic/star3.jpg" border="0" /></a>
+        <h3>Devin Booker</h3>
+        <span>suns</span>
+      </div>
+    </div>
+    <div class="banner-jersey">
+      <a href="##"><img src="pic/jersey_sale.jpg" alt="NBA jersey" /></a>
+    </div>
+    <div class="middle-line"><h2>熱銷排行</h2></div>
+    <div class="best-seller">
+      <div class="product">
+        <a href="##"><img src="pic/nash-front.jpg" border="0" /></a>
+      </div>
+      <div class="product">
+        <a href="##"><img src="pic/bulls-jacket.jpg" border="0" /></a>
+      </div>
+      <div class="product">
+        <a href="##"><img src="pic/jazz-tank.jpg" border="0" /></a>
+      </div>
+    </div>
+    <div class="middle-line"><h2>NBA HOLIC</h2></div>
+    <div class="story">
+      <div class="story-pic"><img src="pic/man.jpg" alt="" /></div>
+      <div class="story-main">
+        <h2>創立故事</h2>
+        <p>
+          國家籃球協會是北美的男子職業籃球聯盟，由30支球隊組成，分屬兩個聯盟：
+          東區聯盟和西區聯盟；而每個聯盟各由三個分組組成，每個分組有五支球隊。
+          NBA是四大北美職業體育聯賽之一，並被視為全世界水準最高的男子職業籃球賽事。
+        </p>
+        <p>
+          NBA正式賽季於每年10月中開始，分為例行賽、季後賽兩大部分。例行賽為循環賽制，
+          每支球隊都要完成82場比賽；例行賽到次年的4月結束(因疫情期間延至5月)，
+          每個聯盟的前八名將有資格進入接下來進行的季後賽。季後賽採用七戰四勝賽制，
+          共分四輪。
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+  </body>
+</html>

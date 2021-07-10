@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css" />
+    <style>
+      .court img {
+        width: 700px;
+      }
+      .court {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: 30px;
+      }
+
+      .title-first {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        font-size: 17px;
+        color: rgb(32, 32, 32);
+      }
+      .title-first h2 {
+        padding: 7px;
+      }
+      .title-first .main {
+        color: #e73535;
+      }
+      .title-second {
+        text-align: center;
+        margin: 8px;
+        color: rgb(46, 46, 46);
+      }
+
+      /* ------------------------------------------------------ */
+
+      .holic {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        justify-content: center;
+        color: rgb(46, 46, 46);
+      }
+      .holic .item {
+        width: 33.3%;
+        height: 200px;
+        padding: 20px;
+      }
+      .holic h2 {
+        text-align: center;
+        margin: 5px;
+        color: #e73535;
+        font-size: 25px;
+      }
+
+      .holic .h,
+      .o {
+        border-right: 1px #d2d2d2 solid;
+        border-bottom: 1px #d2d2d2 solid;
+      }
+
+      .holic .l {
+        border-bottom: 1px #d2d2d2 solid;
+      }
+      .holic .i {
+        border-right: 1px #d2d2d2 solid;
+      }
+
+      /* ------------------------------------- */
+      .map img {
+        width: 700px;
+      }
+      .map {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: 30px;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        align-items: center;
+        /* border: 1px red solid; */
+      }
+      .info .data {
+        display: flex;
+        font-size: 18px;
+        line-height: 30px;
+        /* border: 1px blue solid; */
+      }
+      .info p {
+        border-left: 1px #d2d2d2 solid;
+        text-align: left;
+        width: 300px;
+        padding-left: 10px;
+      }
+      .info h4 {
+        text-align: right;
+        width: 200px;
+        padding-right: 10px;
+        /* border: 1px red solid; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping">
+          <span>FREE SHIPPING</span>
+        </div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="home.html"> 首頁 </a></li>
+      <li class="active">關於我們</li>
+    </ol>
+
+    <div class="court"><img src="pic/court1.jpg" alt="" /></div>
+    <div class="title">
+      <div class="title-first">
+        <h2>分享</h2>
+        <h2 class="main">HOLIC</h2>
+        <h2>對事物的狂熱</h2>
+      </div>
+      <div class="title-second">
+        <h4>
+          觀察街頭、探索市場、預測時代 - 為了分享「HOLIC」而產生的五大理念
+        </h4>
+      </div>
+    </div>
+    <div class="holic">
+      <div class="item h">
+        <h2>H</h2>
+        <p>“H”ype，代表著籃球人最原始的追求，那份不輕易熄滅的熱血。</p>
+      </div>
+      <div class="item o">
+        <h2>O</h2>
+        <p>
+          “O”riginal，是籃球圈那週而復始的循環，在生生不息轉動中，仍不忘本的復刻之心。
+        </p>
+      </div>
+      <div class="item l">
+        <h2>L</h2>
+        <p>
+          “L”uxury，找尋街頭運動與高端時尚間的平衡點，滿足籃球人獨到的胃口。
+        </p>
+      </div>
+    </div>
+    <div class="holic">
+      <div class="item i">
+        <h2>I</h2>
+        <p>
+          “I”dentity，純正好物絕不放過，我們所販售的商品都是官方認證的好物。
+        </p>
+      </div>
+      <div class="item c">
+        <h2>C</h2>
+        <p>
+          “C”ollection，最專業的團隊為你特蒐潛力搜品，為您準備不只是運動用品，更是收藏佳物！
+        </p>
+      </div>
+    </div>
+    <div class="map"><img src="pic/store_map.jpg" alt="" /></div>
+    <div class="info">
+      <div class="data">
+        <h4>公司名稱</h4>
+        <p>NBA LOHIC有限公司</p>
+      </div>
+      <div class="data">
+        <h4>地址</h4>
+        <p>桃園市中壢區復興路46號9樓</p>
+      </div>
+      <div class="data">
+        <h4>電話</h4>
+        <p>03-425-1108</p>
+      </div>
+      <div class="data">
+        <h4>E-MAIL</h4>
+        <p>go2021@nbaholic.com</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+  </body>
+</html>

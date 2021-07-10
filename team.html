@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css" />
+    <link rel="stylesheet" href="grid.css" />
+    <style>
+      /* .html {
+        box-sizing: border-box;
+      } */
+      .icon-size {
+        width: 10px;
+        height: 10px;
+      }
+      .choose {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        margin: 10px;
+      }
+      .choose img {
+        align-self: center;
+      }
+      .team .east,
+      .team .west {
+        padding-left: 18px;
+      }
+      .navigation .option {
+        font-size: 14px;
+        padding-left: 38px;
+        margin: 10px;
+        position: relative;
+      }
+      .navigation .check {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-left: 18px;
+        font-size: 15px;
+      }
+
+      .navigation .all {
+        margin-top: 25px;
+        position: relative;
+        border-top: 1px #e9e8e8 solid;
+      }
+
+      /* -------------------------------- */
+
+      .nets-banner {
+        margin: 23px 20px 20px 20px;
+        position: relative;
+        /* width: 950px; */
+        /* border: 1px solid red; */
+      }
+
+      .slected {
+        display: flex;
+        margin: 20px;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+      }
+
+      .pagination {
+        height: 40px;
+      }
+      .pagination a {
+        text-decoration: none;
+        color: rgb(39, 39, 39);
+        font-size: 16px;
+        line-height: 40px;
+        margin: 10px;
+      }
+      .pagination img {
+        width: 8px;
+      }
+
+      .slected .sort {
+        width: 120px;
+        margin: 0 15px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        border: 1px rgb(39, 39, 39) solid;
+        border-radius: 3%;
+        background-color: #fff;
+      }
+      .slected .sort img {
+        width: 14px;
+      }
+      .product img {
+        width: 300px;
+        /* border: 1px solid green; */
+        align-self: flex-end;
+      }
+
+      .all-products .product {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        margin-bottom: 30px;
+        position: relative;
+        word-spacing: 2px;
+      }
+      .all-products a {
+        text-decoration: none;
+        color: rgb(27, 27, 27);
+      }
+      .product-price,
+      .product-name {
+        padding-left: 40px;
+        width: 300px;
+        display: inline-block;
+        /* border: 1px solid; */
+      }
+      .product::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: rgb(230, 230, 230);
+        margin: 20px;
+      }
+      .nets-banner::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background-color: rgb(230, 230, 230);
+        left: 0;
+        bottom: -70px;
+      }
+      .all-products .pistons::before {
+        content: "Almost Gone";
+        border-radius: 5%;
+        background-color: #e73535;
+        color: #fff;
+        width: 110px;
+        text-align: center;
+        transform: translate(50px, 270px);
+        position: absolute;
+      }
+      .bottom {
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping"><span>FREE SHIPPING</span></div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="home.html"> 首頁 </a></li>
+      <li class="active">Brooklyn Nets</li>
+    </ol>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-2 navigation">
+          <div class="all team">
+            <div class="choose team">
+              <h4>選擇球隊</h4>
+              <img src="icon/up-chevron.png" class="icon-size" alt="" />
+            </div>
+            <div class="choose east">
+              <h4>東區球隊</h4>
+              <img src="icon/plus.png" class="icon-size" alt="" />
+            </div>
+            <div class="choose west">
+              <h4>西區球隊</h4>
+              <img src="icon/minus.png" class="icon-size" alt="" />
+            </div>
+            <div class="check">
+              <label
+                ><input
+                  type="checkbox"
+                  name="team1"
+                  value="atlanta hawks"
+                  class="option hawks"
+                />Atlanta Hawks</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston celtics"
+                  class="option celtics"
+                />Boston Celtics</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team3"
+                  value="boston nets"
+                  class="option nets"
+                />Brooklyn Nets</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston bucks"
+                  class="option bucks"
+                />Milwaukee Bucks</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston magic"
+                  class="option magic"
+                />Orlando Magic</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston suns"
+                  class="option suns"
+                />Phoenix Suns</label
+              >
+            </div>
+          </div>
+
+          <div class="all cloth">
+            <div class="choose cloth">
+              <h4>選擇服飾</h4>
+            </div>
+            <div class="check">
+              <label
+                ><input
+                  type="checkbox"
+                  name="cloth1"
+                  value="short"
+                  class="option short"
+                />短袖上衣</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="cloth2"
+                  value="long"
+                  class="option long"
+                />長袖上衣</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="cloth3"
+                  value="jersey"
+                  class="option jersey"
+                />球衣</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="cloth4"
+                  value="pants"
+                  class="option pants"
+                />褲子</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston jacket"
+                  class="option jacket"
+                />外套</label
+              >
+            </div>
+          </div>
+
+          <div class="all accessory">
+            <div class="choose accessory">
+              <h4>選擇配件</h4>
+            </div>
+
+            <div class="check">
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessory1"
+                  value="hat"
+                  class="option hat"
+                />帽子</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessory2"
+                  value="ball"
+                  class="option ball"
+                />籃球</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessory3"
+                  value="protector"
+                  class="option protector"
+                />運動護具</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="accessory4"
+                  value="doll"
+                  class="option doll"
+                />玩偶公仔</label
+              >
+            </div>
+          </div>
+
+          <div class="all price-range">
+            <div class="choose price-range">
+              <h4>價格區間</h4>
+            </div>
+            <div class="check">
+              <label
+                ><input
+                  type="checkbox"
+                  name="price-range1"
+                  value="999"
+                  class="option 999"
+                />NT$999以下</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="price-range2"
+                  value="1999"
+                  class="option 1999"
+                />NT$1000-1999</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="price-range3"
+                  value="2999"
+                  class="option 2999"
+                />NT$2000-2999</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="price-range4"
+                  value="2999up"
+                  class="option 2999up"
+                />NT$2999以上</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-10 nets">
+          <div class="col-12 nets-banner">
+            <img src="pic/nets-banner.jpg" alt="nets-banner" class="w-100" />
+          </div>
+          <div class="col-12 slected">
+            <div class="slected-left">
+              <span>1 - 12 of 450</span>
+              <button class="sort">
+                <span>價格低到高</span>
+                <img src="icon/sort-down.png" alt="" />
+              </button>
+            </div>
+            <div class="pagination">
+              <a href="#"><img src="icon/page-left.png" alt="" /></a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#"><img src="icon/page-right.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="row row-cols-3 all-products">
+            <class class="product nets">
+              <a href="product.html">
+                <img
+                  src="pic/nets-jersey.jpg"
+                  alt="nets-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3500</h4>
+                <span class="product-name"
+                  >Men's Vince Carter 06-07 Nets Road Jersey</span
+                >
+              </a>
+            </class>
+
+            <class class="product pistons">
+              <a href="product.html">
+                <img
+                  src="pic/pistons-jersey.jpg"
+                  alt="pistons-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Jerry Stackhouse 98-99 Pistons Road Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product blazers">
+              <a href="product.html">
+                <img
+                  src="pic/blazers-jersey.jpg"
+                  alt="blazers-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Rasheed Wallace 99-00 Road Blazers Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product blazers">
+              <a href="product.html">
+                <img
+                  src="pic/blazers-jersey.jpg"
+                  alt="blazers-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Rasheed Wallace 99-00 Road Blazers Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product jazz">
+              <a href="product.html">
+                <img
+                  src="pic/jazz-tank.jpg"
+                  alt="jazz-tank"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$1500</h4>
+                <span class="product-name"
+                  >Men's Jumbotron Mesh Utah Jazz Tank</span
+                >
+              </a>
+            </class>
+            <class class="product hawks">
+              <a href="product.html">
+                <img
+                  src="pic/hawks-jersey.jpg"
+                  alt="hawks-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Dikembe Mutombo 96-97 Road Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product pistons">
+              <a href="product.html">
+                <img
+                  src="pic/pistons-jersey.jpg"
+                  alt="pistons-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Jerry Stackhouse 98-99 Pistons Road Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product blazers">
+              <a href="product.html">
+                <img
+                  src="pic/blazers-jersey.jpg"
+                  alt="blazers-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Rasheed Wallace 99-00 Road Blazers Road Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product nets">
+              <a href="product.html">
+                <img
+                  src="pic/nets-jersey.jpg"
+                  alt="nets-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3500</h4>
+                <span class="product-name"
+                  >Men's Vince Carter 06-07 Nets Road Jersey</span
+                >
+              </a>
+            </class>
+            <class class="product jazz">
+              <a href="product.html">
+                <img
+                  src="pic/jazz-tank.jpg"
+                  alt="jazz-tank"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$1500</h4>
+                <span class="product-name"
+                  >Men's Jumbotron Mesh Utah Jazz Tank</span
+                >
+              </a>
+            </class>
+            <class class="product hawks">
+              <a href="product.html">
+                <img
+                  src="pic/hawks-jersey.jpg"
+                  alt="hawks-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Dikembe Mutombo 96-97 Road Jersey</span
+                >
+              </a>
+            </class>
+
+            <class class="product pistons">
+              <a href="product.html">
+                <img
+                  src="pic/pistons-jersey.jpg"
+                  alt="pistons-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
+                <span class="product-name"
+                  >Men's Jerry Stackhouse 98-99 Pistons Road Jersey</span
+                >
+              </a>
+            </class>
+
+            <div class="bottom pagination">
+              <a href="#"><img src="icon/page-left.png" alt="" /></a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#"><img src="icon/page-right.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+  </body>
+</html>

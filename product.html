@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header&footer.css" />
+
+    <style>
+     
+      .product {
+        display: flex;
+      }
+      
+      
+      .product .jersey-detail h3 {
+        font-size: 22px;
+        color: rgb(43, 43, 43);
+        padding: 30px 0;
+      }
+      .product .jersey-detail h2 {
+        font-size: 24px;
+        color: #e73535;
+        padding: 0 0 30px 0;
+      }
+      .product .selection {
+        background-color: rgb(238, 238, 238);
+        width: 520px;
+        height: 230px;
+        font-weight: bold;
+      }
+      .product .nash-small img{
+        width: 80px;
+        margin: 20px;
+      }
+      .product .nash-small{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      .product .nash-small1{
+        border: 2px #e7e7e7 solid;
+      }
+      .jersey-detail {
+        font-size: 16px;
+      }
+      .cart-icon img {
+        width: 28px;
+      }
+      .selection .size {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: rgb(46, 46, 46);
+      }
+      .size a{
+        color: #000;
+        text-decoration: none;
+      }
+      .size-eng {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+        font-size: 13px;
+      }
+      .size-eng a {
+        text-decoration: none;
+        color: #000;
+      }
+      .size-eng div {
+        border: 1px black solid;
+        padding: 10px;
+        margin-right: 15px;
+        width: 53px;
+        text-align: center;
+        border-radius: 5%;
+        background-color: #ffffff;
+      }
+      .selection .amount {
+        padding: 30px 0 10px 10px;
+        color: rgb(46, 46, 46);
+      }
+      .selection .number {
+        display: flex;
+        padding: 10px;
+      }
+      .selection select {
+        font-size: 15px;
+        width: 60px;
+        border-radius: 5%;
+      }
+      .selection .cart {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: #000066;
+        color: #fff;
+        width: 150px;
+        height: 35px;
+        margin-left: 30px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .selection .cart a{
+        text-decoration: none;
+        color: #fff;
+      }
+      /* ---------------------------------------------- */
+      .text{
+        position: relative;
+        width: 520px;
+        color: rgb(53, 53, 53);
+      }
+      .material img{
+        width:15px;
+      }
+      .material{
+        width: 520px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .material::before{
+        content: "";
+        width: 520px;
+        height: 1px;
+        position: absolute;
+        background-color: #e9e8e8;
+        transform: translateY(-15px);
+
+      }
+      .description img{
+        width: 15px;
+      }
+      .description{
+        width: 520px;
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .description::before{
+        content: "";
+        width: 520px;
+        height: 1px;
+        position: absolute;
+        background-color: #e9e8e8;
+        transform: translateY(-15px);
+      }
+      /* ----------------------------------------------- */
+      .like{
+        text-align: center;
+        margin: auto;
+        position: relative;
+        padding: 50px;
+        color: rgb(53, 53, 53);
+      }
+      .like::before{
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #d2d2d2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(30px);
+      }
+      .like-product{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        font-size: 17px;
+        margin: 30px;
+        /* text-align: center; */
+      }
+      .like-product img{
+        width: 300px;
+        /* border: 1px red solid; */
+      }
+      .like-product span{
+        /* padding: 5px; */
+        margin: 9px 60px 0 60px;
+        color: rgb(53, 53, 53);
+      }
+      .team {
+        display: flex;
+        flex-direction: column;
+      }
+      .sonics {
+        position: relative;
+      }
+      .almost-gone span{
+        background-color: #e73535;
+        color: #fff;
+        /* width: 100%; */
+        border-radius: 5%;
+        position: absolute;
+        bottom: 6px;
+        left: -20px;
+      }
+      .jazz-pic{
+        position: relative;
+      }
+     .arrow img{
+       width: 30px;
+       position: absolute;
+       bottom: 200px;
+       right: -10px;
+     }
+
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping"><span>FREE SHIPPING</span></div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="home.html"> 首頁 </a></li>
+      <li><a a href="team.html"> 球隊 </a></li>
+      <li class="active">Men's Phoenix Suns Steve Nash Jersey</li>
+    </ol>
+    <div class="product">
+      <div class="jersey-pic-big">
+        <div class="nash-big"><img src="pic/nash-front.jpg" alt="nash jersey" /></div>
+        <div class="nash-small">
+          <div class="nash-small1"><img src="pic/nash-small1.png" alt=""></div>
+          <img src="pic/nash-small2.png" alt="">
+        </div>
+      </div>
+      <div class="jersey-detail">
+        <h3>Men's Phoenix Suns Steve Nash Jersey</h3>
+        <h2>NT$2500</h2>
+        <div class="selection">
+          <div class="size">
+            <span>尺寸</span>
+            <span><a href="">尺寸表</a></span>
+          </div>
+          <div class="size-eng">
+            <a href="">
+              <div class="size-s"><span>S</span></div>
+            </a>
+            <a href="">
+              <div class="size-m"><span>M</span></div>
+            </a>
+            <a href="">
+              <div class="size-l"><span>L</span></div>
+            </a>
+            <a href="">
+              <div class="size-xl"><span>XL</span></div>
+            </a>
+            <a href="">
+              <div class="size-2xl"><span>2XL</span></div>
+            </a>
+          </div>
+          <div class="amount">
+            <span>數量</span>
+          </div>
+          <div class="number">
+            <select name="one-to-five" id="">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+            <div class="cart">
+              <a href="">
+                <div class="cart-icon">
+                  <img src="icon/cart.png" alt="" />
+                </div>
+                <div class="cart-add">
+                  <span>加入購物車</span>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <div class="material">
+            <h4>材質</h4>
+            <div class="icon_plus"><img src="icon/plus.png" alt=""></div>
+          </div>
+          <div class="description">
+            <h4>商品說明</h4>
+            <div class="icon_minus"><img src="icon/minus.png" alt=""></div>
+          </div>
+          <p>2020-21球季NIKE NBA獎勵版球衣。<br>
+            為獎勵有進入季後賽的16支球隊而打造。
+            精緻電繡工藝呈現NIKE Swoosh、Logo Man，質感保證。</p>
+        </div>
+      </div>
+    </div>
+    <div class="like">
+      <h2>你可能也喜歡</h2>
+    </div>
+    <div class="like-product">
+      <div class="team jazz">
+        <div class="jazz-pic"><img src="pic/jazz-tank.jpg" alt="">
+          <div class="almost-gone">
+            <span>Almost Gone</span>
+          </div>
+        </div>
+        <span>NT$1500</span>
+        <span>Men’s Jumbotron Mesh Utah Jazz Tank</span>
+      </div>
+      <div class="team suns">
+        <img src="pic/suns_t.jpg" alt="">
+        <span>NT$1300</span>
+        <span>Men’s Classics Carton Phoenix Suns T-Shirt</span>
+      </div>
+      <div class="team sonics">
+        <img src="pic/sonics_tank.jpg" alt="">
+        <span>NT$1800</span>
+        <span>Men’s Jumbotron Mesh Seattle Sonics Tank</span> 
+        <div class="arrow">
+          <img src="icon/arrow1.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+   
+  </body>
+</html>
