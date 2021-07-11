@@ -4,10 +4,372 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>2020-21賽季NBA球隊城市版球衣介紹</title>
     <link rel="stylesheet" href="header&footer.css" />
     <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon" />
+
+    <style>
+      .title-banner img {
+        width: 100%;
+        display: block;
+      }
+
+      .title {
+        position: relative;
+      }
+      .title-banner {
+        display: relative;
+        /* margin: -4px; */
+      }
+      .title-text {
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+        text-shadow: 1px 1px 10px rgb(255, 95, 46);
+        top: 40px;
+        left: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .suns {
+        width: 100%;
+        height: 800px;
+        margin-top: -4px;
+        background-attachment: fixed;
+        display: flex;
+        position: relative;
+        /* justify-content: center; */
+        align-items: center;
+        background-size: cover;
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-image: url(pic/background.png);
+      }
+      .heat {
+        width: 100%;
+        height: 800px;
+        margin-top: -4px;
+        background-attachment: fixed;
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+        background-size: 60%;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-image: url(pic/background2.png);
+        /* border: 1px solid red; */
+      }
+      .rockets {
+        width: 100%;
+        height: 800px;
+        margin-top: -4px;
+        background-attachment: fixed;
+        display: flex;
+        position: relative;
+        /* justify-content: flex-end; */
+        align-items: center;
+        background-size: 50%;
+        background-position: 100% 0;
+        background-repeat: no-repeat;
+        background-image: url(pic/background3.png);
+        /* border: 1px solid red; */
+      }
+      .hawks {
+        width: 100%;
+        height: 800px;
+        margin-top: -4px;
+        background-attachment: fixed;
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+        background-size: 45%;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-image: url(pic/test.png);
+        /* border: 1px solid red; */
+      }
+      .suns .info {
+        width: 53%;
+        font-size: 18px;
+        margin: 20px;
+      }
+      .heat .info {
+        width: 40%;
+        font-size: 18px;
+        /* margin: 20px; */
+      }
+      .rockets .info {
+        width: 50%;
+        font-size: 18px;
+        margin: 20px;
+      }
+      .hawks .info {
+        width: 48%;
+        font-size: 18px;
+        margin: 20px;
+      }
+
+      .info .jersey-name {
+        font-family: sans-serif;
+        font-size: 25px;
+        text-shadow: 1px 1px 3px rgb(105, 105, 105);
+        margin: 20px;
+      }
+
+      .suns .jersey-name {
+        color: rgb(255, 51, 0);
+      }
+      .heat .jersey-name {
+        color: rgb(255, 0, 200);
+      }
+      .rockets .jersey-name {
+        color: rgb(49, 112, 250);
+      }
+
+      .info .jersey-intro {
+        line-height: 40px;
+        margin: 20px;
+      }
+      .gallery .gallery-title img {
+        width: 15%;
+      }
+      .gallery {
+        text-align: center;
+        margin: 100px 0 30px 0;
+        line-height: 30px;
+        color: rgb(68, 68, 68);
+      }
+      .gallery .gallery-pic img {
+        width: 600px;
+      }
+      .gallery .gallery-pic {
+        display: flex;
+        justify-content: center;
+      }
+      .gallery .gallery-pic > * {
+        margin: 20px;
+      }
+      .gallery-title p {
+        font-size: 24px;
+      }
+      .buy-now img {
+        width: 280px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+      }
+      .footer {
+        height: 100px;
+      }
+      .footer .logo {
+        margin: 20px;
+      }
+      .gallery-pic .pic {
+        position: relative;
+      }
+      .gallery-pic .pic::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(icon/pic-left.png);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        top: 50%;
+        left: 0;
+        position: absolute;
+        z-index: 2;
+      }
+      .gallery-pic .pic::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url(icon/pic-right.png);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        top: 50%;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+      }
+    </style>
   </head>
-  <body></body>
+
+  <body>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
+    </div>
+    <div class="header">
+      <div class="logo">
+        <a href="home.html"><img src="icon/logo.png" alt="nba holic logo" /></a>
+      </div>
+      <div class="search">
+        <input class="search-text" type="text" placeholder="球衣" />
+      </div>
+      <div class="header-right">
+        <div class="icon">
+          <a href="##"><img src="icon/facebook.png" border="0" /></a>
+          <a href="##"><img src="icon/instagram.png" border="0" /></a>
+          <a href="##"><img src="icon/account.png" border="0" /></a>
+          <a href="##"><img src="icon/cart.png" border="0" /></a>
+        </div>
+        <div class="discount">
+          <a href="##">
+            <div class="discount-sign-up">
+              <img src="icon/email.png" border="0" />
+              <span>SIGN UP</span>
+            </div>
+            <div class="save">
+              <span>SAVE NT$100</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <a href="team.html">選擇球隊</a>
+      <a href="team.html">服飾</a>
+      <a href="team.html">配件</a>
+      <a href="blog.html">BLOG</a>
+      <a href="news.html">NEWS</a>
+      <a href="about us.html">關於我們</a>
+    </div>
+    <div class="code">
+      <a href="##">
+        <div class="free-shipping"><span>FREE SHIPPING</span></div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <ol class="breadcrumb">
+      <li><a href="home.html"> 首頁 </a></li>
+      <li><a href="blog.html"> BLOG </a></li>
+      <li class="active">2020-21賽季NBA球隊城市版球衣介紹</li>
+    </ol>
+    <div class="title">
+      <div class="title-text">
+        <h2>2020-21賽季NBA球隊</h2>
+        <h2>城市版球衣介紹</h2>
+      </div>
+      <div class="title-banner">
+        <img src="pic/ariticle-header.png" alt="" />
+      </div>
+    </div>
+
+    <iframe
+      width="1260"
+      height="744"
+      src="https://www.youtube.com/embed/9J70U5QP2QE?feature=oembed&mute=1&autoplay=1&loop=1
+        "
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <div class="background-box suns">
+      <div class="info">
+        <div class="jersey-name">
+          <h2>The Vally</h2>
+        </div>
+        <div class="jersey-intro">
+          <p>
+            太陽隊的城市版球衣令人驚豔，胸前巨大的漸層圖案中所使用的顏色元素皆為過去球隊的經典配色，而
+            "The Valley" 意旨鳳凰城都會區，同時也被稱為 "太陽谷"。
+            有著高底起伏的漸層圖騰彷彿城市高樓的剪影，上方的色彩如太陽升起或西下時渲染於整片天空，這款城市版球衣絕對是新賽季最有誠意的款式之一。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="background-box heat">
+      <div class="info">
+        <div class="jersey-name">
+          <h2>ViceVersa</h2>
+        </div>
+        <div class="jersey-intro">
+          <p>
+            經歷了三年的 "Vice" 系列，熱火隊推出了全新的 "ViceVersa"
+            球衣，保留了過往 Vice 系列的特點，以 NBA
+            歷史中罕見的雙色漸層構成主體，絢麗的霓虹色彩依舊是象徵邁阿密繁華的夜生活。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="background-box rockets">
+      <div class="info">
+        <div class="jersey-name">
+          <h2>H-Town</h2>
+        </div>
+        <div class="jersey-intro">
+          <p>
+            火箭隊選用了隊史中少見的水藍色，取自休士頓的市旗，相當的亮麗鮮明。而作為和美國太空總署
+            NASA 密不可分的火箭隊，這季的城市版球衣就以 NASA
+            太空任務作為靈感來源，胸前 “H-Town” 含意是來自 NASA
+            曾使用於任務的太空船。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="background-box hawks">
+      <div class="info">
+        <div class="jersey-name">
+          <h2>I HAVE A DREAM</h2>
+        </div>
+        <div class="jersey-intro">
+          <p>
+            美國非裔人民權運動領袖馬丁路德金恩博士 (Dr. Martin Luther King Jr.)
+            終其一生都奉獻給社會運動，老鷹隊以此球衣向其致敬。
+            黑色和金色為主的色調充分體現了金恩博士的決心和他低調的風格，
+            胸前字體 "MLK" 亦是金恩博士名字的縮寫。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="gallery-title">
+        <p>GALLERY COLLECTION</p>
+        <img src="icon/gallery-bar.png" alt="" /><br />
+        <span>NBA HOLIC販售中! </span>
+      </div>
+      <div class="gallery-pic">
+        <div class="pic left">
+          <img src="pic/gallery1.jpg" alt="" />
+        </div>
+        <div class="pic right">
+          <img src="pic/gallery2.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-link">
+        <span>使用條款 |</span>
+        <span>隱密政策 |</span>
+        <span>常見問題 |</span>
+        <span>關於我們</span>
+      </div>
+
+      <div class="copyright">
+        <span>NBA HOLIC 2021© All Rights Reserved</span>
+      </div>
+    </div>
+    <div class="buy-now">
+      <a href="team.html" target="_blank"
+        ><img src="icon/BuyNow_sticky.png" alt=""
+      /></a>
+    </div>
+  </body>
 </html>
