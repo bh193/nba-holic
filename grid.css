@@ -6,8 +6,8 @@
 .w-100 {
   width: 100%;
 }
-.container {
-  width: 1200px;
+.container-forclass {
+  width: 1230px;
   margin: auto;
   box-sizing: border-box;
   padding-left: 10px;
