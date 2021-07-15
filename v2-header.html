@@ -38,8 +38,7 @@
       .header {
         height: 90px;
         width: 100%;
-
-        background: linear-gradient(to bottom, #4d79ff, #000066);
+        background: linear-gradient(to bottom, #224ac5, #171783);
         position: relative;
       }
 
@@ -71,7 +70,7 @@
         padding-left: 10px;
       }
       /* ---------------------------------- */
-      .category {
+      /* .category {
         height: 35px;
         background-color: #1f77be;
         font-size: 19px;
@@ -80,12 +79,52 @@
         align-items: center;
         flex-wrap: nowrap;
         justify-content: space-evenly;
-      }
-      .category a {
+      } */
+      /* .category a {
         text-decoration: none;
         margin: -30px;
-        /* align-self: flex-end; */
         color: #ffffff;
+      } */
+
+      .menu {
+        background-color: #1f77be;
+        text-align: center;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: 18px;
+      }
+      .menu li {
+        position: relative;
+        display: inline-block;
+        margin: 0 40px;
+      }
+      .menu li a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 20px;
+      }
+      .menu li:hover,
+      .menu li a:hover {
+        background-color: #014f8f;
+        color: #fff;
+      }
+      .submenu {
+        background-color: #1f77be;
+        position: absolute;
+        width: 130px;
+        height: 0;
+        overflow: hidden;
+      }
+      .submenu li {
+        display: block;
+        margin: 0;
+      }
+      li:hover .submenu {
+        height: auto;
       }
       /* ---------------------------------------- */
       .code {
@@ -171,55 +210,84 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="top">
-        【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
-        防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
-      </div>
-
-      <div class="header">
-        <div class="left">
-          <div class="logo">
-            <a href="index.html"
-              ><img src="icon/logo.png" alt="nba holic logo"
-            /></a>
-          </div>
-          <div class="search">
-            <input class="search-text" type="text" placeholder="球衣" />
-          </div>
-        </div>
-        <div class="icon">
-          <a href="##"><img src="icon/facebook.png" border="0" /></a>
-          <a href="##"><img src="icon/instagram.png" border="0" /></a>
-          <a href="##"><img src="icon/account.png" border="0" /></a>
-          <a href="##"><img src="icon/cart.png" border="0" /></a>
-        </div>
-      </div>
-      <div class="category">
-        <a href="team.html">選擇球隊</a>
-        <a href="team.html">服飾</a>
-        <a href="team.html">配件</a>
-        <a href="blog.html">BLOG</a>
-        <a href="news.html">NEWS</a>
-        <a href="about us.html">關於我們</a>
-      </div>
-      <a href="">
-        <div class="code">
-          <div class="free-shipping">
-            <span>FREE SHIPPING</span>
-          </div>
-          <div class="code-num">
-            <div class="left">
-              <span>USE <br />CODE</span>
-            </div>
-            <div class="right">
-              <span>GO2021</span>
-            </div>
-          </div>
-        </div>
-      </a>
+    <div class="top">
+      【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
+      防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
     </div>
-    <div class="container">
+
+    <div class="header">
+      <div class="left">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="icon/logo.png" alt="nba holic logo"
+          /></a>
+        </div>
+        <div class="search">
+          <input class="search-text" type="text" placeholder="球衣" />
+        </div>
+      </div>
+      <div class="icon">
+        <a href="##"><img src="icon/facebook.png" border="0" /></a>
+        <a href="##"><img src="icon/instagram.png" border="0" /></a>
+        <a href="##"><img src="icon/account.png" border="0" /></a>
+        <a href="##"><img src="icon/cart.png" border="0" /></a>
+      </div>
+    </div>
+    <ul class="menu">
+      <li>
+        <a href="#">選擇球隊</a>
+        <ul class="submenu">
+          <li>
+            <a href="#">東區</a>
+          </li>
+          <li><a href="#">西區</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">服飾</a>
+        <ul class="submenu">
+          <li><a href="#">短袖上衣</a></li>
+          <li><a href="#">長袖上衣</a></li>
+          <li><a href="#">球衣</a></li>
+          <li><a href="#">褲子</a></li>
+          <li><a href="#">外套</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">配件</a>
+        <ul class="submenu">
+          <li>
+            <a href="#">籃球</a>
+            <ul class="submenu">
+              <li><a href="#">33444443</a></li>
+            </ul>
+          </li>
+          <li><a href="#">帽子</a></li>
+          <li><a href="#">運動護具</a></li>
+          <li><a href="#">玩偶公仔</a></li>
+        </ul>
+      </li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">NEWS</a></li>
+      <li><a href="#">關於我們</a></li>
+    </ul>
+    <a href="">
+      <div class="code">
+        <div class="free-shipping">
+          <span>FREE SHIPPING</span>
+        </div>
+        <div class="code-num">
+          <div class="left">
+            <span>USE <br />CODE</span>
+          </div>
+          <div class="right">
+            <span>GO2021</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!--     
       <div class="footer">
         <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
         <div class="footer-link">
@@ -237,7 +305,6 @@
         <div class="copyright">
           <span>NBA HOLIC 2021© All Rights Reserved</span>
         </div>
-      </div>
-    </div>
+     -->
   </body>
 </html>
