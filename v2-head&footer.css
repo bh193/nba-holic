@@ -18,7 +18,7 @@ body {
   background-color: #abd1f7;
   font-size: 13px;
 }
-.container a {
+body a {
   text-decoration: none;
 }
 .logo img {
@@ -44,6 +44,7 @@ body {
 }
 .left .search {
   margin: 40px;
+  position: relative;
 }
 .left .logo {
   margin: 50px;
@@ -54,6 +55,17 @@ body {
   font-size: 18px;
   border: none;
   border-radius: 4px;
+  position: relative;
+  padding: 0 4px;
+}
+.loupe {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.loupe img {
+  width: 24px;
 }
 .header .icon {
   position: absolute;
