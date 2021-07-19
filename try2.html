@@ -14,18 +14,23 @@
       .menu {
         background-color: #000;
         text-align: center;
+        position: relative;
+        font-size: 18px;
+
         height: 50px;
       }
       .menu li {
         position: relative;
         display: inline-block;
-        margin: 0 50px;
+        margin: 0 8px;
+        padding-top: 8px;
       }
       .menu li a {
         display: block;
         text-decoration: none;
         color: #fff;
         padding: 6px 20px;
+        margin: 0 15px;
       }
       .menu li:hover,
       .menu li a:hover {
@@ -37,12 +42,24 @@
         width: 130px;
         height: 0;
         overflow: hidden;
+        margin: 0 -8px;
+        width: 160px;
       }
       .submenu li {
         display: block;
+        margin: 0;
       }
       li:hover .submenu {
         height: auto;
+      }
+      .submenu .submenu {
+        display: none;
+        width: 200px;
+        background-color: green;
+        position: relative;
+      }
+      .submenu li:hover .submenu {
+        display: block;
       }
     </style>
   </head>
@@ -59,7 +76,14 @@
         <a href="#">服飾</a>
         <ul class="submenu">
           <li><a href="#">短袖上衣</a></li>
-          <li><a href="#">長袖上衣</a></li>
+          <li>
+            <a href="#">長袖上衣</a>
+            <ul class="submenu">
+              <li><a href="#">123</a></li>
+              <li><a href="#">321</a></li>
+              <li><a href="#">546</a></li>
+            </ul>
+          </li>
           <li><a href="#">球衣</a></li>
           <li><a href="#">褲子</a></li>
           <li><a href="#">外套</a></li>

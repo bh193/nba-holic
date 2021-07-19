@@ -38,7 +38,7 @@
       .header {
         height: 90px;
         width: 100%;
-        background: linear-gradient(to bottom, #4163bb,#0e328d);
+        background: linear-gradient(to bottom, #4163bb, #0e328d);
         position: relative;
       }
 
@@ -89,42 +89,72 @@
       .menu {
         background-color: #1f77be;
         text-align: center;
+        position: relative;
         height: 39px;
-        display: flex;
+        font-size: 18px;
+
+        /*display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: nowrap;
-        font-size: 18px;
+        flex-wrap: nowrap;*/
       }
       .menu li {
-        position: relative;
         display: inline-block;
-        margin: 0 40px;
+        width: 160px;
+
+        /* margin: 0 40px; */
       }
       .menu li a {
         display: block;
         text-decoration: none;
         color: #fff;
-        padding: 8px 20px;
+        padding: 6px 20px;
       }
-      .menu li:hover,
-      .menu li a:hover {
+
+      .menu li:hover {
         background-color: #014f8f;
         color: #fff;
       }
+      /* li:hover .submenu {
+        width: 120px;
+      } */
       .submenu {
         background-color: #1f77be;
         position: absolute;
-        width: 130px;
-        height: 0;
-        overflow: hidden;
+        width: 120px;
+        /* height: 0; */
+        /* overflow: hidden; */
+        width: 100%;
+        left: 0;
+
+        transition: 0.2s;
+        transform: perspective(100px) rotateX(90deg);
+        transform-origin: center top;
+        opacity: 0;
       }
       .submenu li {
-        display: block;
+        display: inline-block;
+        padding: 0 20px;
+        width: 200px;
         margin: 0;
+        position: relative;
+        /* 變直向?不懂 */
+      }
+      .submenu .submenu {
+        display: block;
       }
       li:hover .submenu {
         height: auto;
+        transform: perspective(100px) rotateX(0deg);
+        opacity: 1;
+      }
+
+      .submenu .submenu {
+        display: none;
+      }
+
+      .submenu li:hover .submenu {
+        display: block;
       }
       /* ---------------------------------------- */
       .code {
@@ -239,8 +269,26 @@
         <ul class="submenu">
           <li>
             <a href="#">東區</a>
+            <ul class="submenu">
+              <li><a href="#">Atlanta Hawks</a></li>
+              <li><a href="#">Boston Celtics</a></li>
+              <li><a href="#">Brooklyn Nets</a></li>
+              <li><a href="#">Milwaukee Bucks</a></li>
+              <li><a href="#">Orlando Magic</a></li>
+              <li><a href="#">Toronto Raptors </a></li>
+            </ul>
           </li>
-          <li><a href="#">西區</a></li>
+          <li>
+            <a href="#">西區</a>
+            <ul class="submenu">
+              <li><a href="#">Denver Nuggets </a></li>
+              <li><a href="#">Dallas Mavericks</a></li>
+              <li><a href="#">Houston Rockets</a></li>
+              <li><a href="#">Memphis Grizzlies </a></li>
+              <li><a href="#">Phoenix Suns</a></li>
+              <li><a href="#">Sacramento Kings</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li>
@@ -256,8 +304,7 @@
       <li>
         <a href="#">配件</a>
         <ul class="submenu">
-          <li><a href="#">籃球</a>
-          </li>
+          <li><a href="#">籃球</a></li>
           <li><a href="#">帽子</a></li>
           <li><a href="#">運動護具</a></li>
           <li><a href="#">玩偶公仔</a></li>
@@ -283,8 +330,7 @@
       </div>
     </a>
 
-        
-      <div class="footer">
+    <!-- <div class="footer">
         <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
         <div class="footer-link">
           <span>使用條款 |</span>
@@ -301,6 +347,6 @@
         <div class="copyright">
           <span>NBA HOLIC 2021© All Rights Reserved</span>
         </div>
-    
+     -->
   </body>
 </html>

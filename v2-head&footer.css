@@ -76,21 +76,45 @@ body a {
   padding-left: 10px;
 }
 /* ---------------------------------- */
-.category {
-  height: 35px;
+.menu {
   background-color: #1f77be;
-  font-size: 19px;
+  text-align: center;
   display: flex;
-  padding: 3px;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  font-size: 18px;
+  z-index: 2;
 }
-.category a {
+.menu li {
+  position: relative;
+  display: inline-block;
+  margin: 0 40px;
+}
+.menu li a {
+  display: block;
   text-decoration: none;
-  margin: -30px;
-  /* align-self: flex-end; */
-  color: #ffffff;
+  color: #fff;
+  padding: 8px 20px;
+}
+.menu li:hover,
+.menu li a:hover {
+  background-color: #014f8f;
+  color: #fff;
+}
+.submenu {
+  background-color: #1f77be;
+  position: absolute;
+  width: 130px;
+  height: 0;
+  overflow: hidden;
+}
+.submenu li {
+  display: block;
+  margin: 0;
+}
+li:hover .submenu {
+  height: auto;
 }
 /* ---------------------------------------- */
 .code {
