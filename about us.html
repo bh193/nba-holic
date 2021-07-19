@@ -79,9 +79,7 @@
       }
 
       /* ------------------------------------- */
-      .map img {
-        width: 700px;
-      }
+     
       .map {
         display: flex;
         align-content: center;
@@ -115,11 +113,7 @@
         padding-right: 10px;
         /* border: 1px red solid; */
       }
-      .map {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      
       /* ----------------------------------- */
       @media (max-width: 576px){
         .header, .top, .menu, .code, .breadcrumb, .footer{
@@ -159,16 +153,23 @@
           display: inline-block;
         }
         .holic .item{
-          width: 200px;
+          width: 250px;
           height: 130px;
           font-size: 18px;
           margin: 25px;
           border: 0;
-          border-bottom: 1px #d2d2d2 solid;
+          /* border-bottom: 1px #d2d2d2 solid; */
         }
         .holic h2{
           font-size: 37px;
           padding: 10px 0;
+        }
+        
+        .map{
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          width: 400px;
         }
         
         .info .data{
