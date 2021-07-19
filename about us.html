@@ -122,12 +122,14 @@
       }
       /* ----------------------------------- */
       @media (max-width: 576px){
-        .header, .top, .menu, .code, .footer{
+        .header, .top, .menu, .code, .breadcrumb, .footer{
           display: none;
         }
-       
+        
+        
         .court img{
           width:400px;
+          
         }
         .court {
           display: flex;
@@ -143,6 +145,32 @@
           width: 350px;
           margin: 20px 50px;
           text-align: center;
+        }
+        .holic{
+          margin: 40px 0;
+        }
+        .holic .item{
+          width: 23%;
+          height: 200px;
+        }
+        .info .data{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         margin: 20px;
+
+        }
+        
+        .data p{
+          text-align: center;
+          width: 400px;
+        }
+        .data h4{
+          width: 400px;
+
+          text-align: center;
+
         }
       }
     </style>
