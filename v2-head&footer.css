@@ -84,7 +84,8 @@ body a {
   align-items: center;
   flex-wrap: nowrap;
   font-size: 18px;
-  z-index: 2;
+  position: relative;
+  z-index: 1;
 }
 .menu li {
   position: relative;
