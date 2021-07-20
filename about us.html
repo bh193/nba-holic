@@ -113,12 +113,25 @@
         padding-right: 10px;
         /* border: 1px red solid; */
       }
-      
-      /* ----------------------------------- */
-      @media (max-width: 576px){
+      @media (max-width: 960px){
         .header, .top, .menu, .code, .breadcrumb, .footer{
           display: none;
         }
+        .court img{
+          width:95%;
+        }
+        .holic .item {
+          width: 45%;
+          height: auto;
+          font-size: 18px;
+          border: 0;
+          padding-bottom: 50px;
+          border-bottom: 1px #d2d2d2 solid;
+        }
+      }
+      /* ----------------------------------- */
+      @media (max-width: 576px){
+    
         
         .container{
           display: flex;
@@ -128,8 +141,7 @@
         }
         
         .court img{
-          width:400px;
-          
+          width: 350px;
         }
         .court {
           display: flex;

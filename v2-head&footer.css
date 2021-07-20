@@ -107,8 +107,7 @@ body a {
   background-color: #1f77be;
   position: absolute;
   width: 130px;
-  height: 0;
-  overflow: hidden;
+  display: none;
 }
 .submenu li {
   display: block;
@@ -116,6 +115,20 @@ body a {
 }
 li:hover .submenu {
   height: auto;
+}
+.submenu .submenu {
+  display: none;
+  width: 200px;
+  background-color: green;
+  position: relative;
+}
+.submenu li .submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+li:hover >.submenu {
+  display: block;
 }
 /* ---------------------------------------- */
 .code {
@@ -225,4 +238,19 @@ li:hover .submenu {
   bottom: 0;
   left: 42%;
   padding-bottom: 5px;
+}
+
+
+/* --------------------------------------------- */
+
+@media (max-width: 960px){
+  .header, .top, .menu, .code, .breadcrumb, .footer{
+    display: none;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
 }

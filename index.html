@@ -25,13 +25,7 @@
         width: 100%;
       }
 
-      .circle {
-        position: absolute;
-        transform: translate(599px, -25px);
-      }
-      .circle img {
-        width: 15%;
-      }
+     
 
       /* ------------------------------------------------- */
       .middle-line {
@@ -45,7 +39,7 @@
       .middle-line::before {
         content: "";
         width: 42%;
-        /* flex: 1; */
+        flex: 1;
         height: 1px;
         background-color: #d2d2d2;
         display: block;
@@ -54,34 +48,74 @@
       .middle-line::after {
         content: "";
         width: 42%;
-        /* flex: 1; */
+        flex: 1;
         height: 1px;
         background-color: #d2d2d2;
         /* display: block; */
         transform: translateY(20px);
       }
+      .middle-line h2{
+        margin: 0 10px;
+      }
       .nba-map img {
         width: 100%;
       }
       /* ----------------------------------------------------------- */
-      .player img {
-        width: 300px;
-        border-radius: 4%;
-      }
-      .player {
+      .card-container img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
+      .card-container {
+        height: 400px;
+        position: relative;
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: space-between;
       }
-      .star {
-        box-sizing: border-box;
-        width: 380px;
-        /* margin: 10x; */
-        /* padding: 10px; */
-        text-align: center;
-        font-size: 20px;
+      .card-container .player {
+        position: relative;
       }
+      .cover,
+      .back {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 0.5s ease-in-out;
+      }
+      .back {
+        position: absolute;
+        top: 0;
+      }
+      .cover {
+        transform: rotateY(0deg);
+      }
+      .card-container .player:hover .cover {
+        transform: rotateY(180deg);
+      }
+
+      .back {
+        transform: rotateY(-180deg);
+      }
+      .card-container .player:hover .back {
+        transform: rotateY(0deg);
+      }
+
+      .player .text {
+        width: 100%;
+        height: 90px;
+        font-size: 16px;
+        /* text-align: center; */
+        box-shadow: 0 0 5px rgb(211, 211, 211);
+        border-radius: 0 0 10px 10px;
+      }
+      .text h3 {
+        padding: 10px;
+        line-height: 25px;
+        /* border: 1px solid red; */
+        margin: 0;
+      }
+
       /* -------------------------------------------------------------- */
       .banner-jersey img {
         width: 100%;
@@ -97,11 +131,11 @@
         width: 1200px;
         display: flex;
         flex-wrap: wrap;
-        margin: 30px;
+        margin: 60px;
       }
       .best-seller .product{
         width: 238px;
-        margin: 30px;
+        margin: 20px;
         position: relative;
         box-shadow:0 0 5px  rgb(211, 211, 211);
         
@@ -161,12 +195,59 @@
         width: 580px;
         border-radius: 1%;
       }
+      @media (max-width: 576px){
+        .card-container .player {
+          width: 90%;
+          margin-bottom: 20px;
+          position: relative;
+        }
+        .card-container {
+          justify-content: center;
+          flex-wrap: wrap;
+          height: auto;
+        }
+        .cover, .back {
+          height: auto;
+        }
+       
+        .best-seller {
+          max-width: 1200px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          margin: 2% 5%;
+        }
+        .best-seller .product {
+          width: 19%;
+          /* margin: 2.5%; */
+        }
+        .best-seller img{
+          width: 100%;
+        }
+        .sale{
+          width: 30px;
+        }
+        .story img {
+          max-width: 580px;
+          width: 100%;
+          border-radius: 1%;
+        }
+        .story-pic {
+          width: 100%;
+        }
+        .story {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .story-main {
+          width: auto;
+        }
+      }
+
     </style>
   </head>
   <body>
-   
-    
-      
+  
         <div class="top">
           【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
           防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
@@ -198,6 +279,14 @@
               <ul class="submenu">
                 <li>
                   <a href="#">東區</a>
+                  <ul class="submenu">
+                    <li><a href="#">Atlanta Hawks</a></li>
+                    <li><a href="#">Boston Celtics</a></li>
+                    <li><a href="#">Brooklyn Nets</a></li>
+                    <li><a href="#">Milwaukee Bucks</a></li>
+                    <li><a href="#">Orlando Magic</a></li>
+                    <li><a href="#">Toronto Raptors </a></li>
+                  </ul>
                 </li>
                 <li><a href="#">西區</a></li>
               </ul>
@@ -315,33 +404,50 @@
         <div class="banner">
           <a href="##"><img src="pic/girl.jpg" border="0" /></a>
         </div>
-        <div class="circle">
-          <img src="icon/gray_circle.png" alt="" />
-          <img src="icon/gray_circle.png" alt="" />
-          <img src="icon/red_circle.png" alt="" />
-          <img src="icon/gray_circle.png" alt="" />
-        </div>
+        
         <div class="container">
         <div class="middle-line"><h2>選擇球隊</h2></div>
         <a href="##"
           ><div class="nba-map"><img src="pic/map.png" alt="NBA map" /></div
         ></a>
         <div class="middle-line"><h2>精選球星</h2></div>
-        <div class="player">
-          <div class="star">
-            <a href="##"><img src="pic/star1.jpeg" border="0" /></a>
-            <h3>Steve Nash</h3>
-            <span>Dallas Mavericks</span>
+        <div class="card-container">
+          <div class="player">
+            <div class="cover">
+              <img src="pic/mavs1.jpg" alt="" />
+            </div>
+            <div class="back">
+              <img src="pic/mavs2.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+              <p>$3580</p>
+            </div>
           </div>
-          <div class="star">
-            <a href="##"><img src="pic/star2.jpg" border="0" /></a>
-            <h3>Shawn Marion</h3>
-            <span>Miami Heat</span>
+          <div class="player">
+            <div class="cover">
+              <img src="pic/jordan1.jpg" alt="" />
+            </div>
+            <div class="back">
+              <img src="pic/jordan2.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+              <p>$3580</p>
+            </div>
           </div>
-          <div class="star">
-            <a href="##"><img src="pic/test.png" border="0" /></a>
-            <h3>Amare Stoudemire</h3>
-            <span>Phoenix Suns</span>
+          <div class="player">
+            <div class="cover">
+              <img src="pic/payton1.jpg" alt="" />
+            </div>
+            <div class="back">
+              <img src="pic/payton2.jpg" alt="" />
+            </div>
+            <div class="text">
+              <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+              <p>$3580</p>
+            </div>
+            </div>
           </div>
         </div>
         <div class="banner-jersey">

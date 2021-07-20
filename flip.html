@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
+      .card-container {
+        width: 300px;
+        height: 400px;
+        position: relative;
+        perspective: 1000px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .card-container .player {
+        margin: 0 350px 0 20px;
+      }
+      .cover,
+      .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 0.5s ease-in-out;
+      }
+      .cover {
+        transform: rotateY(0deg);
+      }
+      .card-container .player:hover .cover {
+        transform: rotateY(180deg);
+      }
+
+      .back {
+        transform: rotateY(-180deg);
+      }
+      .card-container .player:hover .back {
+        transform: rotateY(0deg);
+      }
+
+      .player .text {
+        position: absolute;
+        bottom: -90px;
+        width: 100%;
+        height: 90px;
+        font-size: 16px;
+        /* text-align: center; */
+        box-shadow: 0 0 5px rgb(211, 211, 211);
+        border-radius: 0 0 10px 10px;
+      }
+      .text h3 {
+        padding: 10px;
+        line-height: 25px;
+        /* border: 1px solid red; */
+        margin: 0;
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="player">
+        <div class="cover">
+          <img src="pic/mavs1.jpg" alt="" />
+        </div>
+        <div class="back">
+          <img src="pic/mavs2.jpg" alt="" />
+        </div>
+        <div class="text">
+          <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+          <p>$3580</p>
+        </div>
+      </div>
+      <div class="player">
+        <div class="cover">
+          <img src="pic/jordan1.jpg" alt="" />
+        </div>
+        <div class="back">
+          <img src="pic/jordan2.jpg" alt="" />
+        </div>
+        <div class="text">
+          <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+          <p>$3580</p>
+        </div>
+      </div>
+      <div class="player">
+        <div class="cover">
+          <img src="pic/payton1.jpg" alt="" />
+        </div>
+        <div class="back">
+          <img src="pic/payton2.jpg" alt="" />
+        </div>
+        <div class="text">
+          <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+          <p>$3580</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
