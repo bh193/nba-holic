@@ -12,95 +12,111 @@
         list-style: none;
       }
       .menu {
-        background-color: #000;
-        text-align: center;
-        position: relative;
-        font-size: 18px;
-
-        height: 50px;
-      }
-      .menu li {
-        position: relative;
-        display: inline-block;
-        margin: 0 8px;
-        padding-top: 8px;
-      }
-      .menu li a {
-        display: block;
-        text-decoration: none;
-        color: #fff;
-        padding: 6px 20px;
-        margin: 0 15px;
-      }
-      .menu li:hover,
-      .menu li a:hover {
-        background-color: #fa0;
-      }
-      .submenu {
-        background-color: #000;
-        position: absolute;
-        width: 130px;
-        height: 0;
-        overflow: hidden;
-        margin: 0 -8px;
-        width: 160px;
-      }
-      .submenu li {
-        display: block;
-        margin: 0;
-      }
-      li:hover .submenu {
-        height: auto;
-      }
-      .submenu .submenu {
-        display: none;
-        width: 200px;
-        background-color: green;
-        position: relative;
-      }
-      .submenu li:hover .submenu {
-        display: block;
-      }
+  background-color: #1f77be;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+}
+.menu li {
+  position: relative;
+  display: inline-block;
+  margin: 0 40px;
+}
+.menu li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 20px;
+}
+.menu li:hover,
+.menu li a:hover {
+  background-color: #014f8f;
+  color: #fff;
+}
+.submenu {
+  background-color: #1f77be;
+  position: absolute;
+  width: 130px;
+  display: none;
+}
+.submenu li {
+  display: block;
+  margin: 0;
+}
+li:hover .submenu {
+  height: auto;
+}
+.submenu .submenu {
+  display: none;
+  width: 200px;
+  background-color: #1f77be;
+  position: relative;
+}
+.submenu li .submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+li:hover >.submenu {     
+  display: block;
+}
     </style>
   </head>
   <body>
     <ul class="menu">
       <li>
-        <a href="#">選擇球隊</a>
+        <a href="http://127.0.0.1:5500/nba-holic/team.html#">選擇球隊</a>
         <ul class="submenu">
-          <li><a href="#">東區</a></li>
-          <li><a href="#">西區</a></li>
+          <li>
+            <a href="#">東區</a>
+            <ul class="submenu">
+              <li><a href="#">Atlanta Hawks</a></li>
+              <li><a href="#">Boston Celtics</a></li>
+              <li><a href="#">Brooklyn Nets</a></li>
+              <li><a href="#">Milwaukee Bucks</a></li>
+              <li><a href="#">Orlando Magic</a></li>
+              <li><a href="#">Toronto Raptors </a></li>
+            </ul>
+          </li>
+          <li><a href="#">西區</a>
+            <ul class="submenu">
+              <li><a href="#">Denver Nuggets </a></li>
+              <li><a href="#">Dallas Mavericks</a></li>
+              <li><a href="#">Houston Rockets</a></li>
+              <li><a href="#">Memphis Grizzlies </a></li>
+              <li><a href="#">Phoenix Suns</a></li>
+              <li><a href="#">Sacramento Kings</a></li>
+            </ul></li>
         </ul>
       </li>
       <li>
-        <a href="#">服飾</a>
+        <a href="https://bh193.github.io/nbaholic/team.html#">服飾</a>
         <ul class="submenu">
           <li><a href="#">短袖上衣</a></li>
-          <li>
-            <a href="#">長袖上衣</a>
-            <ul class="submenu">
-              <li><a href="#">123</a></li>
-              <li><a href="#">321</a></li>
-              <li><a href="#">546</a></li>
-            </ul>
-          </li>
+          <li><a href="#">長袖上衣</a></li>
           <li><a href="#">球衣</a></li>
           <li><a href="#">褲子</a></li>
           <li><a href="#">外套</a></li>
         </ul>
       </li>
       <li>
-        <a href="#">配件</a>
+        <a href="https://bh193.github.io/nbaholic/team.html#">配件</a>
         <ul class="submenu">
-          <li><a href="#">籃球</a></li>
+          <li><a href="#">籃球</a>
+          </li>
           <li><a href="#">帽子</a></li>
           <li><a href="#">運動護具</a></li>
           <li><a href="#">玩偶公仔</a></li>
         </ul>
       </li>
-      <li><a href="#">BLOG</a></li>
-      <li><a href="#">NEWS</a></li>
-      <li><a href="#">關於我們</a></li>
+      <li><a href="https://bh193.github.io/nbaholic/blog.html#">BLOG</a></li>
+      <li><a href="https://bh193.github.io/nbaholic/news.html#">NEWS</a></li>
+      <li><a href="https://bh193.github.io/nbaholic/about%20us.html">關於我們</a></li>
     </ul>
   </body>
 </html>
