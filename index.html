@@ -69,11 +69,13 @@
       }
       .card-container {
         height: 400px;
+        margin: 5% 0 11% 0;
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
       }
       .card-container .player {
+        width: 25%;
         position: relative;
       }
       .cover,
@@ -110,10 +112,14 @@
         border-radius: 0 0 10px 10px;
       }
       .text h3 {
-        padding: 10px;
+        padding: 7px;
         line-height: 25px;
         /* border: 1px solid red; */
         margin: 0;
+      }
+      .text P{
+        padding: 0 8px;
+        color: #e73535;
       }
 
       /* -------------------------------------------------------------- */
@@ -195,11 +201,14 @@
         width: 580px;
         border-radius: 1%;
       }
+/* ---------------------------------------------------------- */
+
       @media (max-width: 576px){
         .card-container .player {
-          width: 90%;
+          width: 70%;
           margin-bottom: 20px;
           position: relative;
+          margin: 0 0 8% 0;
         }
         .card-container {
           justify-content: center;
@@ -209,16 +218,21 @@
         .cover, .back {
           height: auto;
         }
+        .cover{
+          display: none;
+        }
        
         .best-seller {
-          max-width: 1200px;
+          max-width: 100%;
           display: flex;
           flex-wrap: wrap;
-          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          /* flex-direction: column; */
           margin: 2% 5%;
         }
         .best-seller .product {
-          width: 19%;
+          width: 35%;
           /* margin: 2.5%; */
         }
         .best-seller img{
@@ -241,6 +255,14 @@
         }
         .story-main {
           width: auto;
+        }
+        .middle-line{
+          margin:10%
+        }
+        .product .sale{
+          transform: scale(55%);
+          top: 0;
+          left: 0;
         }
       }
 
@@ -288,7 +310,15 @@
                     <li><a href="#">Toronto Raptors </a></li>
                   </ul>
                 </li>
-                <li><a href="#">西區</a></li>
+                <li><a href="#">西區</a>
+                  <ul class="submenu">
+                    <li><a href="#">Denver Nuggets </a></li>
+                    <li><a href="#">Dallas Mavericks</a></li>
+                    <li><a href="#">Houston Rockets</a></li>
+                    <li><a href="#">Memphis Grizzlies </a></li>
+                    <li><a href="#">Phoenix Suns</a></li>
+                    <li><a href="#">Sacramento Kings</a></li>
+                  </ul></li>
               </ul>
             </li>
             <li>
@@ -405,7 +435,7 @@
           <a href="##"><img src="pic/girl.jpg" border="0" /></a>
         </div>
         
-        <div class="container">
+      <div class="container">
         <div class="middle-line"><h2>選擇球隊</h2></div>
         <a href="##"
           ><div class="nba-map"><img src="pic/map.png" alt="NBA map" /></div
@@ -421,7 +451,7 @@
             </div>
             <div class="text">
               <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
-              <p>$3580</p>
+              <p>$3550</p>
             </div>
           </div>
           <div class="player">
@@ -432,8 +462,8 @@
               <img src="pic/jordan2.jpg" alt="" />
             </div>
             <div class="text">
-              <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
-              <p>$3580</p>
+              <h3>Men's Chicago Bulls Michael Jordan Jersey</h3>
+              <p>$4750</p>
             </div>
           </div>
           <div class="player">
@@ -444,12 +474,12 @@
               <img src="pic/payton2.jpg" alt="" />
             </div>
             <div class="text">
-              <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
-              <p>$3580</p>
+              <h3>Men's Seattle SuperSonics Gary Payton Jersey</h3>
+              <p>$3050</p>
             </div>
             </div>
           </div>
-        </div>
+        
         <div class="banner-jersey">
           <a href="##"><img src="pic/jersey_sale.jpg" alt="NBA jersey" /></a>
         </div>
@@ -492,7 +522,7 @@
             <a href="##"><img src="pic/suns_t.jpg" border="0" /></a>
           </div> 
         </div>
-        <div class="middle-line"><h2>NBA HOLIC</h2></div>
+          <div class="middle-line"><h2>NBA HOLIC</h2></div>
            
           <div class="story">
             <div class="story-pic"><img src="pic/man.jpg" alt="" /></div>
@@ -512,8 +542,8 @@
             </div>
           </div>
            
-        </div>
-  
+      </div>
+    </div>
     
       <div class="footer">
         <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
