@@ -31,7 +31,7 @@
         height: 230px;
         font-weight: bold;
       }
-      .product .nash-small img{
+      /* .product .nash-small img{
         width: 80px;
         margin: 20px;
       }
@@ -43,7 +43,24 @@
       }
       .product .nash-small1{
         border: 2px #eeeeee solid;
+      } */
+/* 
+      .large-pic img{
+        widows: 100px;
+      } */
+      .small-pic {
+        width: 100px;
+        border: 1px solid #fff;
+        opacity: 0.5;
       }
+      .small-pic:hover {
+        border: 1px solid red;
+        opacity: 1;
+      }
+      .choose-pic {
+        margin: 10px 200px;
+      }
+
       .jersey-detail {
         font-size: 16px;
       }
@@ -318,13 +335,22 @@
     </div>
     <div class="container">
     <div class="product">
-      <div class="jersey-pic-big">
+      <div class="box">
+        <div class="large-pic">
+          <img id="large-pic" src="pic/small1.jpg" style="width: 600px"/>
+        </div>
+        <div class="choose-pic">
+          <img src="pic/small1.jpg" class="small-pic" />
+          <img src="pic/small2.jpg" class="small-pic" />
+        </div>
+      </div>
+      <!-- <div class="jersey-pic-big">
         <div class="nash-big"><img src="pic/nash-front.jpg" alt="nash jersey" /></div>
         <div class="nash-small">
           <div class="nash-small1"><img src="pic/nash-small1.png" alt=""></div>
           <img src="pic/nash-small2.png" alt="">
         </div>
-      </div>
+      </div> -->
       <div class="jersey-detail">
         <h3>Men's Phoenix Suns Steve Nash Jersey</h3>
         <h2>NT$2500</h2>
@@ -436,6 +462,20 @@
         </div>
       </div>
     
-   
+   <!-- ---------------------------------------------- -->
+   <!-- 商品圖 -->
+   <script>
+    function showLarge(e) {
+      document.getElementById("large-pic").src = e.target.src;
+    }
+
+    function init() {
+      let imgs = document.getElementsByClassName("small-pic");
+      for (let i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = showLarge;
+      }
+    }
+    window.addEventListener("load", init, false);
+  </script>
   </body>
 </html>

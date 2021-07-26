@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Keywords" content="關鍵詞一，關鍵詞二" />
+    <meta name="Description" content="網站描述內容" />
+    <meta name="Author" content="劉豔" />
+    <title></title>
+    <style>
+      .box {
+        /* width: 800px; */
+        margin: 30px auto;
+        position: relative;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"] ~ img {
+        width: 300px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        /* transform: scale(1.1); */
+        transition: 1s;
+      }
+      input:checked + label + img {
+        opacity: 1;
+        /* transform: scale(1); */
+      }
+      input:checked + label img {
+        border: 2px solid #e2e2e2;
+        opacity: 1;
+        /* transition: all 1s; */
+      }
+      .pic {
+        display: inline-block;
+        width: 100px;
+        margin: 5px 8px;
+      }
+      .pic img {
+        opacity: 0.5;
+        width: 100px;
+        margin-top: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <input type="radio" name="carousel" id="pic-1" checked />
+      <label for="pic-1" class="pic">
+        <img src="pic/nash-small1.png" />
+      </label>
+      <img src="pic/nash-small1.png" />
+
+      <input type="radio" name="carousel" id="pic-2" />
+      <label for="pic-2" class="pic">
+        <img src="pic/nash-small2.png" />
+      </label>
+      <img src="pic/nash-small2.png" />
+    </div>
+  </body>
+</html>

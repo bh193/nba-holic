@@ -134,30 +134,166 @@
         line-height: 40px;
         margin: 20px;
       }
-      .gallery .gallery-title img {
-        width: 15%;
+      .collection .collection-title img {
+        width: 70%;
       }
-      .gallery {
+      .collection {
         text-align: center;
         margin: 100px 0 30px 0;
         line-height: 30px;
         color: #2e2e2e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
-      .gallery .gallery-pic img {
+      /* .collection .collection-pic img {
         width: 600px;
       }
-      .gallery .gallery-pic {
+      .collection .collection-pic {
         display: flex;
         justify-content: center;
       }
-      .gallery .gallery-pic > * {
+      .collection .collection-pic > * {
         margin: 20px;
-      }
-      .gallery-title p {
+      } */
+      .collection-title p {
         font-size: 24px;
       }
-      .gallery-title span {
+      .collection-title span {
         font-size: 18px;
+      }
+
+      /* ---------相簿圖-------------- */
+
+      .pic img {
+        width: 700px;
+      }
+      .gallery {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        margin: 50px;
+        list-style: none;
+        overflow: hidden;
+      }
+
+      .pic {
+        /* width: 100%; */
+        /* height: 100%; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.6s transform ease-in-out;
+      }
+
+      /* 三張圖的位置 */
+      .pic:nth-of-type(1) {
+        left: 0;
+      }
+
+      .pic:nth-of-type(2) {
+        left: 100%;
+      }
+
+      .pic:nth-of-type(3) {
+        left: 200%;
+      }
+
+      /* 原始的radio */
+      input[type="radio"] {
+        position: relative;
+        z-index: 100;
+        display: none;
+      }
+
+      /* 下方的原點們 */
+      .controller {
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        text-align: center;
+      }
+
+      /* 讓label對應到radio */
+      .controller label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(182, 182, 182);
+        border-radius: 50%;
+        margin: 0 3px;
+        border: 2px solid #fff;
+      }
+
+      /* 判斷radio被選到的時候 波浪找到他同一層裡的 .controller label:nth-of-type(1) */
+      .gallery
+        input[type="radio"]:nth-of-type(1):checked
+        ~ .controller
+        label:nth-of-type(1) {
+        background-color: #e73535;
+      }
+
+      .gallery
+        input[type="radio"]:nth-of-type(2):checked
+        ~ .controller
+        label:nth-of-type(2) {
+        background-color: #e73535;
+      }
+
+      .gallery
+        input[type="radio"]:nth-of-type(3):checked
+        ~ .controller
+        label:nth-of-type(3) {
+        background-color: #e73535;
+      }
+
+      /* 當radio被選中時 圖片換位置 */
+      .gallery input[type="radio"]:nth-of-type(1):checked ~ .pic {
+        transform: translatex(0%);
+      }
+
+      .gallery input[type="radio"]:nth-of-type(2):checked ~ .pic {
+        transform: translatex(-100%);
+      }
+
+      .gallery input[type="radio"]:nth-of-type(3):checked ~ .pic {
+        transform: translatex(-200%);
+      }
+
+      /* 左右button Classes Below */
+      .navigator img {
+        width: 20px;
+      }
+      .navigator {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 100%;
+        z-index: 100;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        display: none;
+      }
+
+      .gallery
+        input[type="radio"]:nth-of-type(1):checked
+        ~ .navigator:nth-of-type(1) {
+        display: flex;
+      }
+
+      .gallery
+        input[type="radio"]:nth-of-type(2):checked
+        ~ .navigator:nth-of-type(2) {
+        display: flex;
+      }
+
+      .gallery
+        input[type="radio"]:nth-of-type(3):checked
+        ~ .navigator:nth-of-type(3) {
+        display: flex;
       }
       .buy-now img {
         width: 280px;
@@ -171,10 +307,10 @@
       .footer .logo {
         margin: 20px;
       }
-      .gallery-pic .pic {
+      /* .collection-pic .pic {
         position: relative;
       }
-      .gallery-pic .pic::before {
+      .collection-pic .pic::before {
         content: "";
         width: 20px;
         height: 20px;
@@ -184,9 +320,8 @@
         top: 50%;
         left: 0;
         position: absolute;
-        /* z-index: 2; */
       }
-      .gallery-pic .pic::after {
+      .collection-pic .pic::after {
         content: "";
         width: 20px;
         height: 20px;
@@ -196,8 +331,7 @@
         top: 50%;
         right: 0;
         position: absolute;
-        /* z-index: 2; */
-      }
+      } */
     </style>
   </head>
 
@@ -243,7 +377,8 @@
               <li><a href="#">Toronto Raptors </a></li>
             </ul>
           </li>
-          <li><a href="#">西區</a>
+          <li>
+            <a href="#">西區</a>
             <ul class="submenu">
               <li><a href="#">Denver Nuggets </a></li>
               <li><a href="#">Dallas Mavericks</a></li>
@@ -251,7 +386,8 @@
               <li><a href="#">Memphis Grizzlies </a></li>
               <li><a href="#">Phoenix Suns</a></li>
               <li><a href="#">Sacramento Kings</a></li>
-            </ul></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li>
@@ -267,8 +403,7 @@
       <li>
         <a href="https://bh193.github.io/nbaholic/team.html#">配件</a>
         <ul class="submenu">
-          <li><a href="#">籃球</a>
-          </li>
+          <li><a href="#">籃球</a></li>
           <li><a href="#">帽子</a></li>
           <li><a href="#">運動護具</a></li>
           <li><a href="#">玩偶公仔</a></li>
@@ -276,7 +411,9 @@
       </li>
       <li><a href="https://bh193.github.io/nbaholic/blog.html#">BLOG</a></li>
       <li><a href="https://bh193.github.io/nbaholic/news.html#">NEWS</a></li>
-      <li><a href="https://bh193.github.io/nbaholic/about%20us.html">關於我們</a></li>
+      <li>
+        <a href="https://bh193.github.io/nbaholic/about%20us.html">關於我們</a>
+      </li>
     </ul>
     <a href="">
       <div class="code">
@@ -380,20 +517,64 @@
           </div>
         </div>
       </div>
-      <div class="gallery">
-        <div class="gallery-title">
+      <div class="collection">
+        <div class="collection-title">
           <p>GALLERY COLLECTION</p>
           <img src="icon/gallery-bar.png" alt="" /><br />
           <span>NBA HOLIC販售中! </span>
         </div>
-        <div class="gallery-pic">
+        <!-- <div class="gallery-pic">
           <div class="pic one">
             <img src="pic/gallery1.jpg" alt="" />
           </div>
           <div class="pic two">
             <img src="pic/gallery2.jpg" alt="" />
           </div>
-        </div>
+        </div> -->
+        <ul class="gallery">
+          <input type="radio" id="control-1" name="control" checked />
+          <input type="radio" id="control-2" name="control" />
+          <input type="radio" id="control-3" name="control" />
+
+          <!--  左右button  -->
+          <div class="navigator slide-1">
+            <label for="control-3"
+              ><img src="icon/pic-left.png" alt=""
+            /></label>
+            <label for="control-2"
+              ><img src="icon/pic-right.png" alt=""
+            /></label>
+          </div>
+
+          <div class="navigator slide-2">
+            <label for="control-1"
+              ><img src="icon/pic-left.png" alt=""
+            /></label>
+            <label for="control-3">
+              <img src="icon/pic-right.png" alt="" />
+            </label>
+          </div>
+
+          <div class="navigator slide-3">
+            <label for="control-2">
+              <img src="icon/pic-left.png" alt="" />
+            </label>
+            <label for="control-1">
+              <img src="icon/pic-right.png" alt="" />
+            </label>
+          </div>
+          <!--  /左右button  -->
+
+          <li class="pic"><img src="pic/gallery1.jpg" alt="" /></li>
+          <li class="pic"><img src="pic/gallery2.jpg" alt="" /></li>
+          <li class="pic"><img src="pic/gallery3.jpg" alt="" /></li>
+
+          <div class="controller">
+            <label for="control-1"></label>
+            <label for="control-2"></label>
+            <label for="control-3"></label>
+          </div>
+        </ul>
       </div>
     </div>
 
