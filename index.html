@@ -32,7 +32,7 @@
         font-size: 16px;
         color: #2e2e2e;
         text-align: center;
-        margin: 70px 0 50px 0;
+        margin: 70px 40px 50px 40px;
         display: flex;
         justify-content: space-evenly;
       }
@@ -102,13 +102,16 @@
       .card-container .player:hover .back {
         transform: rotateY(0deg);
       }
-
+      
+      .player a{
+        color: black;
+      }
       .player .text {
         width: 100%;
         height: 90px;
         font-size: 16px;
         /* text-align: center; */
-        box-shadow: 0 0 5px rgb(211, 211, 211);
+        /* box-shadow: 0 0 5px rgb(211, 211, 211); */
         border-radius: 0 0 10px 10px;
       }
       .text h3 {
@@ -125,10 +128,10 @@
       /* -------------------------------------------------------------- */
       .banner-jersey img {
         width: 100%;
+        margin: 20px 0;
       }
       .banner-jersey {
         text-align: center;
-        margin: 50px 0;
       }
       .best-seller img{
         width: 235px;
@@ -143,20 +146,24 @@
         width: 238px;
         margin: 20px;
         position: relative;
-        box-shadow:0 0 5px  rgb(211, 211, 211);   
-        display: flex;  
-        flex-direction: column; 
       }
       .best-seller .product:hover{
-        box-shadow:0 0 2px 1px rgb(250, 60, 60);
+        box-shadow:0 0 0 1px rgb(250, 60, 60);
+        /* border: 1px solid red; */
         transform: translateY(-3px);
+      }
+
+      .best-seller .product a{
+        display: flex;  
+        flex-direction: column; 
+        align-items: center;
 
       }
       .best-seller .product span{
         font-size: 18px;
-        text-align: center;
-        padding:  38%;
+        /* text-align: center; */
         color: #014f8f;
+        padding: 10px 0;
       }
       .sale{
         width: 30px;
@@ -208,9 +215,16 @@
         width: 580px;
         border-radius: 1%;
       }
-/* ---------------------------------------------------------- */
-
-      @media (max-width: 576px){
+/* ----------------------------------------------------------    */
+      @media (max-width: 960px){
+        .middle-line{
+          margin:10% 10% 5% 10%;
+        }
+        .middle-line::before{
+          content: "";
+          height: 1px;
+          width: 500px;
+        }
         .card-container .player {
           width: 70%;
           margin-bottom: 20px;
@@ -236,6 +250,11 @@
         .player img{
           width: 100%;
         }
+        .player .text{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         .best-seller {
           max-width: 100%;
           display: flex;
@@ -254,8 +273,77 @@
         }
         .sale{
           width: 30px;
+          transform: scale(70%);
+          top: 0;
+          left: 0;
         }
         .story img {
+          max-width: 580px;
+          width: 100%;
+          border-radius: 1%;
+          
+        }
+        .story-pic {
+          width: 100%;
+          text-align: center;
+        }
+        .story {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .story-main {
+          width: auto;
+        }
+      }
+
+
+/* ---------------------------------------------------------- */
+
+      @media (max-width: 576px){
+        /* .card-container .player {
+          width: 70%;
+          margin-bottom: 20px;
+          position: relative;
+          margin: 0 0 8% 0;
+        }
+        .card-container {
+          justify-content: center;
+          flex-wrap: wrap;
+          height: auto;
+          margin: 0;
+        }
+        .cover, .back {
+          height: auto;
+          transform: none;
+        }
+        .cover{
+          display: none;
+        }
+        .back{
+         position: relative;
+        }
+        .player img{
+          width: 100%;
+        } */
+        
+        /* .best-seller {
+          max-width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          margin: 2% 5%;
+        }
+        .best-seller .product {
+          width: 35%;
+        }
+        .best-seller img{
+          width: 100%;
+        }
+        .sale{
+          width: 30px;
+        } */
+        /* .story img {
           max-width: 580px;
           width: 100%;
           border-radius: 1%;
@@ -269,15 +357,23 @@
         }
         .story-main {
           width: auto;
-        }
-        .middle-line{
-          margin:10%
-        }
-        .product .sale{
+        } */
+        /* .middle-line{
+          margin:10% 100% 5% 100%;
+        } */
+        /* .product .sale{
           transform: scale(55%);
           top: 0;
           left: 0;
-        }
+        } */
+        /* .middle-line{
+          margin: 40px 0 10px 0;
+        } */
+        /* .middle-line::before{
+          content: "";
+          height: 1px;
+          width: 400px;
+        } */
       }
 
     </style>
@@ -457,41 +553,47 @@
         <div class="middle-line"><h2>精選球星</h2></div>
         <div class="card-container">
           <div class="player">
-            <div class="cover">
-              <img src="pic/mavs1.jpg" alt="" />
-            </div>
-            <div class="back">
-              <img src="pic/mavs2.jpg" alt="" />
-            </div>
-            <div class="text">
-              <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
-              <p>$3550</p>
-            </div>
+            <a href="">
+              <div class="cover">
+                <img src="pic/mavs1.jpg" alt="" />
+              </div>
+              <div class="back">
+                <img src="pic/mavs2.jpg" alt="" />
+              </div>
+              <div class="text">
+                <h3>Men's Dallas Mavericks Steve Nash Jersey</h3>
+                <p>$3550</p>
+              </div>
+            </a>
           </div>
           <div class="player">
-            <div class="cover">
-              <img src="pic/jordan1.jpg" alt="" />
-            </div>
-            <div class="back">
-              <img src="pic/jordan2.jpg" alt="" />
-            </div>
-            <div class="text">
-              <h3>Men's Chicago Bulls Michael Jordan Jersey</h3>
-              <p>$4750</p>
-            </div>
+            <a href="">
+              <div class="cover">
+                <img src="pic/jordan1.jpg" alt="" />
+              </div>
+              <div class="back">
+                <img src="pic/jordan2.jpg" alt="" />
+              </div>
+              <div class="text">
+                <h3>Men's Chicago Bulls Michael Jordan Jersey</h3>
+                <p>$4750</p>
+              </div>
+            </a>
           </div>
           <div class="player">
-            <div class="cover">
-              <img src="pic/payton1.jpg" alt="" />
-            </div>
-            <div class="back">
-              <img src="pic/payton2.jpg" alt="" />
-            </div>
-            <div class="text">
-              <h3>Men's Seattle SuperSonics Gary Payton Jersey</h3>
-              <p>$3050</p>
-            </div>
-            </div>
+            <a href="">
+              <div class="cover">
+                <img src="pic/payton1.jpg" alt="" />
+              </div>
+              <div class="back">
+                <img src="pic/payton2.jpg" alt="" />
+              </div>
+              <div class="text">
+                <h3>Men's Seattle SuperSonics Gary Payton Jersey</h3>
+                <p>$3050</p>
+              </div>
+              </div>
+            </a>
           </div>
         
         <div class="banner-jersey">
