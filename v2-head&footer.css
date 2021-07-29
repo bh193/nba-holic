@@ -100,8 +100,8 @@ body a {
   display: block;
   text-decoration: none;
   color: #fff;
-  padding: 8px 0;
-  width: 75px;
+  padding: 8px 24px;
+  /* width: 75px; */
   /* 增加width為配合rwd */
 }
 .menu li:hover,
@@ -119,6 +119,7 @@ body a {
   display: block;
   margin: 0;
 }
+
 li:hover .submenu {
   height: auto;
 }
@@ -258,6 +259,10 @@ li:hover >.submenu {
   .header-rwd{
     display: none;
   }
+  .menu li a{
+    padding: 8px 6px;
+  }
+  /* 分類的寬度 */
 }
 @media (max-width: 960px){
 
