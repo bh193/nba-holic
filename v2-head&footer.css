@@ -266,7 +266,7 @@ li:hover >.submenu {
 }
 @media (max-width: 960px){
 
-  .header,.top, .menu, .code, .breadcrumb{
+  .header,.top, .menu, .code{
     display: none;
   }
 
