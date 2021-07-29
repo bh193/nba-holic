@@ -328,7 +328,7 @@ li:hover >.submenu {
   .icon{
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    margin: 10px 0 0 50px;
     position: relative;
   }
 
@@ -346,8 +346,8 @@ li:hover >.submenu {
   }
   .search {
    position: absolute;
-   top: 30%;
-   right: 20%;
+   top: 9px;
+   right: 65px;
   }
   
   .cart img{
@@ -355,8 +355,8 @@ li:hover >.submenu {
   }
   .cart{
     position: absolute;
-    top: 23%;
-    right: 5%;
+    top: 5px;
+    right: 15px;
   }
   
   .footer .footer-link{
