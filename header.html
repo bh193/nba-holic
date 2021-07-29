@@ -11,51 +11,130 @@
       margin: 0;
       list-style: none;
     }
-    .header{
-      height: 100px;
+  @media (min-width:961px){  
+    .header-rwd{
+      display: none;
+    }
+  }
+  @media (max-width: 960px){
+    .container {
+      max-width: 1280px;
+      width: 100%;
+      margin: auto;
+    }
+    .header-rwd{
+      height: 60px;
       background: linear-gradient(to bottom, #4163bb, #0e328d);
       position: relative;
     }
     .burger{
       position: absolute;
-      top: 5px;
-      left: 10px;
+      top: 15px;
+      left: 11px;
     }
     .burger img{
-      width: 50px;
+      width: 30px;
     }
 
     #menu {
       position: fixed;
       left: 0px;
-      top: 54px;
+      top: 60px;
       width: 250px;
       height: 100%;
-      background-color: #5696ca;
+      background-color: #e0ebf5;
       transition: left 1s;
+      text-align: center;
     }
     #menu.hidden {
       left: -250px;
       transition: left 1s;
     }
+
+    .header-rwd a{
+      text-decoration: none;
+      color: #000;
+      font-size: 22px;
+    }
+
+    .select{
+      margin: 30px 0;
+    }
+    
+    /* ------------------------------------- */
+    
+    .icon{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin-left: 50px;
+      position: relative;
+    }
+
+    .logo img{
+      width: 75px;
+    }
+    .logo{
+      position: absolute;
+      top: 13%;
+      left: 29%;
+      
+    }
+    .search img{
+      width: 25px;
+    }
+    .search {
+     position: absolute;
+     top: 30%;
+     right: 20%;
+    }
+    
+    .cart img{
+      width: 30px;
+    }
+    .cart{
+      position: absolute;
+      top: 23%;
+      right: 5%;
+    }
+      .header-rwd{
+        width: 100%;
+      }
+  }
+  @media (min-width:961px){  
+    .header-rwd{
+      display: none;
+    }
+  }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="burger">
-      <img id="btnBurger" src="menu.png" width="28" />
-      <div id="menu" class="hidden">
-        <div><a href="">首頁</a></div>
-        <div><a href="">選擇球隊</a></div>
-        <div><a href="">服飾</a></div>
-        <div><a href="">配件</a></div>
-        <div><a href="">BLOG</a></div>
-        <div><a href="">NEWS</a></div>
-        <div><a href="">關於我們</a></div>
+  <!-- -------header-RWD-------- -->
+  <div class="container">
+    <div class="header-rwd">
+      <div class="burger">
+        <img id="btnBurger" src="menu.png" width="28" />
+        <div id="menu" class="hidden">
+          <div class="select"><a href="">首頁</a></div>
+          <div class="select"><a href="">選擇球隊</a></div>
+          <div class="select"><a href="">服飾</a></div>
+          <div class="select"><a href="">配件</a></div>
+          <div class="select"><a href="">BLOG</a></div>
+          <div class="select"><a href="">NEWS</a></div>
+          <div class="select"><a href="">關於我們</a></div>
+        </div>
       </div>
+        <div class="icon">
+          <div class="logo"><img src="icon/logo.png" alt=""></div>
+          <div class="search"><img src="icon/loupe-white.png" alt=""></div>
+          <div class="cart"><img src="icon/cart.png" alt=""></div>
+        </div>
     </div>
   </div>
+  <!-- -------header-RWD-------- -->
 
+
+  <!-- ---------漢堡JS------------- -->
   <script type="text/javascript">
     window.addEventListener("load", function(){
       document.getElementById("btnBurger").onclick = function(){
@@ -68,5 +147,6 @@
       };
     });
   </script>
+  <!-- ---------漢堡JS------------- -->
 </body>
 </html>
