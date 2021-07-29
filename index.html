@@ -500,24 +500,10 @@
   <!-- -------header-RWD-------- -->
 
 
-  <!-- ---------漢堡JS------------- -->
-  <script type="text/javascript">
-    window.addEventListener("load", function(){
-      document.getElementById("btnBurger").onclick = function(){
-        let menu = document.getElementById("menu");
-        if (menu.className == "hidden"){
-          menu.className = "";
-        }else{
-          menu.className = "hidden";
-        }
-      };
-    });
-  </script>
-  <!-- ---------漢堡JS------------- -->
-
-
-
   
+
+
+
       <!-- -------------------------------------- -->
       <!-- <div
         id="carouselExampleIndicators"
@@ -764,5 +750,20 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- ---------漢堡JS------------- -->
+  <script type="text/javascript">
+    window.addEventListener("load", function(){
+      document.getElementById("btnBurger").onclick = function(){
+        let menu = document.getElementById("menu");
+        if (menu.className == "hidden"){
+          menu.className = "";
+        }else{
+          menu.className = "hidden";
+        }
+      };
+    });
+  </script>
+  <!-- ---------漢堡JS------------- -->
+
   </body>
 </html>

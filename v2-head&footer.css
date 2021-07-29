@@ -286,7 +286,9 @@ li:hover >.submenu {
   .header-rwd{
     height: 60px;
     background: linear-gradient(to bottom, #4163bb, #0e328d);
-    position: relative;
+    position: fixed;
+    z-index: 123;
+
   }
   .burger{
     position: absolute;
