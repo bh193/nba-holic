@@ -259,9 +259,9 @@ li:hover >.submenu {
   .header-rwd{
     display: none;
   }
-  /* .menu li a{
-    padding: 8px 6px;
-  } */
+  .menu li a{
+    padding: 8px 24px;
+  }
   /* 分類的寬度 */
 }
 @media (max-width: 960px){
