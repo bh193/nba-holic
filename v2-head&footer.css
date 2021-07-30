@@ -188,7 +188,7 @@ li:hover >.submenu {
 .breadcrumb {
   display: flex;
   font-size: 17px;
-  padding: 20px;
+  padding: 4%;
   position: relative;
 }
 .breadcrumb a {
@@ -283,15 +283,7 @@ li:hover >.submenu {
     align-items: center;
     padding-top: 65px;
   }
-  .container-rwd-header{
-    max-width: 1280px;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
-  }
+  
   /* -------漢堡------- */
   .header-rwd{
     height: 60px;
@@ -361,7 +353,7 @@ li:hover >.submenu {
   
   .breadcrumb{
     align-self: flex-start;
-    width: 100%;
+    width: 90%;
   }
 
 
