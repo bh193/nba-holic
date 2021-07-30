@@ -78,6 +78,7 @@ body a {
 }
 .icon a {
   padding-left: 10px;
+  
 }
 /* ---------------------------------- */
 .menu {
@@ -283,6 +284,11 @@ li:hover >.submenu {
     align-items: center;
     padding-top: 60px;
   }
+
+  .icon a{
+    margin-right: 50px; 
+    padding-right: 10px;
+  }
   
   /* -------漢堡------- */
   .header-rwd{
@@ -317,11 +323,9 @@ li:hover >.submenu {
   }
 
   .header-rwd a{
-    text-decoration: none;
     color: #000;
     font-size: 22px;
-    margin-right: 50px;
-    padding-right: 10px;
+    
   }
 
   .select{
@@ -359,7 +363,7 @@ li:hover >.submenu {
   }
 
 
- 
+ /* ----------footer------------ */
   .icon{
     display: flex;
     justify-content: center;

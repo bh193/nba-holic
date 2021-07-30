@@ -25,7 +25,8 @@
     .header-rwd{
       height: 60px;
       background: linear-gradient(to bottom, #4163bb, #0e328d);
-      position: relative;
+      position: fixed;
+      z-index: 123;
     }
     .burger{
       position: absolute;
@@ -42,7 +43,7 @@
       top: 60px;
       width: 250px;
       height: 100%;
-      background-color: #e0ebf5;
+      background-color: #cce0f3;
       transition: left 1s;
       text-align: center;
     }
@@ -58,8 +59,27 @@
     }
 
     .select{
-      margin: 30px 0;
-    }
+    padding: 5px 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    
+  }
+    .select:hover{
+    background-color: #1f77be;
+    color: #fff;
+  }
+
+    .login{
+    height: 50px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0ecfa;
+  }
     
     /* ------------------------------------- */
     
@@ -101,11 +121,7 @@
         width: 100%;
       }
   }
-  @media (min-width:961px){  
-    .header-rwd{
-      display: none;
-    }
-  }
+ 
   </style>
 </head>
 <body>
@@ -115,13 +131,14 @@
       <div class="burger">
         <img id="btnBurger" src="menu.png" width="28" />
         <div id="menu" class="hidden">
-          <div class="select"><a href="">首頁</a></div>
-          <div class="select"><a href="">選擇球隊</a></div>
-          <div class="select"><a href="">服飾</a></div>
-          <div class="select"><a href="">配件</a></div>
-          <div class="select"><a href="">BLOG</a></div>
-          <div class="select"><a href="">NEWS</a></div>
-          <div class="select"><a href="">關於我們</a></div>
+          <a href=""><div class="select">首頁</div></a>
+          <a href=""><div class="select">選擇球隊</div></a>
+          <a href=""><div class="select">服飾</div></a>
+          <a href=""><div class="select">配件</div></a>
+          <a href=""><div class="select">BLOG</div></a>
+          <a href=""><div class="select">NEWS</div></a>
+          <a href=""><div class="select">關於我們</div></a>
+          <a href=""><div class="login">會員登入</div></a>
         </div>
       </div>
         <div class="icon">
