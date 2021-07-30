@@ -283,6 +283,15 @@ li:hover >.submenu {
     align-items: center;
     padding-top: 65px;
   }
+  .container-rwd-header{
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
   /* -------漢堡------- */
   .header-rwd{
     height: 60px;
