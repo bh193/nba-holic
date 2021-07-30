@@ -101,8 +101,6 @@ body a {
   text-decoration: none;
   color: #fff;
   padding: 8px 24px;
-  /* width: 75px; */
-  /* 增加width為配合rwd */
 }
 .menu li:hover,
 .menu li a:hover {
@@ -206,9 +204,10 @@ li:hover >.submenu {
   height: 1px;
   background-color: rgb(230, 230, 230);
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
-  transform: translateY(50px);
+  bottom: 30%;
+  /* transform: translateY(50px); */
 }
 /* --------------------------------------- */
 .footer {
@@ -281,7 +280,7 @@ li:hover >.submenu {
     flex-direction: column;
     justify-self: center;
     align-items: center;
-    padding-top: 65px;
+    padding-top: 60px;
   }
   
   /* -------漢堡------- */
