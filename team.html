@@ -61,11 +61,12 @@
         /* border: 1px solid red; */
       }
 
-      .slected {
+      .selected {
         display: flex;
         margin: 20px;
         /* border: 1px solid red; */
         justify-content: space-between;
+        align-items: center;
       }
 
       .pagination {
@@ -82,7 +83,7 @@
         width: 8px;
       }
 
-      .slected .sort {
+      .selected .sort {
         width: 120px;
         margin: 0 15px;
         height: 35px;
@@ -92,7 +93,7 @@
         border-radius: 3%;
         background-color: #fff;
       }
-      .slected .sort img {
+      .selected .sort img {
         width: 14px;
       }
       .product img {
@@ -118,7 +119,6 @@
       .product-price,
       .product-name {
         padding-left: 40px;
-        width: 300px;
         display: inline-block;
         /* border: 1px solid; */
       }
@@ -155,9 +155,16 @@
 
 
       /* -------------------------------- */
-
-      @media (max-width: 960px){
-
+      
+      @media (max-width: 992px){
+        .row{
+          /* justify-content: center; */
+          width: 100%;
+          margin: 0;
+        }
+        .nets{
+          width: 100%;
+        }
         .navigation{
           display: none;
         }
@@ -166,11 +173,12 @@
           margin: 0;
           width: 100%;
         }
-        .slected{
+        .selected{
           width: 100%;
         }
         .all-products{
           flex-wrap: wrap;
+          /* text-align: center; */
         }
         .product-price, .product-name {
           width: 100%;
@@ -179,7 +187,19 @@
         .product img {
           width: 100%;
         }
+       
       }
+      @media (max-width: 767px){
+        .product-price, .product-name {
+           text-align: center;
+        }
+      }
+      @media (max-width: 576px){
+        .selected .sort{
+          display: none;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -274,6 +294,33 @@
         </div>
       </div>
     </a>
+
+
+    <!-- -------header-RWD-------- -->
+  
+    <div class="header-rwd">
+      <div class="burger">
+        <img id="btnBurger" src="menu.png" width="28" />
+        <div id="menu" class="hidden">
+         <a href="https://bh193.github.io/nbaholic/index.html"><div class="select">首頁</div></a>
+         <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">選擇球隊</div></a>
+         <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">服飾</div></a>
+         <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">配件</div></a>
+         <a href="https://bh193.github.io/nbaholic/blog.html"><div class="select">BLOG</div></a>
+         <a href="https://bh193.github.io/nbaholic/news.html"><div class="select">NEWS</div></a>
+         <a href="https://bh193.github.io/nbaholic/about%20us.htm"><div class="select">關於我們</div></a>
+         <a href=""><div class="login">會員登入</div></a>
+        </div>
+      </div>
+        <div class="icon">
+          <a class="logo" href="https://bh193.github.io/nbaholic/index.html" >
+            <img src="icon/logo.png" alt="">
+          </a>
+          <div class="search"><img src="icon/loupe-white.png" alt=""></div>
+          <div class="cart"><img src="icon/cart.png" alt=""></div>
+        </div>
+    </div>
+    <!-- -------header-RWD-------- -->
 
     <div class="container">
       <ol class="breadcrumb">
@@ -482,12 +529,12 @@
           </div>
         </div>
 
-        <div class="col-10 col-md-12 nets">
+        <div class="col-10 nets">
           <div class="col-12 nets-banner">
             <img src="pic/nets-banner.jpg" alt="nets-banner" class="w-100" />
           </div>
-          <div class="col-12 slected">
-            <div class="slected-left">
+          <div class="col-12 selected">
+            <div class="selected-left">
               <span>1 - 12 of 450</span>
               <button class="sort">
                 <span>價格低到高</span>
@@ -504,19 +551,17 @@
               <a href="#"><img src="icon/page-right.png" alt="" /></a>
             </div>
           </div>
-          <div class="row row-cols-3 all-products">
-            <class class="product nets">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 all-products">
+            <class class="product hawks">
               <a href="product.html">
-                <div class="rel">
-                  <img
-                    src="pic/nets-jersey.jpg"
-                    alt="nets-jersey"
-                    class="product-pic"
-                  />
-                </div>
-                <h4 class="product-price">NT$3500</h4>
+                <img
+                  src="pic/hawks-jersey.jpg"
+                  alt="hawks-jersey"
+                  class="product-pic"
+                />
+                <h4 class="product-price">NT$3300</h4>
                 <span class="product-name"
-                  >Men's Vince Carter 06-07 Nets Road Jersey</span
+                  >Men's Dikembe Mutombo 96-97 Road Jersey</span
                 >
               </a>
             </class>
@@ -612,16 +657,16 @@
                 >
               </a>
             </class>
-            <class class="product nets">
+            <class class="product pistons">
               <a href="product.html">
                 <img
-                  src="pic/nets-jersey.jpg"
-                  alt="nets-jersey"
+                  src="pic/pistons-jersey.jpg"
+                  alt="pistons-jersey"
                   class="product-pic"
                 />
-                <h4 class="product-price">NT$3500</h4>
+                <h4 class="product-price">NT$3300</h4>
                 <span class="product-name"
-                  >Men's Vince Carter 06-07 Nets Road Jersey</span
+                  >Men's Jerry Stackhouse 98-99 Pistons Road Jersey</span
                 >
               </a>
             </class>
@@ -698,5 +743,21 @@
         <span>NBA HOLIC 2021© All Rights Reserved</span>
       </div>
     </div>
+
+    <!-- ---------漢堡JS------------- -->
+  <script type="text/javascript">
+    window.addEventListener("load", function(){
+      document.getElementById("btnBurger").onclick = function(){
+        let menu = document.getElementById("menu");
+        if (menu.className == "hidden"){
+          menu.className = "";
+        }else{
+          menu.className = "hidden";
+        }
+      };
+    });
+  </script>
+  <!-- ---------漢堡JS------------- -->
+
   </body>
 </html>
