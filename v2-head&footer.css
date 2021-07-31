@@ -377,12 +377,18 @@ li:hover >.submenu {
 
 
  /* ----------footer------------ */
-  .footer .logo{
+  /* .footer .logo{
     display: none;
-  }
+  } */
   .footer{
     justify-content: space-around;
   }
+}
+@media (max-width: 650px){
+  .footer .logo{
+    display: none;
+  }
+
 }
 @media (max-width: 576px){
   .footer{
