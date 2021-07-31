@@ -214,42 +214,36 @@ li:hover >.submenu {
 /* --------------------------------------- */
 .footer {
   height: 80px;
+  width: 100%;
   background: linear-gradient(to bottom, #4163bb, #0e328d);
-  position: relative;
   display: flex;
   flex-wrap: nowrap;
-}
-.footer .logo img {
-  width: 100px;
-}
-.footer .logo {
-  position: absolute;
-  margin: 10px 10px 10px 60px;
-  /* border: 1px red solid; */
-  width: 130px;
-  left: 0px;
-  top: 0px;
-}
-.footer .footer-link {
-  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
   font-size: 15px;
-  color: #ffffff;
-  align-self: center;
-  left: 40%;
+
 }
-.footer .icon {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+.footer .logo{
+  margin-left: 40px;
 }
-.footer .copyright {
-  font-size: 12px;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  left: 42%;
-  padding-bottom: 5px;
+.footer-icon img {
+  width: 30px;
+  padding: 0 3px;
 }
+.footer-icon{
+  margin-right: 40px;
+}
+
+.footer-middle{
+  line-height: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 0 12px;
+}
+
 
 
 /* --------------------------------------------- */
@@ -284,10 +278,29 @@ li:hover >.submenu {
     align-items: center;
     padding-top: 60px;
   }
-
-  .icon a{
+  .header-rwd .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 50px;
+    position: relative;
+  }
+  .header-rwd .icon a{
     margin-right: 50px; 
     padding-right: 10px;
+  }
+  .header-rwd .logo img {
+    width: 75px;
+  }
+  .header-rwd .search {
+    position: absolute;
+    top: 9px;
+    right: 65px;
+  }
+  .header-rwd .cart{
+    position: absolute;
+    top: 5px;
+    right: 15px;
   }
   
   /* -------漢堡------- */
@@ -353,7 +366,7 @@ li:hover >.submenu {
     align-items: center;
     background-color: #e0ecfa;
   }
-
+  
   
   /* ------------------------------------- */
   
@@ -364,44 +377,24 @@ li:hover >.submenu {
 
 
  /* ----------footer------------ */
-  .icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 0 50px;
-    position: relative;
-  }
-
-  .logo img{
-    width: 75px;
-  }
- 
-  .search img{
-    width: 25px;
-  }
-  .search {
-   position: absolute;
-   top: 9px;
-   right: 65px;
-  }
-  
-  .cart img{
-    width: 30px;
-  }
-  .cart{
-    position: absolute;
-    top: 5px;
-    right: 15px;
-  }
-  
-  .footer .footer-link{
-    display: flex;
-    flex-wrap: wrap;
-    width: 55%;
-    left: 2%;
-  }
   .footer .logo{
     display: none;
+  }
+  .footer{
+    justify-content: space-around;
+  }
+}
+@media (max-width: 576px){
+  .footer{
+    flex-direction: column-reverse;
+
+  }
+  .footer-icon{
+    margin: 0;
+  }
+  .footer-middle {
+    line-height:22px;
+    height: 100%;
   }
 }
 
