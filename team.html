@@ -145,8 +145,10 @@
         color: #fff;
         width: 110px;
         text-align: center;
-        transform: translate(50px, 270px);
+        /* transform: translate(50px, 270px); */
         position: absolute;
+        bottom: 120px;
+        left: 30px;
       }
       .bottom {
         width: 100%;
@@ -194,11 +196,19 @@
            /* text-align: center; */
            padding-left: 100px;
         }
+        .all-products .pistons::before{
+          left: 85px;
+        }  
       }
       @media (max-width: 576px){
         .selected .sort{
           display: none;
         }
+        .all-products .pistons::before{
+          left: 55px;
+        }  
+
+        
       }
 
     </style>
