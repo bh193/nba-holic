@@ -234,28 +234,43 @@
     
     #menu_sort{
       width: 100%;
-      height: 40%;
+      height: 50%;
       display: flex;
       flex-direction: column;
-      border: 1px solid #000;
+      /* border: 1px solid #000; */
       position: absolute;
       bottom: 0;
-      background-color: antiquewhite;
+      background-color: #f1f1f1;
       transition: bottom 1s;
       position: fixed;
       z-index: 123;
+      box-sizing: border-box;
+      padding: 17px;
 
     }
     #menu_sort .sort{
       margin: 10px 0;
       border-bottom: 1px solid #dedede;
+      padding: 5px 0;
     }
 
     #menu_sort.hidden-sort {
-      bottom: -40%;
+      bottom: -50%;
       transition: bottom 1s;
     }
-
+    
+    #menu_sort h3{
+      padding-bottom: 10px;
+    }
+    #menu_sort::before{
+      content: "";
+      width: 22px;
+      height: 2px;
+      background-color: rgba(79, 80, 80, 0.445);
+      position: absolute;
+      left: 50%;
+      top: 6px;
+    }
     /* ----------sort by------------- */
         
        
@@ -626,11 +641,11 @@
 
             
             <div id="menu_sort" class="hidden-sort">
-              <h2>Sort</h2>
-              <div class="sort newly"><input type="radio" name="newly" id=""><span>按新品</span></div>
-              <div class="sort best-seller"><input type="radio" name="best-seller" id=""><span>按熱銷</span></div>
-              <div class="sort lowest"><input type="radio" name="lowest" id=""><span>按價格(低到高)</span></div>
-              <div class="sort highest"><input type="radio" name="highest" id=""><span>按價格(高到低)</span></div>
+              <h3>Sort</h3>
+              <div class="sort newly"><input type="radio" name="sort" id="newly" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="newly" >按新品</label></div>
+              <div class="sort best"><input type="radio" name="sort" id="best" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="best">按熱銷</label></div>
+              <div class="sort lowest"><input type="radio" name="sort" id="lowest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="lowest">按價格(低到高)</label></div>
+              <div class="sort highest"><input type="radio" name="sort" id="highest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="highest">按價格(高到低)</label></div>
             </div>
           </div>
 
