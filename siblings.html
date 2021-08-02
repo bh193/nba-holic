@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery-3.6.0.js"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    img{
+      width: 20px;
+    }
+    .team{
+      width: 300px;
+      background-color: rgb(110, 211, 211);
+      margin: auto;
+    }
+    .slected{
+      cursor: pointer;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .slected img{
+      width: 16px;
+      height: 100%;
+    }
+    .slected:hover{
+      background-color: blanchedalmond;
+    }
+    p{
+      display: none;
+    }
+    #minus{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <ul class="choose team">
+    <li>
+      <div class="east slected">
+        <h3>東區隊伍</h3> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
+      </div>
+      <p>Atlanta Hawks</p>
+      <p>Boston Celtics</p>
+      <p>Brooklyn Nets</p>
+      <p>Milwaukee Bucks</p>
+      <p>Orlando Magic</p>
+      <p>Phoenix Suns</p>
+    </li>
+  </ul>
+  <ul class="choose team">
+    <li>
+      <div class="west slected">
+        <h3>西區隊伍</h3> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
+      </div>
+      <p>Atlanta Hawks</p>
+      <p>Boston Celtics</p>
+      <p>Brooklyn Nets</p>
+      <p>Milwaukee Bucks</p>
+      <p>Orlando Magic</p>
+      <p>Phoenix Suns</p>
+    </li>
+  </ul>
+
+  <script>
+    $(".east").click(function(){
+      var text = $(this).siblings("p")
+        if( text.css("display") == "none"){
+          text.slideDown();
+        }else{
+          text.slideUp();
+        }
+      
+      var icon = $(".east #plus")
+        if( icon.css("display") == "none"){
+          icon.show();
+        }else{
+          icon.hide();
+        }
+      
+      var icon = $(".east #minus")
+        if( icon.css("display") == "none"){
+          icon.show();
+        }else{
+          icon.hide();
+        }
+    });
+
+
+
+    $(".west").click(function(){
+      var text = $(this).siblings("p")
+        if( text.css("display") == "none"){
+          text.slideDown();
+        }else{
+          text.slideUp();
+        }
+      
+      var icon = $(".west #plus")
+        if( icon.css("display") == "none"){
+          icon.show();
+        }else{
+          icon.hide();
+        }
+      
+      var icon = $(".west #minus")
+        if( icon.css("display") == "none"){
+          icon.show();
+        }else{
+          icon.hide();
+        }
+    });
+    
+    
+
+
+
+  </script>
+</body>
+</html>

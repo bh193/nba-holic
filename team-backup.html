@@ -8,45 +8,14 @@
     <link rel="stylesheet" href="v2-head&footer.css" />
     <link rel="stylesheet" href="grid.css" />
 
-    <script src="js/jquery-3.6.0.js"></script>
-    
     <link rel="icon" href="icon/favicon.ico" />
     <link rel="shortcut icon" href="icon/favicon.ico" />
 
     <style>
 
-    .team img{
-      width: 13px;
-      height: 13px;
-    }
-    
-    .title{
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    
-    .team .option{
-      display: none;
-    }
+     
+   
 
-    input[type="checkbox"] {
-    margin: 0 8px 0 8px;
-    }
-
-    #minus{
-      display: none;
-    }
-
-    .group{
-    display: flex;
-    flex-direction: column;
-    }
-    .team p{
-    font-size: 15px;
-    padding: 0 5px 0 10px;
-    font-weight: bold;
-    }
       .icon-size {
         width: 10px;
         height: 10px;
@@ -57,14 +26,20 @@
         font-size: 16px;
         margin: 10px;
       }
-      
+      .choose img {
+        align-self: center;
+      }
+      .team .east,
+      .team .west {
+        padding-left: 18px;
+      }
       .navigation {
         color: #2e2e2e;
       }
       .navigation .option {
         font-size: 14px;
-        margin: 8px;
-        padding: 2px;
+        padding-left: 38px;
+        margin: 10px;
         position: relative;
       }
       .navigation .check {
@@ -475,40 +450,67 @@
           <div class="all team">
             <div class="choose team">
               <h4>選擇球隊</h4>
+              <img src="icon/up-chevron.png" class="icon-size" alt="" />
             </div>
-            <ul class="choose team">
-              <div class="group">
-                <div class="east title">
-                  <p>東區球隊</p> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
-                </div>
-                <label class="option"><input type="checkbox" />Atlanta Hawks</label>
-                <label class="option"><input type="checkbox" />Atlanta Hawks</label>
-                <label class="option"><input type="checkbox" />Boston Celtics</label>
-                <label class="option"><input type="checkbox" />Brooklyn Nets</label>
-                <label class="option"><input type="checkbox" />Milwaukee Bucks</label>
-                <label class="option"><input type="checkbox" />Orlando Magic</label>
-                <label class="option"><input type="checkbox" />Phoenix Suns</label>
-              </div>  
-            </ul>
-            
-            <ul class="choose team">
-              <div class="group">
-                <div class="west title">
-                  <p>西區球隊</p> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
-                </div>
-                <label class="option"><input type="checkbox" />Atlanta Hawks</label>
-                <label class="option"><input type="checkbox" />Atlanta Hawks</label>
-                <label class="option"><input type="checkbox" />Boston Celtics</label>
-                <label class="option"><input type="checkbox" />Brooklyn Nets</label>
-                <label class="option"><input type="checkbox" />Milwaukee Bucks</label>
-                <label class="option"><input type="checkbox" />Orlando Magic</label>
-                <label class="option"><input type="checkbox" />Phoenix Suns</label>
-              </div>  
-            </ul>
-            
-            
-
-            
+            <div class="choose east">
+              <h4>東區球隊</h4>
+              <img src="icon/plus.png" class="icon-size" alt="" />
+            </div>
+            <div class="choose west">
+              <h4>西區球隊</h4>
+              <img src="icon/minus.png" class="icon-size" alt="" />
+            </div>
+            <div class="check">
+              <label
+                ><input
+                  type="checkbox"
+                  name="team1"
+                  value="atlanta hawks"
+                  class="option hawks"
+                />Atlanta Hawks</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston celtics"
+                  class="option celtics"
+                />Boston Celtics</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team3"
+                  value="boston nets"
+                  class="option nets"
+                  checked
+                />Brooklyn Nets</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston bucks"
+                  class="option bucks"
+                />Milwaukee Bucks</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston magic"
+                  class="option magic"
+                />Orlando Magic</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="team2"
+                  value="boston suns"
+                  class="option suns"
+                />Phoenix Suns</label
+              >
+            </div>
           </div>
 
           <div class="all cloth">
@@ -930,59 +932,6 @@
       
     });
   </script>
-
-
-<script>
-  // 點西區會展開
-  $(".east").click(function(){
-    var text = $(this).siblings(".option")
-      if( text.css("display") == "none"){
-        text.slideDown();
-      }else{
-        text.slideUp();
-      }
-  // + -轉換
-    var icon = $(".east #plus")
-      if( icon.css("display") == "none"){
-        icon.show();
-      }else{
-        icon.hide();
-      }
-    
-    var icon = $(".east #minus")
-      if( icon.css("display") == "none"){
-        icon.show();
-      }else{
-        icon.hide();
-      }
-  });
-
-
-  
-  $(".west").click(function(){
-    var text = $(this).siblings(".option")
-      if( text.css("display") == "none"){
-        text.slideDown();
-      }else{
-        text.slideUp();
-      }
-    
-    var icon = $(".west #plus")
-      if( icon.css("display") == "none"){
-        icon.show();
-      }else{
-        icon.hide();
-      }
-    
-    var icon = $(".west #minus")
-      if( icon.css("display") == "none"){
-        icon.show();
-      }else{
-        icon.hide();
-      }
-  });
-  
-</script>
 
 
   </body>
