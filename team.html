@@ -232,6 +232,16 @@
         }
 
         /* --------sort by---------------- */
+
+     .many{
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+     }
+     .amount{
+       width: 150px;
+       padding-top: 9px;
+     }   
      .sort{
       display: flex;
       /* justify-content: flex-end; */
@@ -648,15 +658,20 @@
           </div>
 
           <div class="container sort">
-            <div class="button-box">
-              <button id="sort-button" class="button" >
-                <img src="icon/sort.png" alt="">
-                <span>Sort</span>
-              </button>
-              <button id="filter-button" class="button" >
-                <img src="icon/filter.png" alt="">
-                <span>Filter</span>
-              </button>
+            <div class="many">
+              <div class="amount">
+                <p>共111件商品</p>
+              </div>
+              <div class="button-box">
+                <button id="sort-button" class="button" >
+                  <img src="icon/sort.png" alt="">
+                  <span>Sort</span>
+                </button>
+                <button id="filter-button" class="button" >
+                  <img src="icon/filter.png" alt="">
+                  <span>Filter</span>
+                </button>
+              </div>
             </div>
 
             

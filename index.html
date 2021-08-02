@@ -13,11 +13,22 @@
     /> -->
     <link rel="icon" href="icon/favicon.ico" />
     <link rel="shortcut icon" href="icon/favicon.ico" />
-
+    <script src="js/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="v2-head&footer.css" />
 
     <style>
-     
+     #gotop img{
+      width: 100px;
+    }
+    #gotop {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 20px;    
+    padding: 10px 0;    
+    font-size: 20px;
+    cursor: pointer;
+    }
       /* .banner {
         position: relative;
       } */
@@ -677,5 +688,29 @@
     <!-- ---------漢堡JS------------- -->
 
    <script src="burger.js" ></script>
+
+
+
+   <!-- 回到頂部 -->
+<div id="gotop">
+  <img src="icon/scroll-top2.png" alt="">
+</div>
+
+<script type="text/javascript">
+  $(function(){
+      $("#gotop").click(function(){
+          jQuery("html,body").animate({
+              scrollTop:0
+          },1000);
+      });
+      $(window).scroll(function() {
+          if ( $(this).scrollTop() > 300){
+              $('#gotop').fadeIn("fast");
+          } else {
+              $('#gotop').stop().fadeOut("fast");
+          }
+      });
+  });
+  </script>
   </body>
 </html>
