@@ -248,17 +248,17 @@
       padding: 17px;
 
     }
+    #menu_sort.hidden-sort {
+      bottom: -50%;
+      transition: bottom 1s;
+    }
+
+
     #menu_sort .sort{
       margin: 10px 0;
       border-bottom: 1px solid #dedede;
       padding: 5px 0;
     }
-
-    #menu_sort.hidden-sort {
-      bottom: -50%;
-      transition: bottom 1s;
-    }
-    
     #menu_sort h3{
       padding-bottom: 10px;
     }
@@ -270,6 +270,19 @@
       position: absolute;
       left: 50%;
       top: 6px;
+    }
+
+    #mask{
+      height: 1210%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .6);;
+      position: absolute;
+      top: 0%;
+      z-index: 2;
+    }
+    #mask.hidden-mask{
+      top: -1210%;
+
     }
     /* ----------sort by------------- */
         
@@ -647,6 +660,7 @@
               <div class="sort lowest"><input type="radio" name="sort" id="lowest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="lowest">按價格(低到高)</label></div>
               <div class="sort highest"><input type="radio" name="sort" id="highest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="highest">按價格(高到低)</label></div>
             </div>
+            <div id="mask" class="hidden-mask"></div>
           </div>
 
           <div class="col-12 selected">
@@ -882,7 +896,15 @@
 
   <script type="text/javascript">
     window.addEventListener("load", function(){
+      //按button出現遮罩&sort
       document.getElementById("sort-button").onclick = function(){
+        let mask = document.getElementById("mask");
+        if (mask.className == "hidden-mask"){
+          mask.className = "";
+        }else{
+          mask.className = "hidden-mask";
+        }
+        
         let menu_sort = document.getElementById("menu_sort");
         if (menu_sort.className == "hidden-sort"){
           menu_sort.className = "";
@@ -890,12 +912,23 @@
           menu_sort.className = "hidden-sort";
         }
       };
-      document.getElementById("遮罩").onclick = function(){
-        let menuSort = document.getElementById("menu_sort");
+      
+      //按遮罩收回遮罩&sort
+      document.getElementById("mask").onclick = function(){
+        let menu_sort = document.getElementById("menu_sort");
         if (menu_sort.className == ""){
           menu_sort.className = "hidden-sort";
         }
-      }
+
+        let mask = document.getElementById("mask");
+        if (mask.className == "hidden-mask"){
+          mask.className = "";
+        }else{
+          mask.className = "hidden-mask";
+        }
+
+      };
+      
     });
   </script>
 
