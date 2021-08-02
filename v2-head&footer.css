@@ -202,12 +202,12 @@ li:hover >.submenu {
 }
 .breadcrumb::after {
   content: "";
-  width: 100%;
+  width: 93%;
   height: 1px;
   background-color: rgb(230, 230, 230);
   position: absolute;
   /* top: 0; */
-  left: 0;
+  left: 20px;
   bottom: 30%;
   /* transform: translateY(50px); */
 }

@@ -170,15 +170,7 @@
         background-color: #d2d2d2;
         margin: 20px;
       } */
-      .nets-banner::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        background-color: rgb(230, 230, 230);
-        left: 0;
-        bottom: -100px;
-      }
+      
       .all-products .pistons::before {
         content: "Almost Gone";
         border-radius: 5%;
@@ -202,6 +194,9 @@
         .sort{
         display: none;
         }
+        .breadcrumb-team{
+          display: none;
+        }
       }
 
       @media (max-width: 992px){
@@ -211,10 +206,29 @@
         /* .bottom.pagination{
           display: none;
         } */
+.breadcrumb-team {
+  display: flex;
+  font-size: 17px;
+  padding: 5px 0 0 0;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #dedede;
+}
+.breadcrumb-team a {
+  text-decoration: none;
+  color: #1f77be;
+}
+.breadcrumb-team > li + li:before {
+  color: #cccccc;
+  content: "/ ";
+  padding: 0 5px;
+}
 
         .breadcrumb{
           top: 155px;
+          display: none;
         }
+       
         .row{
           /* justify-content: center; */
           width: 100%;
@@ -228,7 +242,7 @@
         }
 
         .nets-banner{
-          margin: 0;
+          margin: 65px 0 0 0;
           width: 100%;
         }
         .selected{
@@ -253,6 +267,8 @@
        display: flex;
        width: 100%;
        justify-content: space-between;
+       padding-bottom: 5px;
+       border-bottom:1px solid #dad9d9;
      }
      .amount{
        width: 150px;
@@ -261,7 +277,7 @@
      .sort{
       display: flex;
       /* justify-content: flex-end; */
-      margin: 60px 0;
+      margin: 30px 0;
      }
      .button-box{
        display: flex;
@@ -672,6 +688,13 @@
         <div class="col-10 nets">
           <div class="col-12 nets-banner">
             <img src="pic/nets-banner.jpg" alt="nets-banner" class="w-100" />
+          </div>
+
+          <div class="container">
+            <ol class="breadcrumb-team">
+              <li><a href="index.html"> 首頁 </a></li>
+              <li class="active">Brooklyn Nets</li>
+            </ol>
           </div>
 
           <div class="container sort">
