@@ -888,52 +888,12 @@
       
    </div>
 
-    <!-- ---------漢堡JS------------- -->
-  <script type="text/javascript">
-    window.addEventListener("load", function(){
+    
+<!-- ---------漢堡JS------------- -->
 
-      //按漢堡出現menu 
-      document.getElementById("btnBurger").onclick = function(){
-        let menu = document.getElementById("menu");
-        if (menu.className == "hidden"){
-          menu.className = "";
-        }else{
-          menu.className = "hidden";
-        }
+<script src="burger.js" ></script>
 
-      //按漢堡出現遮罩
-        let mask = document.getElementById("mask");
-        if (mask.className == "hidden-mask"){
-          mask.className = "";
-        }else{
-          mask.className = "hidden-mask";
-        }
-      };
-     
-      //按遮罩收回menu
-      document.getElementById("mask").onclick = function(){
-        let menu = document.getElementById("menu");
-        if (menu.className == "hidden"){
-          menu.className = "";
-        }else{
-          menu.className = "hidden";
-        }
-        
-        //按遮罩收回遮罩  
-        let mask = document.getElementById("mask");
-        if (mask.className == "hidden-mask"){
-          mask.className = "";
-        }else{
-          mask.className = "hidden-mask";
-        }
-
-      }
-      
-    });
-  </script>
-  <!-- ---------漢堡JS------------- -->
-
-
+  <!-- ---------- sort按鈕----------- -->
   <script type="text/javascript">
     window.addEventListener("load", function(){
       //按sort button出現遮罩
@@ -969,8 +929,6 @@
         }
 
       };
-
-      
       
     });
   </script>
