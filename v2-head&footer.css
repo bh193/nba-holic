@@ -366,6 +366,10 @@ li:hover >.submenu {
     align-items: center;
     background-color: #e0ecfa;
   }
+  .login:hover{
+    background-color: #1f77be;
+    color: #fff;
+  }
   
   
   /* ------------------------------------- */

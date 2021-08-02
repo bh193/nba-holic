@@ -228,8 +228,12 @@
       margin-left: 20px;
 
     }
-    .button img{
-      width: 20px;
+    #sort-button img{
+      width: 27px;
+    }
+    #filter-button img{
+      width: 15px;
+      padding-right: 6px;
     }
     
     #menu_sort{
@@ -644,11 +648,11 @@
             <div class="button-box">
               <button id="sort-button" class="button" >
                 <img src="icon/sort.png" alt="">
-                <span>排序</span>
+                <span>Sort</span>
               </button>
-              <button id="categroy-button" class="button" >
-                <img src="icon/sort.png" alt="">
-                <span>分類</span>
+              <button id="filter-button" class="button" >
+                <img src="icon/filter.png" alt="">
+                <span>Filter</span>
               </button>
             </div>
 
@@ -889,6 +893,13 @@
         }else{
           menu.className = "hidden";
         }
+
+        // let mask = document.getElementById("mask");
+        // if (mask.className == "hidden-mask"){
+        //   mask.className = "";
+        // }else{
+        //   mask.className = "hidden-mask";
+        // }
       };
     });
   </script>
