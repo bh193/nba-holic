@@ -288,9 +288,11 @@ li:hover >.submenu {
   .header-rwd .icon a{
     margin-right: 50px; 
     padding-right: 10px;
+    
   }
   .header-rwd .logo img {
     width: 75px;
+    
   }
   .header-rwd .search {
     position: absolute;
@@ -323,8 +325,11 @@ li:hover >.submenu {
   #menu {
     position: fixed;
     left: 0px;
-    top: 60px;
-    width: 250px;
+    /* top: 60px; */
+    top: 0;
+    /* width: 250px; */
+    width: 203px;
+    z-index: 2;
     height: 100%;
     background-color: #cce0f3;
     transition: left 1s;
@@ -371,6 +376,23 @@ li:hover >.submenu {
     color: #fff;
   }
   
+/* ------------------遮罩--------------- */
+#mask{
+  height: 1210%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);;
+  position: absolute;
+  top: 0%;
+  /* z-index: 2; */
+  z-index: 1;
+}
+#mask.hidden-mask{
+  top: -1210%;
+
+}
+
+
+
   
   /* ------------------------------------- */
   

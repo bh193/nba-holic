@@ -322,6 +322,7 @@
           <div class="search"><img src="icon/loupe-white.png" alt=""></div>
           <div class="cart"><img src="icon/cart.png" alt=""></div>
         </div>
+      <div id="mask" class="hidden-mask"></div>
     </div>
   
   <!-- -------header-RWD-------- -->
@@ -430,19 +431,11 @@
     </div>  
 
     
-     <!-- ---------漢堡JS------------- -->
-  <script type="text/javascript">
-    window.addEventListener("load", function(){
-      document.getElementById("btnBurger").onclick = function(){
-        let menu = document.getElementById("menu");
-        if (menu.className == "hidden"){
-          menu.className = "";
-        }else{
-          menu.className = "hidden";
-        }
-      };
-    });
-  </script>
+     
+  
   <!-- ---------漢堡JS------------- -->
+
+   <script src="burger.js" ></script>
+  
   </body>
 </html>

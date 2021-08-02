@@ -226,6 +226,7 @@
       justify-content: center;
       align-items: center;
       margin-left: 20px;
+      background-color: #f1efef;
 
     }
     #sort-button img{
@@ -276,17 +277,20 @@
       top: 6px;
     }
 
-    #mask{
+    
+
+    #mask_team{
       height: 1210%;
       width: 100%;
       background-color: rgba(0, 0, 0, .6);;
       position: absolute;
       top: 0%;
-      z-index: 2;
+      /* z-index: 2; */
+      z-index: 1;
     }
-    #mask.hidden-mask{
-      top: -1210%;
 
+    #mask_team.hidden-mask{
+      top: -1210%;
     }
     /* ----------sort by------------- */
         
@@ -421,13 +425,14 @@
          <a href=""><div class="login">會員登入</div></a>
         </div>
       </div>
-        <div class="icon">
-          <a class="logo" href="https://bh193.github.io/nbaholic/index.html" >
-            <img src="icon/logo.png" alt="">
-          </a>
-          <div class="search"><img src="icon/loupe-white.png" alt=""></div>
-          <div class="cart"><img src="icon/cart.png" alt=""></div>
-        </div>
+      <div class="icon">
+        <a class="logo" href="https://bh193.github.io/nbaholic/index.html" >
+          <img src="icon/logo.png" alt="">
+        </a>
+        <div class="search"><img src="icon/loupe-white.png" alt=""></div>
+        <div class="cart"><img src="icon/cart.png" alt=""></div>
+      </div>
+      <div id="mask" class="hidden-mask"></div>
     </div>
     <!-- -------header-RWD-------- -->
 
@@ -664,7 +669,7 @@
               <div class="sort lowest"><input type="radio" name="sort" id="lowest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="lowest">按價格(低到高)</label></div>
               <div class="sort highest"><input type="radio" name="sort" id="highest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="highest">按價格(高到低)</label></div>
             </div>
-            <div id="mask" class="hidden-mask"></div>
+            <div id="mask_team" class="hidden-mask"></div>
           </div>
 
           <div class="col-12 selected">
@@ -886,6 +891,8 @@
     <!-- ---------漢堡JS------------- -->
   <script type="text/javascript">
     window.addEventListener("load", function(){
+
+      //按漢堡出現menu 
       document.getElementById("btnBurger").onclick = function(){
         let menu = document.getElementById("menu");
         if (menu.className == "hidden"){
@@ -894,28 +901,49 @@
           menu.className = "hidden";
         }
 
-        // let mask = document.getElementById("mask");
-        // if (mask.className == "hidden-mask"){
-        //   mask.className = "";
-        // }else{
-        //   mask.className = "hidden-mask";
-        // }
-      };
-    });
-  </script>
-  <!-- ---------漢堡JS------------- -->
-
-  <script type="text/javascript">
-    window.addEventListener("load", function(){
-      //按button出現遮罩&sort
-      document.getElementById("sort-button").onclick = function(){
+      //按漢堡出現遮罩
         let mask = document.getElementById("mask");
         if (mask.className == "hidden-mask"){
           mask.className = "";
         }else{
           mask.className = "hidden-mask";
         }
+      };
+     
+      //按遮罩收回menu
+      document.getElementById("mask").onclick = function(){
+        let menu = document.getElementById("menu");
+        if (menu.className == "hidden"){
+          menu.className = "";
+        }else{
+          menu.className = "hidden";
+        }
         
+        //按遮罩收回遮罩  
+        let mask = document.getElementById("mask");
+        if (mask.className == "hidden-mask"){
+          mask.className = "";
+        }else{
+          mask.className = "hidden-mask";
+        }
+
+      }
+      
+    });
+  </script>
+  <!-- ---------漢堡JS------------- -->
+
+
+  <script type="text/javascript">
+    window.addEventListener("load", function(){
+      //按sort button出現遮罩
+      document.getElementById("sort-button").onclick = function(){
+        let mask = document.getElementById("mask_team");
+        if (mask.className == "hidden-mask"){
+          mask.className = "";
+        }
+
+      //按sort button出現sort
         let menu_sort = document.getElementById("menu_sort");
         if (menu_sort.className == "hidden-sort"){
           menu_sort.className = "";
@@ -924,14 +952,16 @@
         }
       };
       
-      //按遮罩收回遮罩&sort
-      document.getElementById("mask").onclick = function(){
+
+        //按遮罩收回sort
+      document.getElementById("mask_team").onclick = function(){
         let menu_sort = document.getElementById("menu_sort");
         if (menu_sort.className == ""){
           menu_sort.className = "hidden-sort";
         }
 
-        let mask = document.getElementById("mask");
+        //按遮罩收回遮罩  
+        let mask = document.getElementById("mask_team");
         if (mask.className == "hidden-mask"){
           mask.className = "";
         }else{
@@ -939,6 +969,8 @@
         }
 
       };
+
+      
       
     });
   </script>
