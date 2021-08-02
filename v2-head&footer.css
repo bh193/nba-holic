@@ -378,7 +378,7 @@ li:hover >.submenu {
   
 /* ------------------遮罩--------------- */
 #mask{
-  height: 1210%;
+  height: 10000%;
   width: 100%;
   background-color: rgba(0, 0, 0, .6);;
   position: absolute;
@@ -387,7 +387,7 @@ li:hover >.submenu {
   z-index: 1;
 }
 #mask.hidden-mask{
-  top: -1210%;
+  top: -10000%;
 
 }
 
