@@ -16,8 +16,10 @@
         display: flex;
         width: 100%;
       }
-      .jersey-detail{
-      width: 50%;
+      .jersey-detail {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0px 20px;
       }
       .product .jersey-detail h2 {
         font-size: 24px;
@@ -26,15 +28,21 @@
       }
       .product .selection {
         background-color: #eeeeee;
-        /* width: 520px; */
+        width: 100%;        
         height: 230px;
         font-weight: bold;
       }
-      
+      .box{
+        width: 50%;
+      }
       .large-pic{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 600px;
+      }
+      .large-pic img{
+        width: 100%;
       }
       .small-pic.red{
         width: 100px;
@@ -217,7 +225,10 @@
   .product{
     display: block;
   }
-  .large-pic img{
+  .box {
+    width: 100%;
+  }
+  .large-pic{
     width: 100%;
   }
   .jersey-detail{
@@ -226,6 +237,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .text{
+    width: 100%;
+    box-sizing: border-box;
   }
 }
     </style>
@@ -362,7 +379,7 @@
       <div class="product">
         <div class="box">
           <div class="large-pic">
-            <img id="large-pic" src="pic/small1.jpg" style="width: 600px"/>
+            <img id="large-pic" src="pic/small1.jpg" />
           </div>
   
           <div class="choose-pic">
@@ -379,11 +396,11 @@
               <span><a href="">尺寸表</a></span>
             </div>
             <div class="size-eng">
-              <a href=""><div class="size-s"><span>S</span></div></a>
-              <a href=""><div class="size-m"><span>M</span></div></a>
-              <a href=""><div class="size-l"><span>L</span></div></a>
-              <a href=""><div class="size-xl"><span>XL</span></div></a>
-              <a href=""><div class="size-2xl"><span>2XL</span></div></a>
+              <div class="size-s"><span>S</span></div>
+              <div class="size-m"><span>M</span></div>
+              <div class="size-l"><span>L</span></div>
+              <div class="size-xl"><span>XL</span></div>
+              <div class="size-2xl"><span>2XL</span></div>
             </div>
             <div class="amount">
               <span>數量</span>
