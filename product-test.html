@@ -30,40 +30,30 @@
         height: 230px;
         font-weight: bold;
       }
-      /* .product .nash-small img{
-        width: 80px;
-        margin: 20px;
-      }
-      .product .nash-small{
+      
+      .large-pic{
         display: flex;
-        margin: auto;
         justify-content: center;
         align-items: center;
       }
-      .product .nash-small1{
-        border: 2px #eeeeee solid;
-      } */
-/* 
-      .large-pic img{
-        widows: 100px;
-      } */
-      .small-pic {
+      .small-pic.red{
         width: 100px;
-        border: 1px solid #fff;
-        opacity: 0.5;
+        opacity: none;
+        border: 2px solid #f00;
       }
-      /* .small-pic:hover {
-        border: 1px solid red;
-        opacity: 1;
-      } */
+      .small-pic.gray{
+        width: 100px;
+        opacity: 0.5;
+        border: 2px solid #c0c0c0;
+      }
       .choose-pic {
-        margin: 10px 200px;
+        /* margin: 10px 200px; */
         display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* .jersey-detail {
-        margin-right: 100px;
-      } */
+      
       .cart-icon img {
         width: 28px;
       }
@@ -218,7 +208,26 @@
        bottom: 200px;
        right: -10px;
      }
+/* -------------------------- */
 
+@media (max-width: 960px){
+  .like, .like-product{
+    display: none;
+  }
+  .product{
+    display: block;
+  }
+  .large-pic img{
+    width: 100%;
+  }
+  .jersey-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
     </style>
   </head>
   <body>
@@ -357,8 +366,8 @@
           </div>
   
           <div class="choose-pic">
-            <img src="pic/small1.jpg" class="small-pic" />
-            <img src="pic/small2.jpg" class="small-pic" />
+            <img src="pic/small1.jpg" class="small-pic red" id="small-1" />
+          <img src="pic/small2.jpg" class="small-pic gray" id="small-2"/>
           </div>
         </div>
         <div class="jersey-detail">
@@ -549,7 +558,34 @@
   </script>
 
 
-   
+   <!-- ------------小圖border切換----------- -->
+  <script>
+    $('#small-1').click(function(){
+      if ($('#small-1').hasClass("red")){
+        $('#small-1').removeClass('red').addClass('gray');
+      }else{
+        $('#small-1').removeClass('gray').addClass('red');
+      }
+      if ($('#small-2').hasClass("gray")){
+        $('#small-2').removeClass('gray').addClass('red');
+      }else{
+        $('#small-2').removeClass('red').addClass('gray');
+      }
+    });
+
+    $('#small-2').click(function(){
+      if ($('#small-1').hasClass("red")){
+        $('#small-1').removeClass('red').addClass('gray');
+      }else{
+        $('#small-1').removeClass('gray').addClass('red');
+      }
+      if ($('#small-2').hasClass("gray")){
+        $('#small-2').removeClass('gray').addClass('red');
+      }else{
+        $('#small-2').removeClass('red').addClass('gray');
+      }
+    });
+  </script>
 
   </body>
 </html>

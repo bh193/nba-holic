@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="v2-head&footer.css" />
     <link rel="icon" href="icon/favicon.ico"  />
     <link rel="shortcut icon" href="icon/favicon.ico" />
-
+    <link rel="stylesheet" href="v2-head&footer.css" />
+    <script src="js/jquery-3.6.0.js"></script>
     <style>
       
       .product {
@@ -48,14 +49,19 @@
       .large-pic img{
         widows: 100px;
       } */
-      .small-pic {
+      /* .small-pic {
         width: 100px;
-        border: 1px solid #fff;
         opacity: 0.5;
+      } */
+      .small-pic.red{
+        width: 100px;
+        opacity: none;
+        border: 2px solid #f00;
       }
-      .small-pic:hover {
-        border: 1px solid red;
-        opacity: 1;
+      .small-pic.gray{
+        width: 100px;
+        opacity: 0.5;
+        border: 2px solid #c0c0c0;
       }
       .choose-pic {
         margin: 10px 200px;
@@ -367,8 +373,8 @@
           <img id="large-pic" src="pic/small1.jpg" style="width: 600px"/>
         </div>
         <div class="choose-pic">
-          <img src="pic/small1.jpg" class="small-pic" />
-          <img src="pic/small2.jpg" class="small-pic" />
+          <img src="pic/small1.jpg" class="small-pic red" id="small-1" />
+          <img src="pic/small2.jpg" class="small-pic gray" id="small-2"/>
         </div>
       </div>
       <!-- <div class="jersey-pic-big">
@@ -508,9 +514,43 @@
     window.addEventListener("load", init, false);
   </script>
 
+  <!-- ------------小圖border切換----------- -->
+  <script>
+    $('#small-1').click(function(){
+      if ($('#small-1').hasClass("red")){
+        $('#small-1').removeClass('red').addClass('gray');
+      }else{
+        $('#small-1').removeClass('gray').addClass('red');
+      }
+      if ($('#small-2').hasClass("gray")){
+        $('#small-2').removeClass('gray').addClass('red');
+      }else{
+        $('#small-2').removeClass('red').addClass('gray');
+      }
+    });
+
+    $('#small-2').click(function(){
+      if ($('#small-1').hasClass("red")){
+        $('#small-1').removeClass('red').addClass('gray');
+      }else{
+        $('#small-1').removeClass('gray').addClass('red');
+      }
+      if ($('#small-2').hasClass("gray")){
+        $('#small-2').removeClass('gray').addClass('red');
+      }else{
+        $('#small-2').removeClass('red').addClass('gray');
+      }
+    });
+  </script>
+
+
+
+
+
    <!-- ---------漢堡JS------------- -->
 
    <script src="burger.js" ></script>
+
 
 
   </body>
