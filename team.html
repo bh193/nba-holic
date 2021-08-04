@@ -94,7 +94,9 @@
       }
 
       /* -------------------------------- */
-
+      .container-forclass{
+        padding: 0;
+      }
       .nets-banner {
         margin: 23px 20px 20px 20px;
         position: relative;
@@ -227,7 +229,10 @@
         .breadcrumb{
           display: none;
         }
-       
+        [class*="row-cols-"] {
+          box-sizing: border-box;
+          padding: 0;
+        }
         .row{
           /* justify-content: center; */
           width: 100%;
@@ -235,6 +240,7 @@
         }
         .nets{
           width: 100%;
+          padding: 0;
         }
         .navigation{
           display: none;
@@ -246,11 +252,12 @@
         }
         .selected{
           width: 100%;
+          padding: 0;
           display: none;
         }
         .all-products{
           flex-wrap: wrap;
-          /* text-align: center; */
+          padding: 0;
         }
         .product-price, .product-name {
           width: 100%;
