@@ -20,19 +20,23 @@
       }
       .title-banner {
         display: relative;
-        /* margin: -4px; */
       }
       .title-text {
-        position: absolute;
+        /* position: absolute; */
         font-size: 24px;
-        color: #fff;
-        text-shadow: 1px 1px 10px rgb(255, 95, 46);
-        top: 40px;
-        left: 700px;
+        color: rgb(73, 73, 73);
+        /* text-shadow: 1px 1px 10px rgb(255, 95, 46); */
+        /* top: 40px; */
+        /* left: 700px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 20px;
+      }
+      .title-text img{
+        width: 200px;
+        margin: 7px;
       }
 
       .suns {
@@ -45,7 +49,7 @@
         /* justify-content: center; */
         align-items: center;
         background-size: cover;
-        /* background-position: center; */
+        background-position: 100%;
         background-repeat: no-repeat;
         background-image: url(pic/background.png);
       }
@@ -89,7 +93,7 @@
         background-image: url(pic/background4.png);
       }
       .suns .info {
-        width: 53%;
+        width: 48%;
         font-size: 18px;
         margin: 20px;
       }
@@ -295,11 +299,16 @@
         ~ .navigator:nth-of-type(3) {
         display: flex;
       }
-      .buy-now img {
-        width: 280px;
+      .buy-now{
         position: fixed;
         right: 20px;
         bottom: 20px;
+      }
+      .buy-now img {
+        width: 280px;
+        /* position: fixed;
+        right: 20px;
+        bottom: 20px; */
       }
       .footer {
         height: 100px;
@@ -307,7 +316,29 @@
       .footer .logo {
         margin: 20px;
       }
-      
+/* --------------------------------------------- */
+
+
+@media (max-width: 960px){
+  .suns{
+    background-position: 70%;
+  }
+  .suns .info{
+    width: 40%;
+  }
+  .rockets{
+    background-position: 100% 59%;
+  }
+}
+
+@media (max-width: 577px){
+  .suns{
+    background-position: 60%;
+  }
+  .suns .info{
+    width: 52%;
+  }
+}
     </style>
   </head>
 
@@ -445,8 +476,9 @@
 
       <div class="title">
         <div class="title-text">
-          <h2>2020-21賽季NBA球隊</h2>
-          <h2>城市版球衣介紹</h2>
+          <h3>2020-21賽季NBA球隊</h3>
+          <img src="icon/gallery-bar.png" alt="">
+          <h3>城市版球衣介紹</h3>
         </div>
         <div class="title-banner">
           <img src="pic/ariticle-header.png" alt="" />
@@ -528,14 +560,7 @@
           <img src="icon/gallery-bar.png" alt="" /><br />
           <span>NBA HOLIC販售中! </span>
         </div>
-        <!-- <div class="gallery-pic">
-          <div class="pic one">
-            <img src="pic/gallery1.jpg" alt="" />
-          </div>
-          <div class="pic two">
-            <img src="pic/gallery2.jpg" alt="" />
-          </div>
-        </div> -->
+
         <ul class="gallery">
           <input type="radio" id="control-1" name="control" checked />
           <input type="radio" id="control-2" name="control" />
