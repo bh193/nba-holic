@@ -375,6 +375,26 @@
     #mask_team.hidden-mask{
       top: -1210%;
     }
+
+
+    #menu_filter{
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      background-color: antiquewhite;
+      transition: right 1s;
+      z-index: 123;
+    }
+    #menu_filter .filter{
+     
+      border-bottom: 1px solid #dedede;
+    }
+
+    #menu_filter.hidden-filter {
+      right: -50%;
+      transition: right 1s;
+    }
     /* ----------sort by------------- */
         
        
@@ -401,6 +421,7 @@
     </style>
   </head>
   <body>
+    
     <div class="top">
       【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
       防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
@@ -529,6 +550,11 @@
         <li>球隊</li>
         <li class="active">Brooklyn Nets</li>
       </ol>
+    </div>
+ 
+    
+    <div id="menu_filter" class="hidden-filter">
+      <h2>filter</h2>
     </div>
 
 
@@ -745,6 +771,8 @@
               <div class="sort highest"><input type="radio" name="sort" id="highest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="highest">按價格(高到低)</label></div>
             </div>
             <div id="mask_team" class="hidden-mask"></div>
+
+           
           </div>
 
           <div class="col-12 selected">
@@ -765,7 +793,7 @@
               <a href="#"><img src="icon/page-right.png" alt="" /></a>
             </div>
           </div>
-          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 all-products">
+          <div class="row row-cols-1 row-cols-md-4 row-cols-lg-3 all-products">
             <class class="product hawks">
               <a href="product.html">
                 <img
@@ -1008,6 +1036,19 @@
     });
   </script>
 
+<!-- --------filter button------------   -->
+<script type="text/javascript">
+  window.addEventListener("load", function(){
+    document.getElementById("filter-button").onclick = function(){
+      let menu_filter = document.getElementById("menu_filter");
+      if (menu_filter.className == "hidden-filter"){
+        menu_filter.className = "";
+      }else{
+        menu_filter.className = "hidden-filter";
+      }
+    };
+  });
+</script>
 
 <script>
   // 點西區會展開
