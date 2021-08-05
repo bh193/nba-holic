@@ -398,6 +398,10 @@ li:hover >.submenu {
   .breadcrumb{
     align-self: flex-start;
     width: 90%;
+    flex-wrap: wrap;
+  }
+  .breadcrumb::after{
+    bottom: 15%;
   }
 
 
