@@ -360,50 +360,20 @@
       top: 6px;
     }
 
+    
+
     #mask_team{
-      height: 100%;
+      height: 700%;
       width: 100%;
       background-color: rgba(0, 0, 0, .6);;
-      position: fixed;
+      position: absolute;
       top: 0%;
       /* z-index: 2; */
       z-index: 1;
     }
 
     #mask_team.hidden-mask{
-      top: -100%;
-    }
-
-    #aaa{
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, .6);;
-      position: fixed;
-      top: 0%;
-      z-index: 2;
-    }
-
-    #aaa.aaa{
-      top: -100%;
-    }
-
-
-    #menu_filter{
-      width: 50%;
-      height: 100%;
-      position: fixed;
-      right: 0;
-      background-color: antiquewhite;
-      transition: right 1s;
-      z-index: 123;
-    }
-    #menu_filter .filter{
-      border-bottom: 1px solid #dedede;
-    }
-
-    #menu_filter.hidden-filter {
-      right: -50%;
-      transition: right 1s;
+      top: -1210%;
     }
     /* ----------sort by------------- */
         
@@ -431,7 +401,6 @@
     </style>
   </head>
   <body>
-    
     <div class="top">
       【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
       防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
@@ -560,14 +529,6 @@
         <li>球隊</li>
         <li class="active">Brooklyn Nets</li>
       </ol>
-    </div>
- 
-    
-    <div class="container">
-      <div id="menu_filter" class="hidden-filter">
-        <h2>filter</h2>
-      </div>
-      <div id="aaa" class="aaa"></div>
     </div>
 
 
@@ -775,6 +736,7 @@
               </div>
             </div>
 
+            
             <div id="menu_sort" class="hidden-sort">
               <h3>Sort</h3>
               <div class="sort newly"><input type="radio" name="sort" id="newly" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="newly" >按新品</label></div>
@@ -783,7 +745,6 @@
               <div class="sort highest"><input type="radio" name="sort" id="highest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="highest">按價格(高到低)</label></div>
             </div>
             <div id="mask_team" class="hidden-mask"></div>
-           
           </div>
 
           <div class="col-12 selected">
@@ -804,7 +765,7 @@
               <a href="#"><img src="icon/page-right.png" alt="" /></a>
             </div>
           </div>
-          <div class="row row-cols-1 row-cols-md-4 row-cols-lg-3 all-products">
+          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 all-products">
             <class class="product hawks">
               <a href="product.html">
                 <img
@@ -1007,12 +968,47 @@
 
 <script src="burger.js" ></script>
 
-<!-- ----------sort filter------  -->
-<script src="sort&filter.js" ></script>
+  <!-- ---------- sort按鈕----------- -->
+  <script type="text/javascript">
+    window.addEventListener("load", function(){
+      //按sort button出現遮罩
+      document.getElementById("sort-button").onclick = function(){
+        let mask = document.getElementById("mask_team");
+        if (mask.className == "hidden-mask"){
+          mask.className = "";
+        }
+
+      //按sort button出現sort
+        let menu_sort = document.getElementById("menu_sort");
+        if (menu_sort.className == "hidden-sort"){
+          menu_sort.className = "";
+        }else{
+          menu_sort.className = "hidden-sort";
+        }
+      };
+      
+
+        //按遮罩收回sort
+      document.getElementById("mask_team").onclick = function(){
+        let menu_sort = document.getElementById("menu_sort");
+        if (menu_sort.className == ""){
+          menu_sort.className = "hidden-sort";
+        }
+
+        //按遮罩收回遮罩  
+        let mask = document.getElementById("mask_team");
+        if (mask.className == "hidden-mask"){
+          mask.className = "";
+        }else{
+          mask.className = "hidden-mask";
+        }
+
+      };
+      
+    });
+  </script>
 
 
-
-<!-- ----------導覽列東西區-------- -->
 <script>
   // 點西區會展開
   $(".east").click(function(){
@@ -1067,7 +1063,7 @@
 
 
 
-<!------- 回到頂部 -------->
+<!-- 回到頂部 -->
 <div id="gotop">
   <img src="icon/scroll-top2.png" alt="">
 </div>
