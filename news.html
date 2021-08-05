@@ -10,21 +10,14 @@
     <link rel="shortcut icon" href="icon/favicon.ico" />
 
     <style>
+      .breadcrumb{
+        padding: 25px;
+      }
       .title {
         position: relative;
         height: 40px;
       }
-      .title-left {
-        position: absolute;
-        left: 20px;
-        bottom: 0;
-      }
-      .title-right {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        transform: translateX(-408px);
-      }
+      
       .main-area {
         /* width: 95%; */
         display: flex;
@@ -33,29 +26,40 @@
         text-decoration: none;
         color: #2e2e2e;
       }
-
+      .title-left{
+        padding:20px 0;
+      }
+      .title-right{
+        padding:20px 0;
+      }
       .top-news {
-        width: 700px;
-        margin: 20px;
+        width: 60%;
+        /* margin: 20px; */
+        box-sizing: border-box;
+        padding: 0 20px;
         line-height: 27px;
         background-color: #fff;
-        box-shadow: 1px 1px 5px rgb(207, 207, 207);
+        /* box-shadow: 1px 1px 5px rgb(207, 207, 207); */
         border-radius: 4px;
       }
       .top-news h3 {
         line-height: 35px;
       }
       .top-news .top-text {
-        margin: 10px;
+        /* margin: 10px; */
+        box-shadow: 0px 2px 6px rgb(207 207 207);
+        padding: 5px;
       }
       .top-news img {
-        width: 700px;
+        width: 100%;
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
       }
       .video-news {
-        width: 600px;
-        margin: 20px;
+        width: 40%;
+        /* margin: 20px; */
+        box-sizing: border-box;
+        padding: 0 20px;
         line-height: 20px;
         position: relative;
       }
@@ -63,7 +67,7 @@
       .video-news .video {
         display: flex;
         margin-bottom: 25px;
-        align-items: center;
+        /* align-items: center; */
         background-color: #fff;
         box-shadow: 1px 1px 5px rgb(207, 207, 207);
         position: relative;
@@ -96,7 +100,7 @@
       .hot-news {
         /* width: 100%; */
         position: relative;
-        margin: 10px 0;
+        margin: 50px 0 0 0;
         padding: 10px 0 0 20px;
         border-top: 1px solid #d2d2d2;
       }
@@ -117,7 +121,7 @@
         display: flex;
         height: 120px;
         flex-wrap: nowrap;
-        width: 900px;
+        width: 95%;
         /* border: 1px solid red; */
         margin: 20px;
         background-color: #fff;
@@ -198,6 +202,43 @@
         justify-content: center;
         align-items: center;
         margin-top: -15px;
+      }
+
+
+      @media (max-width: 960px){
+        .subscribe{
+          display: none;
+        }
+        .breadcrumb{
+          padding-top: 85px;
+        }
+        .main-area{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .top-news {
+          width: 100%;
+          margin: 0;
+        }
+        .container{
+          padding: 0;
+        }
+        .video-news{
+          width: 100%;
+          margin: 45px 0;
+        }
+        .title-right{
+          border-top: 1px solid #d1d1d1;
+        }
+        .hot-news{
+          width: 100%;
+        }
+        .second-area{
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -321,19 +362,17 @@
     </div>
     <!-- -------header-RWD-------- -->
 
-    <div class="container">
+    <!-- <div class="container"> -->
       <ol class="breadcrumb">
         <li><a href="index.html"> 首頁 </a></li>
         <li class="active">News</li>
       </ol>
     </div>
     <div class="container">
-      <div class="title">
-        <h2 class="title-left">頭條新聞</h2>
-        <h2 class="title-right">影音報導</h2>
-      </div>
+      
       <div class="main-area">
         <div class="top-news">
+          <h2 class="title-left">頭條新聞</h2>
           <a href="#">
             <img src="pic/news-1.jpg" alt="" />
             <div class="top-text">
@@ -347,6 +386,7 @@
           </a>
         </div>
         <div class="video-news">
+          <h2 class="title-right">影音報導</h2>
           <a href="">
             <div class="video">
               <img src="pic/video-1.jpg" alt="" />
@@ -394,7 +434,7 @@
             </div>
           </a>
           <div class="page-down">
-            <img src="icon/news-down.png" alt="" />
+            <img src="icon/down.png" alt="" />
           </div>
         </div>
       </div>

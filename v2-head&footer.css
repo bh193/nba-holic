@@ -377,16 +377,16 @@ li:hover >.submenu {
   
 /* ------------------遮罩--------------- */
 #mask{
-  height: 10000%;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, .6);;
-  position: absolute;
+  position: fixed;
   top: 0%;
   /* z-index: 2; */
   z-index: 1;
 }
 #mask.hidden-mask{
-  top: -10000%;
+  top: -100%;
 
 }
 
