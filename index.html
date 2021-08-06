@@ -231,14 +231,19 @@
       }
 /* ----------------------------------------------------------    */
       @media (max-width: 960px){
+        .banner{
+          margin: 70px 0 0 0;
+        }
+        .code{
+          display: flex;
+          position: absolute;
+          width: 100%;
+          top: 60px;
+        }
         .middle-line{
           margin:10% 0 3% 0;
         }
-        /* .middle-line::before{
-          content: "";
-          height: 1px;
-          width: 500px;
-        } */
+        
         .card-container .player {
           width: 100%;
           margin-bottom: 20px;
@@ -311,12 +316,45 @@
           width: auto;
         }
       }
+      @media (max-width: 687px){
+        .code .free-shipping{
+          margin: 0;
+          height: auto;
+          padding: 0 0 0 20px;
+          font-size: 25px;
+        }
+      }
 
 
     </style>
   </head>
   <body>
-  <!-- <div class="mask"></div> -->
+  <!-- -------header-RWD-------- -->
+  
+  <div class="header-rwd">
+    <div class="burger">
+      <img id="btnBurger" src="menu.png" width="28" />
+      <div id="menu" class="hidden">
+       <a href="https://bh193.github.io/nbaholic/index.html"><div class="select">首頁</div></a>
+       <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">選擇球隊</div></a>
+       <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">服飾</div></a>
+       <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">配件</div></a>
+       <a href="https://bh193.github.io/nbaholic/blog.html"><div class="select">BLOG</div></a>
+       <a href="https://bh193.github.io/nbaholic/news.html"><div class="select">NEWS</div></a>
+       <a href="https://bh193.github.io/nbaholic/about%20us.html"><div class="select">關於我們</div></a>
+       <a href=""><div class="login">會員登入</div></a>
+      </div>
+    </div>
+      <div class="icon">
+        <a class="logo" href="https://bh193.github.io/nbaholic/index.html" >
+          <img src="icon/logo.png" alt="">
+        </a>
+        <div class="search"><img src="icon/loupe-white.png" alt=""></div>
+        <div class="cart"><img src="icon/cart.png" alt=""></div>
+      </div>
+    <div id="mask" class="hidden-mask"></div>  
+  </div>
+
         <div class="top">
           【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
           防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
@@ -411,32 +449,7 @@
 
 
 
-      <!-- -------header-RWD-------- -->
-  
-    <div class="header-rwd">
-      <div class="burger">
-        <img id="btnBurger" src="menu.png" width="28" />
-        <div id="menu" class="hidden">
-         <a href="https://bh193.github.io/nbaholic/index.html"><div class="select">首頁</div></a>
-         <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">選擇球隊</div></a>
-         <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">服飾</div></a>
-         <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">配件</div></a>
-         <a href="https://bh193.github.io/nbaholic/blog.html"><div class="select">BLOG</div></a>
-         <a href="https://bh193.github.io/nbaholic/news.html"><div class="select">NEWS</div></a>
-         <a href="https://bh193.github.io/nbaholic/about%20us.html"><div class="select">關於我們</div></a>
-         <a href=""><div class="login">會員登入</div></a>
-        </div>
-      </div>
-        <div class="icon">
-          <a class="logo" href="https://bh193.github.io/nbaholic/index.html" >
-            <img src="icon/logo.png" alt="">
-          </a>
-          <div class="search"><img src="icon/loupe-white.png" alt=""></div>
-          <div class="cart"><img src="icon/cart.png" alt=""></div>
-        </div>
-      <div id="mask" class="hidden-mask"></div>  
-    </div>
-  
+      
   
   <!-- -------------------------------------- -->
       <!-- <div
