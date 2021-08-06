@@ -55,11 +55,11 @@
       }
       .top-news img {
         width: 100%;
-        border-top-right-radius: 4px;
-        border-top-left-radius: 4px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
       }
       .video-news {
-        width: 40%;
+        /* width: 40%; */
         /* margin: 20px; */
         box-sizing: border-box;
         padding: 0 20px;
@@ -73,14 +73,21 @@
         margin-bottom: 25px;
         /* align-items: center; */
         background-color: #fff;
+        border-radius: 3px;
         box-shadow: 1px 1px 5px rgb(207, 207, 207);
         position: relative;
+        transition: .5s ease;
       }
-
+      .video-news .video:hover{
+        transform: translateY(-5px);
+        transition: .5s ease;
+      }  
       .video-news img {
         width: 200px;
-        border-radius: 4px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
         object-fit: cover;
+
       }
       .video-text {
         margin: 0 5px 15px 7px;
@@ -107,6 +114,8 @@
       .second-area img {
         width: 180px;
         object-fit: cover;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
       }
       .second-area {
         display: flex;
@@ -130,10 +139,13 @@
         /* width: 95%; */
         margin: 20px 0;
         background-color: #fff;
+        border-radius: 3px;
         box-shadow: 1px 1px 5px rgb(207, 207, 207);
+        transition: .5s ease;
       }
       .news-list .single:hover{
-        transform: scale(1);
+        transform: translateY(-5px);
+        transition: .5s ease;
       }
       .single .list-text {
         width: 100%;
@@ -499,7 +511,7 @@
                 <h4>怪物奇兵新篇章 詹皇新球鞋趁勢推出</h4>
                 <p>
                   電影《怪物奇兵：A NEW LEGACY》相關商品即將登場，Nike 和
-                  Converse 為影片角色帶來了一系列鞋款和服飾。
+                  Converse 為影片角色帶來了一系列鞋款和服飾。設計靈感結合了運動帶來的能量。
                 </p>
                 <span>觀看次數：9,146次</span>
               </div>
