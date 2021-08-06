@@ -14,7 +14,7 @@
         color: #505050;
       }
       .breadcrumb{
-        padding: 25px;
+        padding: 20px;
       }
       .title {
         position: relative;
@@ -33,7 +33,7 @@
         padding:20px 0;
       }
       .title-right{
-        padding:20px 0;
+        padding:23px 0;
       }
       .top-news {
         width: 60%;
@@ -75,7 +75,6 @@
         background-color: #fff;
         box-shadow: 1px 1px 5px rgb(207, 207, 207);
         position: relative;
-        height: 150px;
       }
 
       .video-news img {
@@ -90,26 +89,20 @@
       .video-text h4 {
         font-size: 14px;
         color: #2e2e2e;
+        padding: 5px 0;
       }
       .video-text p {
         font-size: 13px;
         color: #2e2e2e;
+        padding: 5px 0;
       }
       .video-text span {
         font-size: 12px;
         color: #2e2e2e;
-        position: absolute;
-        bottom: 0;
       }
 
       /* ---------------------------------- */
-      .hot-news {
-        /* width: 100%; */
-        position: relative;
-        margin: 50px 0 0 0;
-        padding: 10px 0 0 20px;
-        border-top: 1px solid #d2d2d2;
-      }
+      
 
       .second-area img {
         width: 180px;
@@ -117,11 +110,17 @@
       }
       .second-area {
         display: flex;
-        margin-bottom: 30px;
+        border-top: 1px solid #afafaf;
+        margin: 20px;
       }
       .second-area a {
         text-decoration: none;
         color: #2e2e2e;
+      }
+
+      .news-list{
+        padding-top: 20px;
+        box-sizing: border-box;
       }
       .news-list .single {
         display: flex;
@@ -129,7 +128,7 @@
         /* height: 120px; */
         flex-wrap: nowrap;
         /* width: 95%; */
-        margin: 20px;
+        margin: 20px 0;
         background-color: #fff;
         box-shadow: 1px 1px 5px rgb(207, 207, 207);
       }
@@ -161,7 +160,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px;
+        margin: 72px 20px;
         background-color: #fff;
         box-shadow: 1px 1px 5px rgb(207, 207, 207);
       }
@@ -206,7 +205,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: -17px;
       }
+      
 
       @media (max-width: 1155px){
         .single .list-text span{
@@ -224,7 +225,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 100%;
+          /* width: 100%; */
           box-sizing: border-box;
         }
         .top-news {
@@ -244,9 +245,9 @@
         .hot-news{
           width: 100%;
         }
-        .second-area{
+        /* .second-area{
           width: 100%;
-        }
+        } */
         .hot-news{
           width: 95%;
         }
@@ -377,7 +378,7 @@
     </div>
     <!-- -------header-RWD-------- -->
 
-    <!-- <div class="container"> -->
+    <div class="container">
       <ol class="breadcrumb">
         <li><a href="index.html"> 首頁 </a></li>
         <li class="active">News</li>
@@ -453,11 +454,10 @@
           </div>
         </div>
       </div>
-      <div class="title hot-news">
-        <h2>熱門新聞</h2>
-      </div>
+      
       <div class="second-area">
         <div class="news-list">
+          <h2>熱門新聞</h2>
           <a href="">
             <div class="single">
               <img src="pic/lbj-jersey.jpg" alt="lbj jersey" />
