@@ -119,7 +119,8 @@
       }
       .news-list .single {
         display: flex;
-        height: 120px;
+        justify-content: space-between;
+        /* height: 120px; */
         flex-wrap: nowrap;
         width: 95%;
         /* border: 1px solid red; */
@@ -138,7 +139,6 @@
       .single .list-text p {
         /* padding-top: 8px; */
         font-size: 14px;
-        /* border: 1px green solid; */
         margin: 10px 0 20px 0;
       }
       .single .list-text span {
@@ -201,10 +201,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -15px;
       }
 
-
+      @media (max-width: 1155px){
+        .single .list-text span{
+          position: relative;
+        }
+      }
       @media (max-width: 960px){
         .subscribe{
           display: none;
@@ -239,6 +242,13 @@
         .second-area{
           width: 100%;
         }
+        .hot-news{
+          width: 95%;
+        }
+        .news-list{
+          margin: 20px 0;
+        }
+        
       }
     </style>
   </head>
@@ -513,7 +523,7 @@
             </div>
           </a>
           <div class="page-down">
-            <img src="icon/news-down.png" alt="" />
+            <img src="icon/down.png" alt="" />
           </div>
         </div>
         <div class="subscribe">
