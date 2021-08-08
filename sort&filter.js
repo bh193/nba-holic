@@ -92,12 +92,26 @@ window.addEventListener("load", function(){
 
 });
 
-
+// RWD裡的filter收合
 $("#team-east").click(function(){
   var text = $(this).siblings("#text")
     if( text.css("display") == "none"){
       text.slideDown();
     }else{
       text.slideUp();
+    }
+
+  var icon = $("#filter-down")
+    if( icon.css("display") == "none"){
+      icon.show();
+    }else{
+      icon.hide();
+    }
+  
+  var icon = $("#filter-up")
+    if( icon.css("display") == "none"){
+      icon.show();
+    }else{
+      icon.hide();
     }
 });    
