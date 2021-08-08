@@ -52,26 +52,52 @@ window.addEventListener("load", function(){
       menu_filter.className = "hidden-filter";
     }
     //按filter button出現遮罩
-    let mask = document.getElementById("aaa");
-    if (mask.className == "aaa"){
+    let mask = document.getElementById("filterbox-hidden");
+    if (mask.className == "filterbox-hidden"){
       mask.className = "";
     }
   };
 
     //按遮罩收回filter
-  document.getElementById("aaa").onclick = function(){
+  document.getElementById("filterbox-hidden").onclick = function(){
     let menu_filter = document.getElementById("menu_filter");
     if (menu_filter.className == ""){
       menu_filter.className = "hidden-filter";
     }
 
     //按遮罩收回遮罩  
-    let mask = document.getElementById("aaa");
-    if (mask.className == "aaa"){
+    let mask = document.getElementById("filterbox-hidden");
+    if (mask.className == "filterbox-hidden"){
       mask.className = "";
     }else{
-      mask.className = "aaa";
+      mask.className = "filterbox-hidden";
+    } 
+  };
+
+   //按X收回filter
+  document.getElementById("letter-x").onclick = function(){
+    let menu_filter = document.getElementById("menu_filter");
+    if (menu_filter.className == ""){
+      menu_filter.className = "hidden-filter";
+    }
+
+    //按X收回遮罩
+    let mask = document.getElementById("filterbox-hidden");
+    if (mask.className == "filterbox-hidden"){
+      mask.className = "";
+    }else{
+      mask.className = "filterbox-hidden";
     } 
   };
 
 });
+
+
+$("#team-east").click(function(){
+  var text = $(this).siblings("#text")
+    if( text.css("display") == "none"){
+      text.slideDown();
+    }else{
+      text.slideUp();
+    }
+});    

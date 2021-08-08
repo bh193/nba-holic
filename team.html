@@ -33,9 +33,11 @@
     }
     
     .title{
-      cursor: pointer;
       display: flex;
       align-items: center;
+    }
+    .group{
+      cursor: pointer;
     }
     
     .team .option{
@@ -54,7 +56,7 @@
     display: flex;
     flex-direction: column;
     }
-    .team p{
+    .group p{
     font-size: 15px;
     padding: 0 5px 0 10px;
     font-weight: bold;
@@ -198,6 +200,9 @@
       @media (min-width: 992px){
         .sort{
         display: none;
+        }
+        .category{
+          display: none;
         }
         #menu_filter{
           display: none;
@@ -377,7 +382,7 @@
       top: -100%;
     }
 
-    #aaa{
+    #filterbox-hidden{
       height: 100%;
       width: 100%;
       background-color: rgba(0, 0, 0, .6);;
@@ -386,7 +391,7 @@
       z-index: 2;
     }
 
-    #aaa.aaa{
+    #filterbox-hidden.filterbox-hidden{
       top: -100%;
     }
 
@@ -396,7 +401,7 @@
       height: 100%;
       position: fixed;
       right: 0;
-      background-color: antiquewhite;
+      background-color: #f1f1f1;
       transition: right 1s;
       z-index: 123;
     }
@@ -408,6 +413,78 @@
       right: -50%;
       transition: right 1s;
     }
+
+    .category .filter img{
+      width: 30px;
+      height: 30px;
+      padding: 0 5px;
+    }
+    .category .filter span{
+      color: #fff;
+      font-size: 22px;
+      padding: 0 5px;
+    }
+    .category .text{
+      display: none;
+      
+    }
+    .text .option{
+      display: block;
+      padding: 5px;
+    }
+
+    
+    .category .filter{
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* flex-direction: column; */
+      margin: 2px 0;
+      padding: 0 4px;
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-color: rgba(153,153,153,.9);
+      background-blend-mode: multiply;
+      cursor: pointer;
+    }
+
+    .filter.team-east{
+      background-image: url(pic/filter-team.png);
+    }
+
+    .filter.team-west{
+      background-image: url(pic/filter-team2.png);
+    }
+    .filter.cloth{
+      background-image: url(pic/filter-cloth.jpg);
+    }
+    .filter.accessories{
+      background-image: url(pic/filter-accessories.png);  
+    }
+    .filter.all{
+      background-image: url(pic/try.jpg); 
+    }
+
+    
+    .title img{
+      width: 20px;
+      margin: 0 10px;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      cursor: pointer;
+    }
+    .title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 10px 0;
+      border-bottom: 1px solid #dedede;
+    }
+    
     /* ----------sort by------------- */
         
        
@@ -560,7 +637,7 @@
     <div class="container">
       <ol class="breadcrumb">
         <li><a href="index.html"> 首頁 </a></li>
-        <li>球隊</li>
+        <li><a href="team.html"> 球隊 </a></li>
         <li class="active">Brooklyn Nets</li>
       </ol>
     </div>
@@ -568,9 +645,46 @@
     
     <div class="container">
       <div id="menu_filter" class="hidden-filter">
-        <h2>filter</h2>
+        <div class="title">
+          <div id="letter-x"><img src="icon/letter-x.png"></div>
+          <h2>Filter</h2>
+        </div>
+        <div class="category">
+          <div class="filter team-east" id="team-east">
+            <span>東區球隊</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="text" id="text">
+            <label class="option"><input type="checkbox" />Atlanta Hawks</label>
+            <label class="option"><input type="checkbox" />Miami Heat</label>
+            <label class="option"><input type="checkbox" />Boston Celtics</label>
+            <label class="option"><input type="checkbox" />Brooklyn Nets</label>
+            <label class="option"><input type="checkbox" />Milwaukee Bucks</label>
+            <label class="option"><input type="checkbox" />Orlando Magic</label>
+            <label class="option"><input type="checkbox" />Phoenix Suns</label>
+          </div>
+          
+          <div class="filter team-west">
+            <span>西區球隊</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="filter cloth">
+            <span>服飾</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="filter accessories">
+            <span>配件</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="filter all">
+            <span>全部商品</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          
+        </div>
       </div>
-      <div id="aaa" class="aaa"></div>
+      
+      <div id="filterbox-hidden" class="filterbox-hidden"></div>
     </div>
 
 
@@ -587,7 +701,7 @@
                   <p>東區球隊</p> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
                 </div>
                 <label class="option"><input type="checkbox" />Atlanta Hawks</label>
-                <label class="option"><input type="checkbox" />Atlanta Hawks</label>
+                <label class="option"><input type="checkbox" />Miami Heat</label>
                 <label class="option"><input type="checkbox" />Boston Celtics</label>
                 <label class="option"><input type="checkbox" />Brooklyn Nets</label>
                 <label class="option"><input type="checkbox" />Milwaukee Bucks</label>
@@ -602,7 +716,7 @@
                   <p>西區球隊</p> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
                 </div>
                 <label class="option"><input type="checkbox" />Atlanta Hawks</label>
-                <label class="option"><input type="checkbox" />Atlanta Hawks</label>
+                <label class="option"><input type="checkbox" />Miami Heat</label>
                 <label class="option"><input type="checkbox" />Boston Celtics</label>
                 <label class="option"><input type="checkbox" />Brooklyn Nets</label>
                 <label class="option"><input type="checkbox" />Milwaukee Bucks</label>

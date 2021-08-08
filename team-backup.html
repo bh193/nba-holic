@@ -27,18 +27,20 @@
     cursor: pointer;
     }  
 
-    .team img{
+    .team-east img{
       width: 13px;
       height: 13px;
     }
     
     .title{
-      cursor: pointer;
       display: flex;
       align-items: center;
     }
+    .group{
+      cursor: pointer;
+    }
     
-    .team .option{
+    .team-east .option{
       display: none;
     }
 
@@ -54,7 +56,7 @@
     display: flex;
     flex-direction: column;
     }
-    .team p{
+    .group p{
     font-size: 15px;
     padding: 0 5px 0 10px;
     font-weight: bold;
@@ -199,7 +201,13 @@
         .sort{
         display: none;
         }
-        .breadcrumb-team{
+        .category{
+          display: none;
+        }
+        #menu_filter{
+          display: none;
+        }
+        .breadcrumb-team-east{
           display: none;
         }
       }
@@ -211,7 +219,7 @@
         /* .bottom.pagination{
           display: none;
         } */
-.breadcrumb-team {
+.breadcrumb-team-east {
   display: flex;
   font-size: 17px;
   padding: 7px 10px;
@@ -220,11 +228,11 @@
   position: relative;
   border-bottom: 1px solid #dedede;
 }
-.breadcrumb-team a {
+.breadcrumb-team-east a {
   text-decoration: none;
   color: #1f77be;
 }
-.breadcrumb-team > li + li:before {
+.breadcrumb-team-east > li + li:before {
   color: #cccccc;
   content: "/ ";
   padding: 0 5px;
@@ -360,21 +368,122 @@
       top: 6px;
     }
 
-    
-
-    #mask_team{
-      height: 700%;
+    #mask_team-east{
+      height: 100%;
       width: 100%;
       background-color: rgba(0, 0, 0, .6);;
-      position: absolute;
+      position: fixed;
       top: 0%;
       /* z-index: 2; */
       z-index: 1;
     }
 
-    #mask_team.hidden-mask{
-      top: -1210%;
+    #mask_team-east.hidden-mask{
+      top: -100%;
     }
+
+    #filterbox-hidden{
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .6);;
+      position: fixed;
+      top: 0%;
+      z-index: 2;
+    }
+
+    #filterbox-hidden.filterbox-hidden{
+      top: -100%;
+    }
+
+
+    #menu_filter{
+      width: 50%;
+      height: 100%;
+      position: fixed;
+      right: 0;
+      background-color: #f1f1f1;
+      transition: right 1s;
+      z-index: 123;
+    }
+    #menu_filter .filter{
+      border-bottom: 1px solid #dedede;
+    }
+
+    #menu_filter.hidden-filter {
+      right: -50%;
+      transition: right 1s;
+    }
+
+    .category .filter img{
+      width: 30px;
+      height: 30px;
+      padding: 0 5px;
+    }
+    .category .filter span{
+      color: #fff;
+      font-size: 22px;
+      padding: 0 5px;
+    }
+    .category .text{
+      display: none;
+      background-color: #cce0f3;
+      cursor: pointer;
+    }
+
+    .category .text p{
+      padding: 5px;
+    }
+    
+    .category .filter{
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* flex-direction: column; */
+      margin: 3px 0;
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-color: rgba(153,153,153,.9);
+      background-blend-mode: multiply;
+      cursor: pointer;
+    }
+
+    .filter.team-east{
+      background-image: url(pic/filter-team.png);
+    }
+
+    .filter.team-west{
+      background-image: url(pic/filter-team2.png);
+    }
+    .filter.cloth{
+      background-image: url(pic/filter-cloth.jpg);
+    }
+    .filter.accessories{
+      background-image: url(pic/filter-accessories.png);  
+    }
+    .filter.all{
+      background-image: url(pic/filter-all.png); 
+    }
+
+    
+    .title img{
+      width: 20px;
+      margin: 0 10px;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      cursor: pointer;
+    }
+    .title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 10px 0;
+      border-bottom: 1px solid #dedede;
+    }
+
     /* ----------sort by------------- */
         
        
@@ -401,6 +510,7 @@
     </style>
   </head>
   <body>
+    
     <div class="top">
       【NBA HOLIC提醒您】疫情期間減少不必要的出門，以網購代替實體門市。
       防疫運動人人有責，NBA HOLIC祝您身體健康、購物愉快！
@@ -429,7 +539,7 @@
     </div>
     <ul class="menu">
       <li>
-        <a href="https://bh193.github.io/nbaholic/team.html">選擇球隊</a>
+        <a href="https://bh193.github.io/nbaholic/team-east.html">選擇球隊</a>
         <ul class="submenu">
           <li>
             <a href="#">東區</a>
@@ -454,7 +564,7 @@
         </ul>
       </li>
       <li>
-        <a href="https://bh193.github.io/nbaholic/team.html#">服飾</a>
+        <a href="https://bh193.github.io/nbaholic/team-east.html#">服飾</a>
         <ul class="submenu">
           <li><a href="#">短袖上衣</a></li>
           <li><a href="#">長袖上衣</a></li>
@@ -464,7 +574,7 @@
         </ul>
       </li>
       <li>
-        <a href="https://bh193.github.io/nbaholic/team.html#">配件</a>
+        <a href="https://bh193.github.io/nbaholic/team-east.html#">配件</a>
         <ul class="submenu">
           <li><a href="#">籃球</a>
           </li>
@@ -502,9 +612,9 @@
           <img id="btnBurger" src="menu.png" width="28" />
           <div id="menu" class="hidden">
            <a href="https://bh193.github.io/nbaholic/index.html"><div class="select">首頁</div></a>
-           <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">選擇球隊</div></a>
-           <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">服飾</div></a>
-           <a href="https://bh193.github.io/nbaholic/team.html"><div class="select">配件</div></a>
+           <a href="https://bh193.github.io/nbaholic/team-east.html"><div class="select">選擇球隊</div></a>
+           <a href="https://bh193.github.io/nbaholic/team-east.html"><div class="select">服飾</div></a>
+           <a href="https://bh193.github.io/nbaholic/team-east.html"><div class="select">配件</div></a>
            <a href="https://bh193.github.io/nbaholic/blog.html"><div class="select">BLOG</div></a>
            <a href="https://bh193.github.io/nbaholic/news.html"><div class="select">NEWS</div></a>
            <a href="https://bh193.github.io/nbaholic/about%20us.html"><div class="select">關於我們</div></a>
@@ -526,20 +636,64 @@
     <div class="container">
       <ol class="breadcrumb">
         <li><a href="index.html"> 首頁 </a></li>
-        <li>球隊</li>
+        <li><a href="team-east.html"> 球隊 </a></li>
         <li class="active">Brooklyn Nets</li>
       </ol>
+    </div>
+ 
+    
+    <div class="container">
+      <div id="menu_filter" class="hidden-filter">
+        <div class="title">
+          <div id="letter-x"><img src="icon/letter-x.png"></div>
+          <h2>Filter</h2>
+        </div>
+        <div class="category">
+          <div class="filter team-east" id="team-east">
+            <span>東區球隊</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="text" id="text">
+            <p>Atlanta Hawks</p>
+            <p>Boston Celtics</p>
+            <p>Brooklyn Nets</p>
+            <p>Milwaukee Bucks</p>
+            <p>Orlando Magic</p>
+            <p>Phoenix Suns</p>
+          </div>
+          
+          <div class="filter team-west">
+            <span>西區球隊</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="filter cloth">
+            <span>服飾</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="filter accessories">
+            <span>配件</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          <div class="filter all">
+            <span>全部商品</span>
+            <img src="icon/filter-down.png" alt="">
+          </div>
+          
+        </div>
+      </div>
+      
+      <div id="filterbox-hidden" class="filterbox-hidden"></div>
     </div>
 
 
     <div class="container-forclass">
       <div class="row">
         <div class="col-2 navigation">
-          <div class="all team">
-            <div class="choose team">
+          <div class="all team-east">
+            <div class="choose team-east">
               <h4>選擇球隊</h4>
             </div>
-            <ul class="choose team">
+            <ul class="choose team-east">
               <div class="group">
                 <div class="east title">
                   <p>東區球隊</p> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
@@ -554,7 +708,7 @@
               </div>  
             </ul>
             
-            <ul class="choose team">
+            <ul class="choose team-east">
               <div class="group">
                 <div class="west title">
                   <p>西區球隊</p> <img id="plus" src="icon/plus.png" alt=""> <img id="minus" src="icon/minus.png" alt="">
@@ -579,47 +733,21 @@
               <h4>選擇服飾</h4>
             </div>
             <div class="check">
-              <label
-                ><input
-                  type="checkbox"
-                  name="cloth1"
-                  value="short"
-                  class="option short"
-                />短袖上衣</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="cloth2"
-                  value="long"
-                  class="option long"
-                />長袖上衣</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="cloth3"
-                  value="jersey"
-                  class="option jersey"
-                  checked
-                />球衣</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="cloth4"
-                  value="pants"
-                  class="option pants"
-                />褲子</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="team2"
-                  value="boston jacket"
-                  class="option jacket"
-                />外套</label
-              >
+              <label><input type="checkbox" name="cloth1" value="short" class="option short"/>
+                短袖上衣
+              </label>
+              <label><input type="checkbox" name="cloth2" value="long" class="option long"/>
+                長袖上衣
+              </label>
+              <label><input type="checkbox" name="cloth3"　value="jersey" class="option jersey" checked/>
+                球衣
+              </label>
+              <label><input type="checkbox" name="cloth4" value="pants" class="option pants"/>
+                褲子
+              </label>
+              <label><input type="checkbox" name="team-east2" value="boston jacket" class="option jacket"/>
+                外套
+              </label>
             </div>
           </div>
 
@@ -712,7 +840,7 @@
           </div>
 
           <div class="container">
-            <ol class="breadcrumb-team">
+            <ol class="breadcrumb-team-east">
               <li><a href="index.html"> 首頁 </a></li>
               <li>球隊</li>
               <li class="active">Brooklyn Nets</li>
@@ -736,7 +864,6 @@
               </div>
             </div>
 
-            
             <div id="menu_sort" class="hidden-sort">
               <h3>Sort</h3>
               <div class="sort newly"><input type="radio" name="sort" id="newly" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="newly" >按新品</label></div>
@@ -744,7 +871,8 @@
               <div class="sort lowest"><input type="radio" name="sort" id="lowest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="lowest">按價格(低到高)</label></div>
               <div class="sort highest"><input type="radio" name="sort" id="highest" style="width:16px; height:16px; margin: 4px 15px 0 0"><label for="highest">按價格(高到低)</label></div>
             </div>
-            <div id="mask_team" class="hidden-mask"></div>
+            <div id="mask_team-east" class="hidden-mask"></div>
+           
           </div>
 
           <div class="col-12 selected">
@@ -765,7 +893,7 @@
               <a href="#"><img src="icon/page-right.png" alt="" /></a>
             </div>
           </div>
-          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 all-products">
+          <div class="row row-cols-1 row-cols-md-4 row-cols-lg-3 all-products">
             <class class="product hawks">
               <a href="product.html">
                 <img
@@ -939,76 +1067,38 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="footer">
-        <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
-        <div class="footer-middle">
-          <div class="footer-link">
-            <span>使用條款 |</span>
-            <span>隱密政策 |</span>
-            <span>常見問題 |</span>
-            <span>關於我們</span>
-          </div>
-          <div class="copyright">
-            <span>NBA HOLIC 2021© All Rights Reserved</span>
-          </div>
+    <div class="footer">
+      <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
+      <div class="footer-middle">
+        <div class="footer-link">
+          <span>使用條款 |</span>
+          <span>隱密政策 |</span>
+          <span>常見問題 |</span>
+          <span>關於我們</span>
         </div>
-        <div class="footer-icon">
-         <img src="icon/facebook.png" border="0" />
-         <img src="icon/instagram.png" border="0" />
-         <img src="icon/account.png" border="0" />
-         <img src="icon/cart.png" border="0" />
+        <div class="copyright">
+          <span>NBA HOLIC 2021© All Rights Reserved</span>
         </div>
+      </div>
+      <div class="footer-icon">
+        <img src="icon/facebook.png" border="0" />
+        <img src="icon/instagram.png" border="0" />
+        <img src="icon/account.png" border="0" />
+        <img src="icon/cart.png" border="0" />
+      </div>
     </div>
-      
-   </div>
 
     
 <!-- ---------漢堡JS------------- -->
 
 <script src="burger.js" ></script>
 
-  <!-- ---------- sort按鈕----------- -->
-  <script type="text/javascript">
-    window.addEventListener("load", function(){
-      //按sort button出現遮罩
-      document.getElementById("sort-button").onclick = function(){
-        let mask = document.getElementById("mask_team");
-        if (mask.className == "hidden-mask"){
-          mask.className = "";
-        }
-
-      //按sort button出現sort
-        let menu_sort = document.getElementById("menu_sort");
-        if (menu_sort.className == "hidden-sort"){
-          menu_sort.className = "";
-        }else{
-          menu_sort.className = "hidden-sort";
-        }
-      };
-      
-
-        //按遮罩收回sort
-      document.getElementById("mask_team").onclick = function(){
-        let menu_sort = document.getElementById("menu_sort");
-        if (menu_sort.className == ""){
-          menu_sort.className = "hidden-sort";
-        }
-
-        //按遮罩收回遮罩  
-        let mask = document.getElementById("mask_team");
-        if (mask.className == "hidden-mask"){
-          mask.className = "";
-        }else{
-          mask.className = "hidden-mask";
-        }
-
-      };
-      
-    });
-  </script>
+<!-- ----------sort filter------  -->
+<script src="sort&filter.js" ></script>
 
 
+
+<!-- ----------導覽列東西區-------- -->
 <script>
   // 點西區會展開
   $(".east").click(function(){
@@ -1063,7 +1153,7 @@
 
 
 
-<!-- 回到頂部 -->
+<!------- 回到頂部 -------->
 <div id="gotop">
   <img src="icon/scroll-top2.png" alt="">
 </div>
@@ -1084,6 +1174,10 @@
       });
   });
   </script>
+
+
+
+
 
   </body>
 </html>
