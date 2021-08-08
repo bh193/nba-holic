@@ -108,6 +108,8 @@ body a {
 .menu li a:hover {
   background-color: #014f8f;
   color: #fff;
+  transition: .5s;
+
 }
 .submenu {
   background-color: #1f77be;
@@ -360,6 +362,7 @@ li:hover >.submenu {
   .select:hover{
     background-color: #1f77be;
     color: #fff;
+    transition: .5s;
   }
 
   .login{
@@ -373,6 +376,7 @@ li:hover >.submenu {
   .login:hover{
     background-color: #1f77be;
     color: #fff;
+    transition: .5s;
   }
   
 /* ------------------遮罩--------------- */

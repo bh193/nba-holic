@@ -98,6 +98,10 @@
         position: relative;
         border-top: 1px #d2d2d2 solid;
       }
+      .navigation label:hover{
+        background-color: #1f77be;
+        color: #FFF;
+      }
 
       /* -------------------------------- */
       .container-forclass{
@@ -424,18 +428,20 @@
     }
     .category .filter span{
       color: #fff;
-      font-size: 22px;
+      font-size: 20px;
       padding: 0 5px;
     }
     .category .text{
       display: none;
-      
     }
     .text .option{
       display: block;
       padding: 5px;
     }
-
+    .text label:hover{
+      background-color: #1f77be;
+      color: #FFF;
+    }
     
     .category .filter{
       width: 100%;
@@ -444,7 +450,7 @@
       justify-content: space-between;
       align-items: center;
       /* flex-direction: column; */
-      margin: 2px 0;
+      /* margin: 2px 0; */
       padding: 0 4px;
       background-size:cover;
       background-repeat: no-repeat;
@@ -914,10 +920,7 @@
           <div class="col-12 selected">
             <div class="selected-left">
               <span>1 - 12 of 111</span>
-              <button class="sort">
-                <span>價格低到高</span>
-                <img src="icon/sort-down.png" alt="" />
-              </button>
+              
             </div>
             <div class="pagination">
               <a href="#"><img src="icon/page-left.png" alt="" /></a>
