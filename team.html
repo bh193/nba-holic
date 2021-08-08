@@ -472,10 +472,10 @@
 
     
     .title img{
-      width: 20px;
-      margin: 0 10px;
+      width: 15px;
+      margin: 0 5px;
       position: absolute;
-      top: 6px;
+      top: 10px;
       left: 8px;
       cursor: pointer;
     }
@@ -484,7 +484,8 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      margin: 10px 0;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
       border-bottom: 1px solid #dedede;
     }
     
@@ -1209,6 +1210,33 @@
       });
   });
   </script>
+
+<script>
+  // RWD裡的filter收合
+$("#team-east").click(function(){
+  var text = $(this).siblings("#text")
+    if( text.css("display") == "none"){
+      text.slideDown();
+    }else{
+      text.slideUp();
+    }
+
+  var icon = $("#filter-down")
+    if( icon.css("display") == "none"){
+      icon.show();
+    }else{
+      icon.hide();
+    }
+  
+  var icon = $("#filter-up")
+    if( icon.css("display") == "none"){
+      icon.show();
+    }else{
+      icon.hide();
+    }
+});    
+</script>
+
 
   </body>
 </html>
