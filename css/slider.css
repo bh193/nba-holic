@@ -1,0 +1,112 @@
+.slider-box{
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;    /* 100%*4張 再加100% */
+  height: 600px;
+  display: flex;  /* 讓跑出來的3張隱藏 */
+}
+
+/* 隱藏實際的操控鈕 */
+.slides input{
+  display: none;
+}
+
+/* 圖片移動的距離 對應每張margin往左推的距離 */
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* 圖下面的操控鈕 */
+.navigation-manual{
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #cacaca;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+/* 除了最後一個的按鈕們 */
+/* 但沒寫last-child好像也沒差? */
+.manual-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+/* .manual-btn:hover{
+  background: #e73535;
+} */
+
+/* 當按鈕1被確認到時 margin往左增加 */
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+
+/* 自動播放鈕  樣貌與手動操控鈕要一樣 且位置要重疊*/
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 560px;
+}
+
+.navigation-auto div{
+  border: 2px solid #e73535;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+/* 除了最後一個的按鈕們 */
+.navigation-auto div:not(:last-child){
+  margin-right: 20px;
+}
+
+/* 當按鈕被checked到時 變顏色 */
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #e73535;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #e73535;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #e73535;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #e73535;
+}
