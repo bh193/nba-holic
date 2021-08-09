@@ -343,7 +343,7 @@
       /* border: 1px solid #000; */
       position: absolute;
       bottom: 0;
-      background-color: #f1f1f1;
+      background-color: #ffF;
       transition: bottom 1s;
       position: fixed;
       z-index: 123;
@@ -408,7 +408,7 @@
       height: 100%;
       position: fixed;
       right: 0;
-      background-color: #f1f1f1;
+      background-color: #FFF;
       transition: right 1s;
       z-index: 123;
     }
@@ -427,12 +427,12 @@
       padding: 0 5px;
     }
     .category .filter span{
-      color: #fff;
-      font-size: 20px;
+      font-size: 18px;
       padding: 0 5px;
     }
     .category .text{
       display: none;
+      border-bottom: 1px solid #dedede;
     }
     .text .option{
       display: block;
@@ -441,25 +441,29 @@
     .text label:hover{
       background-color: #1f77be;
       color: #FFF;
+      transition: .5s;
     }
     
+    .filter:hover{
+      background-color: #1f77be;
+      color: #FFF;
+      transition: .5s;
+    }
     .category .filter{
       width: 100%;
-      height: 90px;
+      height: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      /* flex-direction: column; */
-      /* margin: 2px 0; */
       padding: 0 4px;
-      background-size:cover;
-      background-repeat: no-repeat;
-      background-color: rgba(153,153,153,.9);
-      background-blend-mode: multiply;
+      /* background-size:cover; */
+      /* background-repeat: no-repeat; */
+      /* background-color: rgba(153,153,153,.9); */
+      /* background-blend-mode: multiply; */
       cursor: pointer;
     }
 
-    .filter.team-east{
+    /* .filter.team-east{
       background-image: url(pic/filter-team.png);
     }
 
@@ -474,14 +478,14 @@
     }
     .filter.all{
       background-image: url(pic/try.jpg); 
-    }
+    } */
 
     
     .title img{
       width: 15px;
       margin: 0 5px;
       position: absolute;
-      top: 10px;
+      top: 7px;
       left: 8px;
       cursor: pointer;
     }
@@ -490,8 +494,8 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      margin-bottom: 20px;
-      padding-bottom: 5px;
+      /* margin-bottom: 20px; */
+      padding-bottom: 15px;
       border-bottom: 1px solid #dedede;
     }
     
