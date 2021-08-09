@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="css/slider.css">
     <script src="js/burger.js" ></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/wow.min.js"></script>
 
     <style>
+      
       h2, h3, p{
         color: #505050;
       }
@@ -231,6 +234,7 @@
         justify-content: center;
         align-items: center;
         margin-top: -17px;
+        display: none;
       }
       
 
@@ -454,7 +458,7 @@
         <div class="top-news">
           <h2 class="title-left">頭條新聞</h2>
           <a href="#">
-            <div class="box">
+            <div class="box wow animate__animated animate__fadeInLeft" data-wow-duration="2s">
               <img src="pic/news-1.jpg" alt="" />
               <div class="top-text">
                 <h3>NBA明星賽球衣紀念Kobe　背號統一穿24與2</h3>
@@ -470,7 +474,7 @@
         <div class="video-news">
           <h2 class="title-right">影音報導</h2>
           <a href="">
-            <div class="video">
+            <div class="video wow animate__animated animate__fadeInDown" data-wow-delay="0">
               <img src="pic/video-1.jpg" alt="" />
               <div class="video-text">
                 <h4>明星賽球衣演變史-喬丹球衣勾起球迷青春回憶</h4>
@@ -482,7 +486,7 @@
             </div>
           </a>
           <a href="">
-            <div class="video">
+            <div class="video wow animate__animated animate__fadeInDown" data-wow-delay="0.5s">
               <img src="pic/video-2.jpg" alt="" />
               <div class="video-text">
                 <h4>球鞋愛好者注意！歐洲金童專屬喬丹鞋發售日確定</h4>
@@ -494,7 +498,7 @@
             </div>
           </a>
           <a href="">
-            <div class="video">
+            <div class="video wow animate__animated animate__fadeInDown" data-wow-delay="0">
               <img src="pic/video-3.jpg" alt="" />
               <div class="video-text">
                 <h4>NBA首開賣NFT商品 勇士競標豐收2百萬美元</h4>
@@ -506,7 +510,7 @@
             </div>
           </a>
           <a href="">
-            <div class="video">
+            <div class="video wow animate__animated animate__fadeInDown" data-wow-delay="0">
               <img src="pic/video-4.jpg" alt="" />
               <div class="video-text">
                 <h4>揮別黑曼巴 Nike聲明與布萊恩結束合作</h4>
@@ -525,7 +529,7 @@
         <div class="news-list">
           <h2>熱門新聞</h2>
            
-            <div class="single">
+            <div class="single wow animate__animated animate__fadeInDown">
               <div class="single-pic"><img src="pic/lbj-jersey.jpg" alt="lbj jersey" /></div>
               <div class="list-text">
                 <h4>LeBron James明星賽球衣標出一千八百萬天價 創官方紀錄</h4>
@@ -539,7 +543,7 @@
             </div>
           
           
-            <div class="single">
+            <div class="single wow animate__animated animate__fadeInDown">
               <div class="single-pic"><img src="pic/pillow.jpg" alt="nba pillow" /></div>
               <div class="list-text">
                 <h4>球衣變抱枕？Looptworks與NBA環保結合</h4>
@@ -553,7 +557,7 @@
             </div>
            
           
-            <div class="single">
+            <div class="single wow animate__animated animate__fadeInDown">
               <div class="single-pic"><img src="pic/movie.jpeg" alt="nba movie" /></div>
               <div class="list-text">
                 <h4>怪物奇兵新篇章 詹皇新球鞋趁勢推出</h4>
@@ -566,7 +570,7 @@
             </div>
            
           
-            <div class="single">
+            <div class="single wow animate__animated animate__fadeInDown">
               <div class="single-pic"><img src="pic/fingercroxx.jpg" alt="fingercroxx" /></div>
               <div class="list-text">
                 <h4>
@@ -581,7 +585,7 @@
             </div>
            
            
-            <div class="single">
+            <div class="single wow animate__animated animate__fadeInDown">
               <div class="single-pic"><img src="pic/lbj.jpg" alt="lbj" /></div>
               <div class="list-text">
                 <h4>詹皇、湖人稱霸上半季球衣商品銷售　籃網組3巨頭人氣大爆發</h4>
@@ -593,7 +597,7 @@
               </div>
             </div>
           
-            <div class="single">
+            <div class="single wow animate__animated animate__fadeInDown">
               <div class="single-pic"><img src="pic/lbj-jersey.jpg" alt="lbj jersey" /></div>
               <div class="list-text">
                 <h4>LeBron James明星賽球衣標出一千八百萬天價 創官方紀錄</h4>
@@ -642,10 +646,26 @@
       </div>
     </div>
 
-<!-- ---------漢堡JS------------- -->
+<!-- 動畫 -->
 
-<script src="burger.js" ></script>
-
+<script>
+  new WOW().init();
+  var wow = new WOW(
+    {
+      boxClass:     'wow',      // 要套用WOW.js縮需要的動畫class(預設是wow)
+      animateClass: 'animated', // 要"動起來"的動畫(預設是animated, 因此如果你有其他動畫library要使用也可以在這裡調整)
+      offset:       0,          // 距離顯示多遠開始顯示動畫 (預設是0, 因此捲動到顯示時才出現動畫)
+      mobile:       true,       // 手機上是否要套用動畫 (預設是true)
+      live:         true,       // 非同步產生的內容是否也要套用 (預設是true, 非常適合搭配SPA)
+      callback:     function(box) {
+        // 當每個要開始時, 呼叫這裡面的內容, 參數是要開始進行動畫特效的element DOM
+      },
+      scrollContainer: null // 可以設定成只套用在某個container中捲動才呈現, 不設定就是整個視窗
+    }
+  
+  );
+  wow.init();
+  </script>
 
   </body>
 </html>

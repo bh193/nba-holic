@@ -9,8 +9,6 @@
     <link rel="icon" href="icon/favicon.ico" />
     <link rel="shortcut icon" href="icon/favicon.ico" />
     <script src="js/burger.js" ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="js/wow.min.js"></script>
 
     <style>
      
@@ -340,29 +338,29 @@
       
       <div class="court"><img src="pic/court1.jpg" alt="" /></div>
       <div class="title">
-        <div class="title-first wow animate__animated animate__bounceInLeft" data-wow-duration="2s">
-          <h2 class="">分享</h2>
+        <div class="title-first">
+          <h2>分享</h2>
           <h2 class="main">HOLIC</h2>
           <h2>對事物的狂熱</h2>
         </div>
-        <div class="title-second wow animate__animated animate__pulse">
+        <div class="title-second">
           <h4>
             觀察街頭、探索市場、預測時代 - 為了分享「HOLIC」而產生的五大理念
           </h4>
         </div>
       </div>
       <div class="holic">
-        <div class="item h wow animate__animated animate__bounceInDown"  data-wow-duration="1s" data-wow-delay="0">
+        <div class="item h">
           <h2>H</h2>
           <p>Hype：代表著籃球人最原始的追求，那份不輕易熄滅的熱血。</p>
         </div>
-        <div class="item o wow animate__animated animate__bounceInDown" data-wow-duration="1s" data-wow-delay=".5s">
+        <div class="item o">
           <h2>O</h2>
           <p>
             Original：是籃球圈那週而復始的循環，在生生不息轉動中，仍不忘本的復刻之心。
           </p>
         </div>
-        <div class="item l wow animate__animated animate__bounceInDown" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="item l">
           <h2>L</h2>
           <p>
             Luxury：找尋街頭運動與高端時尚間的平衡點，滿足籃球人獨到的胃口。
@@ -370,13 +368,13 @@
         </div>
       </div>
       <div class="holic">
-        <div class="item i wow animate__animated animate__bounceInLeft" data-wow-duration="1s" data-wow-delay="1.5s">
+        <div class="item i">
           <h2>I</h2>
           <p>
             Identity：純正好物絕不放過，我們所販售的商品都是官方認證的好物。
           </p>
         </div>
-        <div class="item c wow animate__animated animate__bounceInRight" data-wow-duration="1s" data-wow-delay="1.5s">
+        <div class="item c">
           <h2>C</h2>
           <p>
             Collection：最專業的團隊為你特蒐潛力搜品，為您準備不只是運動用品，更是收藏佳物！
@@ -435,28 +433,6 @@
       </div>
     </div>
   
-<!-- 動畫 -->
-
-<script>
-new WOW().init();
-var wow = new WOW(
-  {
-    boxClass:     'wow',      // 要套用WOW.js縮需要的動畫class(預設是wow)
-    animateClass: 'animated', // 要"動起來"的動畫(預設是animated, 因此如果你有其他動畫library要使用也可以在這裡調整)
-    offset:       0,          // 距離顯示多遠開始顯示動畫 (預設是0, 因此捲動到顯示時才出現動畫)
-    mobile:       true,       // 手機上是否要套用動畫 (預設是true)
-    live:         true,       // 非同步產生的內容是否也要套用 (預設是true, 非常適合搭配SPA)
-    callback:     function(box) {
-      // 當每個要開始時, 呼叫這裡面的內容, 參數是要開始進行動畫特效的element DOM
-    },
-    scrollContainer: null // 可以設定成只套用在某個container中捲動才呈現, 不設定就是整個視窗
-  }
-
-);
-wow.init();
-</script>
-
-
   
   </body>
 </html>
