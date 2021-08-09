@@ -394,14 +394,14 @@ li:hover >.submenu {
     transition: .5s;
   } */
 
-  .login{
+  /* .login{
     height: 70px;
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #8cc5fd;
-  }
+  } */
   /* .login:hover{
     background-color: #1f77be;
     color: #fff;
