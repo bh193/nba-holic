@@ -360,8 +360,11 @@ li:hover >.submenu {
     background-size:cover;
     background-repeat: no-repeat;
     background-color: rgba(153,153,153,.9);
-    background-blend-mode: multiply; 
-   
+    background-blend-mode: multiply;    
+  }
+
+  .select:hover{
+    background-color: rgba(153,153,153,.2);
   }
 
   .select.burger-home{
