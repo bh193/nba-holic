@@ -166,8 +166,9 @@
       
       /* -----------你可能也喜歡 slick slider----------------------- */
       .like-title{
+        width: 90%;
         text-align: center;
-        margin: 50px 0;
+        margin: 50px auto;
         position: relative;
         padding: 25px 0;
         color: #2e2e2e;
@@ -203,18 +204,9 @@
     }
      
 /* -------------------------- */
-/* @media (max-width: 1087px) {
-  .like{
-    width: 750px;
-  }
-} */
+
 @media (max-width: 960px){
-  /* .like, .like-product{
-    display: none;
-  }
-  .product{
-    display: block;
-  } */
+ 
   .box {
     width: 100%;
   }
@@ -234,12 +226,16 @@
     width: 100%;
     box-sizing: border-box;
   }
+  .like-title{
+    margin: 50px auto 0px;
+  }
 }
-/* @media (max-width: 842px){
-.like{
-  width: 400px;
+@media (max-width: 780px) {
+  .product{
+    display: inline-block;
+  }
 }
-} */
+
     </style>
   </head>
   <body>
@@ -441,12 +437,7 @@
           </div>
         </div>
       </div>
-    </div>
-
-
-
     
-    <div class="container">
       <div class="like-title">
         <h2>你可能也喜歡</h2>
       </div>
@@ -603,9 +594,9 @@
        }
      },
      {
-       breakpoint: 740, 
+       breakpoint: 890, 
        settings: {
-         slidesToShow: 1, 
+         slidesToShow: 2, 
          slidesToScroll: 1, 
        }
      },
