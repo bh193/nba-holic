@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/slider.css">
     <script src="js/burger.js" ></script>
 
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick-theme.css">
+    <script src="js/slick-1.8.1/slick/slick.js"></script>
+
 
     <style>
       
@@ -160,75 +164,57 @@
       }
       
       
-      /* ----------------------------------------------- */
-      .like{
+      /* -----------你可能也喜歡 slick slider----------------------- */
+      .like-title{
         text-align: center;
-        margin: auto;
+        margin: 50px 0;
         position: relative;
-        padding: 50px;
+        padding: 25px 0;
         color: #2e2e2e;
+        border-top: 1px solid #c4c4c4;
+        box-sizing: border-box;
       }
-      .like::before{
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: #eeeeee;
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform: translateY(30px);
-      }
-      .like-product{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        font-size: 17px;
-        margin: 30px;
-        /* text-align: center; */
-      }
-      .like-product img{
-        width: 300px;
-        /* border: 1px red solid; */
-      }
-      .like-product span{
-        /* padding: 5px; */
-        margin: 9px 60px 0 60px;
-        color: #2e2e2e;
-      }
-      .team {
-        display: flex;
-        flex-direction: column;
-      }
-      .sonics {
-        position: relative;
-      }
-      .almost-gone span{
-        background-color: #e73535;
-        color: #fff;
-        /* width: 100%; */
-        border-radius: 5%;
-        position: absolute;
-        bottom: 6px;
-        left: -20px;
-      }
-      .jazz-pic{
-        position: relative;
-      }
-     .arrow img{
-       width: 30px;
-       position: absolute;
-       bottom: 200px;
-       right: -10px;
-     }
-/* -------------------------- */
+    .like img{
+      width: 250px;
+      margin: 0 auto;
+    }
+    .like{
+      width: 80%;
+      margin: 50px auto;
+    }
+    .like-product p{
+      margin: 0 20px;
+      color: #2e2e2e;
+    }
+    #left-arrow{
+      width: 30px;
+      height: 30px;
+    }
 
+    #right-arrow{
+      width: 30px;
+      height: 30px;
+    }
+    .slick-next {
+      right: -35px;
+    }
+    .slick-prev {
+      left: -35px;
+    }
+     
+/* -------------------------- */
+/* @media (max-width: 1087px) {
+  .like{
+    width: 750px;
+  }
+} */
 @media (max-width: 960px){
-  .like, .like-product{
+  /* .like, .like-product{
     display: none;
   }
   .product{
     display: block;
-  }
+  } */
   .box {
     width: 100%;
   }
@@ -249,6 +235,11 @@
     box-sizing: border-box;
   }
 }
+/* @media (max-width: 842px){
+.like{
+  width: 400px;
+}
+} */
     </style>
   </head>
   <body>
@@ -455,34 +446,43 @@
 
 
     
-    <div class="like">
-      <h2>你可能也喜歡</h2>
-    </div>
-    <div class="like-product">
-      <div class="team jazz">
-        <div class="jazz-pic"><img src="pic/jazz-tank.jpg" alt="">
-          <div class="almost-gone">
-            <span>Almost Gone</span>
-          </div>
+    <div class="container">
+      <div class="like-title">
+        <h2>你可能也喜歡</h2>
+      </div>
+      <div class="like">
+        <div class="like-product">
+          <img src="pic/jazz-tank.jpg" alt="">
+          <p>NT$1500</p>
+          <p>Men's Jumbotron Mesh Utah Jazz Tank</p>
         </div>
-        <span>NT$1500</span>
-        <span>Men's Jumbotron Mesh Utah Jazz Tank</span>
-      </div>
-      <div class="team suns">
-        <img src="pic/suns_t.jpg" alt="">
-        <span>NT$1300</span>
-        <span>Men's Classics Carton Phoenix Suns T-Shirt</span>
-      </div>
-      <div class="team sonics">
-        <img src="pic/sonics_tank.jpg" alt="">
-        <span>NT$1800</span>
-        <span>Men's Jumbotron Mesh Seattle Sonics Tank</span> 
-        <div class="arrow">
-          <img src="icon/right.png" alt="">
+        <div class="like-product">
+          <img src="pic/suns_t.jpg" alt="">
+          <p>NT$1300</p>
+          <p>Men's Classics Carton Phoenix Suns T-Shirt</p>
+        </div>
+        <div class="like-product">
+          <img src="pic/sonics_tank.jpg" alt="">
+          <p>NT$2000</p>
+          <p>Men's Jumbotron Mesh Seattle Sonics Tank</p>
+        </div>
+        <div class="like-product">
+          <img src="pic/tt.jpg" alt="">
+          <p>NT$1300</p>
+          <p>Men's Classics Carton Phoenix Suns T-Shirt</p>
+        </div>
+        <div class="like-product">
+          <img src="pic/blazers-jersey.jpg" alt="">
+          <p>NT$1300</p>
+          <p>Men's Classics Carton Phoenix Suns T-Shirt</p>
+        </div>
+        <div class="like-product">
+          <img src="pic/bulls-jacket.jpg" alt="">
+          <p>NT$1300</p>
+          <p>Men's Classics Carton Phoenix Suns T-Shirt</p>
         </div>
       </div>
     </div>
-  </div>
     
   <div class="footer">
     <div class="logo"><img src="icon/logo.png" alt="nba holic logo" /></div>
@@ -520,10 +520,6 @@
     }
     window.addEventListener("load", init, false);
   </script>
-
-   <!-- ---------漢堡JS------------- -->
-
-   <script src="burger.js" ></script>
 
    <!-- ------------材質跟商品說明收合----------------------- -->
    <script>
@@ -580,40 +576,50 @@
 
    <!-- ------------小圖border切換----------- -->
   <script>
-    // $('#small-1').click(function(){
-    //   if ($('#small-1').hasClass("red")){
-    //     $('#small-1').removeClass('red').addClass('gray');
-    //   }else{
-    //     $('#small-1').removeClass('gray').addClass('red');
-    //   }
-
-    //   if ($('#small-2').hasClass("gray")){
-    //     $('#small-2').removeClass('gray').addClass('red');
-    //   }else{
-    //     $('#small-2').removeClass('red').addClass('gray');
-    //   }
-    // });
-
-    // $('#small-2').click(function(){
-    //   if ($('#small-1').hasClass("red")){
-    //     $('#small-1').removeClass('red').addClass('gray');
-    //   }else{
-    //     $('#small-1').removeClass('gray').addClass('red');
-    //   }
-
-    //   if ($('#small-2').hasClass("gray")){
-    //     $('#small-2').removeClass('gray').addClass('red');
-    //   }else{
-    //     $('#small-2').removeClass('red').addClass('gray');
-    //   }
-    // });
-      $('.small-pic').click(function(){
-      
-        $(this).addClass('red').siblings().removeClass('red')
-
-      
+    $('.small-pic').click(function(){
+      $(this).addClass('red').siblings().removeClass('red')
     });
   </script>
+
+
+
+<!-- 推薦商品slick slider -->
+<!-- 需加$('.like').slick(); 內容可放更改icon -->
+<script type="text/javascript">
+   
+  $('.like').slick({
+   prevArrow:"<img class='a-left control-c prev slick-prev' src='icon/left.png' id='left-arrow'>",
+   nextArrow:"<img class='a-right control-c next slick-next' src='icon/right.png' id='right-arrow'>",
+
+   slidesToShow: 3, //一次show3個
+   slidesToScroll: 1, //一次移動1個
+
+   responsive: [
+     {
+       breakpoint: 1024, // RWD在1024寬度時切換顯示數量
+       settings: {
+        slidesToShow: 3, 
+        slidesToScroll: 1,
+       }
+     },
+     {
+       breakpoint: 740, 
+       settings: {
+         slidesToShow: 1, 
+         slidesToScroll: 1, 
+       }
+     },
+     {
+       breakpoint: 576, 
+       settings: {
+         slidesToShow: 1, 
+         slidesToScroll: 1, 
+       }
+     },
+    ]
+  });
+  
+ </script>
 
   </body>
 </html>
