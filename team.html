@@ -151,6 +151,13 @@
       .selected .sort img {
         width: 14px;
       }
+
+      .selected-left select{
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+        margin-left: 15px;
+      }
       .product img {
         width: 100%;
         /* border: 1px solid green; */
@@ -926,7 +933,12 @@
           <div class="col-12 selected">
             <div class="selected-left">
               <span>1 - 12 of 111</span>
-              
+              <select name="" id="">
+                <option>按新品</option>
+                <option>按熱銷</option>
+                <option>按價格(低到高)</option>
+                <option>按價格(高到低)</option>
+              </select>
             </div>
             <div class="pagination">
               <a href="#"><img src="icon/page-left.png" alt="" /></a>
