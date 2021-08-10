@@ -38,12 +38,11 @@
 }
 
 .manual-btn{
-  border: 2px solid rgb(182, 182, 182);
+  border: 2px solid #cacaca;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
-  background-color: rgb(182, 182, 182);
 }
 
 /* 除了最後一個的按鈕們 */
@@ -84,11 +83,10 @@
 }
 
 .navigation-auto div{
-  border: 2px solid #FFF;
+  border: 2px solid #e73535;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
-  z-index: 22;
 }
 
 /* 除了最後一個的按鈕們 */
@@ -99,20 +97,16 @@
 /* 當按鈕被checked到時 變顏色 */
 #radio1:checked ~ .navigation-auto .auto-btn1{
   background: #e73535;
-  z-index: 22;  
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
   background: #e73535;
-  z-index: 22;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3{
   background: #e73535;
-  z-index: 22;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
   background: #e73535;
-  z-index: 22;
 }
