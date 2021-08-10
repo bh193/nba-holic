@@ -58,9 +58,9 @@
         opacity: 0.5;
         border: 2px solid #c0c0c0;
       }
-      .small-pic.blue{
+      .small-pic.red{
         opacity: 1;
-        border: 2px solid #1f77be;
+        border: 2px solid #f00;
       }
       .choose-pic {
         /* margin: 10px 200px; */
@@ -82,31 +82,26 @@
       .size a{
         color: #2e2e2e;
         text-decoration: none;
-        color: #1f77be;
       }
-      .size a:hover{
-        text-decoration: underline;
+      .size-eng {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+        font-size: 13px;
       }
-      .size-eng{
-        margin-top: 10px;
-        margin-left: 9px;
+      .size-eng a {
+        text-decoration: none;
+        color: #2e2e2e;
       }
-      .size-eng .size-select{
-      background-color: #FFF;
-      width: 50px;
-      height: 35px;
-      color: #2e2e2e;
-      font-size: 16px;
-      border: 2px solid #dedede;
-      margin-right: 8px;
-      cursor: pointer;
-     }
-
-     .size-select.blue{
-      border: 2px solid #1f77be;
-     }
-
-
+      .size-eng div {
+        border: 1px #2e2e2e solid;
+        padding: 10px;
+        margin-right: 15px;
+        width: 53px;
+        text-align: center;
+        border-radius: 5%;
+        background-color: #ffffff;
+      }
       .selection .amount {
         padding: 30px 0 10px 10px;
         color: #2e2e2e;
@@ -130,7 +125,6 @@
         margin-left: 30px;
         justify-content: space-around;
         align-items: center;
-        cursor: pointer;
       }
       .selection .cart a{
         text-decoration: none;
@@ -208,6 +202,7 @@
     .slick-prev {
       left: -35px;
     }
+     
 /* -------------------------- */
 
 @media (max-width: 960px){
@@ -379,7 +374,7 @@
           </div>
   
           <div class="choose-pic">
-            <img src="pic/small1.jpg" class="small-pic blue" />
+            <img src="pic/small1.jpg" class="small-pic red" />
           <img src="pic/small2.jpg" class="small-pic"/>
           </div>
         </div>
@@ -392,11 +387,11 @@
               <span><a href="">尺寸表</a></span>
             </div>
             <div class="size-eng">
-              <button class="size-select blue">S</button>
-              <button class="size-select">M</button>
-              <button class="size-select">L</button>
-              <button class="size-select">XL</button>
-              <button class="size-select">XXL</button>
+              <div class="size-s"><span>S</span></div>
+              <div class="size-m"><span>M</span></div>
+              <div class="size-l"><span>L</span></div>
+              <div class="size-xl"><span>XL</span></div>
+              <div class="size-2xl"><span>2XL</span></div>
             </div>
             <div class="amount">
               <span>數量</span>
@@ -573,16 +568,9 @@
    <!-- ------------小圖border切換----------- -->
   <script>
     $('.small-pic').click(function(){
-      $(this).addClass('blue').siblings().removeClass('blue')
+      $(this).addClass('red').siblings().removeClass('red')
     });
   </script>
-
-<!-- -----------尺寸border切換----------------- -->
-<script>
-  $('.size-select').click(function(){
-    $(this).addClass('blue').siblings().removeClass('blue')
-  });
-</script>
 
 
 
