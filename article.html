@@ -57,7 +57,7 @@
         /* justify-content: center; */
         align-items: center;
         background-size: cover;
-        background-position: 100%;
+        background-position: 100% 100%;
         background-repeat: no-repeat;
         background-image: url(pic/background.png);
       }
@@ -326,10 +326,27 @@
         margin: 20px;
       }
 /* --------------------------------------------- */
-@media (max-width: 1024px){
-  .suns {
+@media (max-width:1024px){
+  .suns{
     background-size: 100%;
-    background-position: 100% 100%;
+    background-position: center;
+  }
+  .heat{
+    background-position: 4px 56%;
+  }
+  .rockets{
+    background-position: 100% 50%;
+  }
+}
+@media (max-width: 577px){
+  .suns {
+    background-size: 118%;
+    background-position: 100% 107%;
+    background-attachment: inherit;
+    height: 710px;
+  }
+  .suns .info{
+    width: 100%;
   }
   .info .jersey-intro{
     margin: 0;
@@ -339,44 +356,39 @@
   }
 
   .heat{
-    background-position: -35% 100%;
-    background-size: 58%;
+    background-position: -1% 102%;
+    background-size: 71%;
+    background-attachment: inherit;
+    height: 539px;
   }
   .heat .info{
-    width: 49%;
+    width: 100%;
     margin: 20px;
   }
 
   .rockets {
-    background-size: 75%;
-    background-position: 221% 100%;
+    background-size: 82%;
+    background-position: 230% 150%;
+    background-attachment: inherit;
+    height: 600px;
+  }
+  .rockets .info{
+    width: 100%;
   }
   .hawks{
-    background-size: 57%;
-    background-position: -37% 100%;
+    background-size: 68%;
+    background-position: -33% 125%;
+    background-attachment: inherit;
+    height: 600px;
+  }
+  .hawks .info{
+    width: 100%;
   }
 
 }
 
 
-/* @media (max-width: 960px){
-  .suns{
-    background-size: 0;
-  }
-  .suns .info{
-    width: 47%;
-  }
-  
-}
 
-@media (max-width: 577px){
-  .suns{
-    background-size: 52%;
-  }
-  .suns .info{
-    width: 60%;
-  }
-} */
     </style>
   </head>
 
