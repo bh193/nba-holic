@@ -19,7 +19,18 @@
 
 
     <style>
-      
+      #gotop img{
+      width: 100px;
+      }
+      #gotop {
+      display: none;
+      position: fixed;
+      right: 0;
+      bottom: 20px;    
+      padding: 10px 0;    
+      font-size: 20px;
+      cursor: pointer;
+      }
       .product {
         display: flex;
         width: 100%;
@@ -645,6 +656,26 @@
   });
   
  </script>
+<!-- 回到頂部 -->
+<div id="gotop">
+  <img src="icon/scroll-top2.png" alt="">
+</div>
 
+<script type="text/javascript">
+  $(function(){
+      $("#gotop").click(function(){
+          jQuery("html,body").animate({
+              scrollTop:0
+          },1000);
+      });
+      $(window).scroll(function() {
+          if ( $(this).scrollTop() > 300){
+              $('#gotop').fadeIn("fast");
+          } else {
+              $('#gotop').stop().fadeOut("fast");
+          }
+      });
+  });
+  </script>
   </body>
 </html>

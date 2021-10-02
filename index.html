@@ -211,15 +211,18 @@
         flex-wrap: nowrap;
         justify-content: space-around;
         color: #2e2e2e;
+        box-sizing: border-box;
+        padding: 10px 100px 70px;
       }
 
       .story-pic {
         width: 55%;
-        margin: 30px;
+        /* margin: 30px; */
       }
       .story-main {
         width: 50%;
-        margin: 30px;
+        box-sizing: border-box;
+        padding: 0 40px 40px;
         font-size: 16px;
         line-height: 28px;
         text-decoration: none;
@@ -227,10 +230,10 @@
       }
       .story h2 {
         text-align: center;
-        padding: 5px;
+        padding: 5px 0;
       }
       .story p {
-        padding: 10px;
+        padding: 10px 0;
       }
       .story p a{
         color:#014f8f;
@@ -327,8 +330,12 @@
           top: 0;
           left: 0;
         }
+        .story{
+          padding: 0;
+          margin-top: 30px;
+        }
         .story img {
-          max-width: 580px;
+          /* max-width: 580px; */
           width: 100%;
           border-radius: 1%;
           
@@ -344,6 +351,7 @@
         }
         .story-main {
           width: auto;
+          padding: 20px 40px 40px;
         }
       }
       @media (max-width: 687px){
@@ -576,9 +584,9 @@
           <a href="##"><img src="pic/jersey_sale.jpg" alt="NBA jersey" /></a>
         </div>
         <div class="middle-line"><h2>熱銷商品</h2></div>
-        <div class="best-seller">
+        <ul class="best-seller">
           
-            <div class="product wow animate__animated animate__fadeInLeftBig" data-wow-delay="0">
+            <li class="product wow animate__animated animate__fadeInLeftBig" data-wow-delay="0">
               <a href="product.html">
               <img src="pic/nash-front.jpg"/>
               <div class="sale">
@@ -588,9 +596,9 @@
               <p>Phoenix Suns Steve Nash Jersey</p>
               <span>$2500</span>
             </a>
-            </div>
+            </li>
          
-            <div class="product wow animate__animated animate__fadeInLeftBig" data-wow-delay=".5s">
+            <li class="product wow animate__animated animate__fadeInLeftBig" data-wow-delay=".5s">
               <a href="product.html">
               <img src="pic/jazz-tank.jpg"  />
               <div class="sale">
@@ -600,9 +608,9 @@
               <p>Utah Jazz Team Tank</p>
               <span>$2200</span>
             </a>
-            </div>
+            </li>
           
-            <div class="product wow animate__animated animate__fadeInLeftBig" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeInLeftBig" data-wow-delay="1s">
               <a href="product.html">
                 <img src="pic/d77.jpg"/>
                 <div class="sale">
@@ -612,81 +620,81 @@
                  <p>Los Angeles Team Shorts</p>
                 <span>$1800</span>
              </a>
-            </div>
+            </li>
           
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
                 <img src="pic/ball.jpg"/>
                 <p>NBA Spalding Basketball</p>
                 <span>$900</span>
               </a>
-            </div>
+            </li>
          
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
                 <img src="pic/doll.jpg"/>
                 <p>Trae Young Flush Figure</p>
                 <span>$650</span>
               </a>
-            </div>
+            </li>
          
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
                 <img src="pic/lakers_cap.jpg"/>
                 <p>Los Angeles Team Cap</p>
                 <span>$1000</span>
               </a>
-            </div>
+            </li>
           
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
                 <img src="pic/umbrella.jpg"/>
                 <p>Cleveland Cavaliers Umbrella</p>
                 <span>$750</span>
               </a> 
-            </div>
+            </li>
          
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
               <img src="pic/suns_t.jpg"/>
               <p>Steve Nash Tee</p>
               <span>$1050</span>
               </a> 
-            </div>
+            </li>
 
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
               <img src="pic/tt.jpg"/>
               <p>Houston Rockets Hoodie</p>
               <span>$1650</span>
               </a> 
-            </div>
+            </li>
 
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
               <img src="pic/2k.jpg"/>
               <p>PS4 NBA 2K21</p>
               <span>$1250</span>
               </a> 
-            </div>
+            </li>
 
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
               <img src="pic/bag.jpg"/>
               <p>Cleveland Cavaliers Bag</p>
               <span>$950</span>
               </a> 
-            </div>
+            </li>
 
-            <div class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
+            <li class="product wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="1s">
               <a href="product.html">
               <img src="pic/lbj-toy.jpg"/>
               <p>LeBron James Figure</p>
               <span>$5500</span>
               </a> 
-            </div>
+            </li>
           
-        </div>
+        </ul>
           <div class="middle-line"><h2>精選BLOG文章</h2></div>
            
           <div class="story">
